@@ -1,10 +1,9 @@
 ---
 import { ChevronDown } from "lucide-astro";
-import Button from "../components/ui/Button.astro";
 ---
 
 <header
-  class="fixed top-0 right-0 left-0 z-50 mx-auto border-b border-gray-100 bg-white/80 backdrop-blur-md"
+  class="fixed top-0 right-0 left-0 z-50 mx-auto border-b border-gray-100 bg-white/80 backdrop-blur-sm backdrop-filter transition-colors duration-200 ease-in-out"
   transition:persist
 >
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -12,20 +11,23 @@ import Button from "../components/ui/Button.astro";
       <!-- Logo -->
       <div class="flex-shrink-0">
         <a href="/" class="group flex items-center space-x-2">
-          <img src="/logo-1.png" alt="Luzgas Logo" class="h-18 w-18" />
+          <img src="/logo-3.png" alt="Luzgas Logo" class="h-auto w-48" />
         </a>
       </div>
 
       <!-- Navigation -->
-      <nav class="hidden items-center justify-items-center space-x-8 lg:flex">
-        <!-- Inicio -->
+      <nav class="hidden items-center space-x-8 lg:flex">
+        <!-- Inicio con dropdown -->
         <div class="group relative">
-          <Button variant="link" color="gray">
-            Inicio <ChevronDown slot="rightIcon" class="w-5 h-5 -ml-1" />
-          </Button>
+          <button
+            class="hover:text-luzgas-blue flex items-center text-gray-700 transition-colors duration-200 cursor-pointer"
+          >
+            Inicio
+            <ChevronDown class="ml-1 h-4 w-4" />
+          </button>
 
           <div
-            class="invisible absolute top-full left-0 mt-2 w-64 translate-y-2 transform rounded-xl border border-gray-100 bg-white/95 opacity-0 shadow-xl backdrop-blur-md transition-all duration-300 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100"
+            class="invisible absolute left-0 top-full mt-2 w-64 translate-y-2 transform rounded-xl border border-gray-100 bg-white/95 opacity-0 shadow-xl backdrop-blur-md transition-all duration-300 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100"
           >
             <div class="p-2">
               <a
@@ -62,52 +64,42 @@ import Button from "../components/ui/Button.astro";
           </div>
         </div>
 
-        <!-- Sobre nosotros with dropdown -->
+        <!-- Sobre nosotros con dropdown -->
         <div class="group relative">
           <button
-            class="hover:text-luzgas-blue flex items-center py-2 font-medium text-gray-700 transition-colors duration-200"
+            class="hover:text-luzgas-green flex items-center text-gray-700 transition-colors duration-200"
           >
             Sobre nosotros
-            <svg
-              class="ml-1 h-4 w-4 transform transition-transform duration-200 group-hover:rotate-180"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M19 9l-7 7-7-7"></path>
-            </svg>
+            <ChevronDown class="ml-1 h-4 w-4" />
           </button>
+
           <div
-            class="invisible absolute top-full left-0 mt-2 w-64 translate-y-2 transform rounded-xl border border-gray-100 bg-white/95 opacity-0 shadow-xl backdrop-blur-md transition-all duration-300 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100"
+            class="invisible absolute left-0 top-full mt-2 w-64 translate-y-2 transform rounded-xl border border-gray-100 bg-white/95 opacity-0 shadow-xl backdrop-blur-md transition-all duration-300 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100"
           >
             <div class="p-2">
               <a
-                href="/sobre-nosotros#brief-review"
+                href="/about-us#brief-review"
                 class="hover:text-luzgas-green hover:bg-luzgas-green/5 block rounded-lg px-4 py-3 text-gray-700 transition-all duration-200"
               >
                 <div class="font-medium">Breve reseña</div>
                 <div class="text-sm text-gray-500">Nuestra historia</div>
               </a>
               <a
-                href="/sobre-nosotros#how-we-work"
+                href="/about-us#how-we-work"
                 class="hover:text-luzgas-green hover:bg-luzgas-green/5 block rounded-lg px-4 py-3 text-gray-700 transition-all duration-200"
               >
                 <div class="font-medium">¿Cómo funcionamos?</div>
                 <div class="text-sm text-gray-500">Nuestro proceso</div>
               </a>
               <a
-                href="/sobre-nosotros#members"
+                href="/about-us#members"
                 class="hover:text-luzgas-green hover:bg-luzgas-green/5 block rounded-lg px-4 py-3 text-gray-700 transition-all duration-200"
               >
                 <div class="font-medium">Integrantes</div>
                 <div class="text-sm text-gray-500">Nuestro equipo</div>
               </a>
               <a
-                href="/sobre-nosotros#objectives"
+                href="/about-us#objectives"
                 class="hover:text-luzgas-green hover:bg-luzgas-green/5 block rounded-lg px-4 py-3 text-gray-700 transition-all duration-200"
               >
                 <div class="font-medium">Objetivos</div>
@@ -119,31 +111,34 @@ import Button from "../components/ui/Button.astro";
 
         <!-- Servicios -->
         <a
-          href="/servicios"
+          href="/our-services"
           class="hover:text-luzgas-blue text-gray-700 transition-colors duration-200"
-          >Servicios</a
         >
+          Servicios
+        </a>
 
         <!-- Contactános -->
         <a
-          href="/contacto"
+          href="/contact-us"
           class="hover:text-luzgas-blue text-gray-700 transition-colors duration-200"
-          >Contactános</a
         >
+          Contactános
+        </a>
 
         <!-- Factura -->
         <a
-          href="/factura"
+          href="/invoice"
           class="hover:text-luzgas-blue text-gray-700 transition-colors duration-200"
-          >Factura</a
         >
+          Factura
+        </a>
       </nav>
 
       <!-- CTA Button -->
       <div class="hidden lg:block">
         <a
-          href="/solicitar-estudio"
-          class="from-luzgas-green to-luzgas-blue transform rounded-lg bg-gradient-to-r px-6 py-2 font-medium text-white transition-all duration-200 hover:scale-105 hover:shadow-lg"
+          href="/study"
+          class="from-luzgas-green to-luzgas-blue block w-full rounded-lg bg-gradient-to-r px-6 py-2 text-center font-medium text-white"
         >
           Solicitar Estudio
         </a>
@@ -199,23 +194,27 @@ import Button from "../components/ui/Button.astro";
             <a
               href="/#featured-services"
               class="hover:text-luzgas-blue block text-gray-600 transition-colors duration-200"
-              >Servicios destacados</a
             >
+              Servicios destacados
+            </a>
             <a
               href="/#why-choose-us"
               class="hover:text-luzgas-blue block text-gray-600 transition-colors duration-200"
-              >¿Por qué elegirnos?</a
             >
+              ¿Por qué elegirnos?
+            </a>
             <a
               href="/#testimonials"
               class="hover:text-luzgas-blue block text-gray-600 transition-colors duration-200"
-              >Testimonios</a
             >
+              Testimonios
+            </a>
             <a
               href="/#frequently-asked-questions"
               class="hover:text-luzgas-blue block text-gray-600 transition-colors duration-200"
-              >Preguntas frecuentes</a
             >
+              Preguntas frecuentes
+            </a>
           </div>
         </div>
 
@@ -241,45 +240,53 @@ import Button from "../components/ui/Button.astro";
           </button>
           <div id="mobile-about-submenu" class="mt-2 ml-4 hidden space-y-2">
             <a
-              href="/sobre-nosotros#brief-review"
+              href="/about-us#brief-review"
               class="hover:text-luzgas-green block text-gray-600 transition-colors duration-200"
-              >Breve reseña</a
             >
+              Breve reseña
+            </a>
             <a
-              href="/sobre-nosotros#how-we-work"
+              href="/about-us#how-we-work"
               class="hover:text-luzgas-green block text-gray-600 transition-colors duration-200"
-              >¿Cómo funcionamos?</a
             >
+              ¿Cómo funcionamos?
+            </a>
             <a
-              href="/sobre-nosotros#members"
+              href="/about-us#members"
               class="hover:text-luzgas-green block text-gray-600 transition-colors duration-200"
-              >Integrantes</a
             >
+              Integrantes
+            </a>
             <a
-              href="/sobre-nosotros#objectives"
+              href="/about-us#objectives"
               class="hover:text-luzgas-green block text-gray-600 transition-colors duration-200"
-              >Objetivos</a
             >
+              Objetivos
+            </a>
           </div>
         </div>
 
+        <!-- Mobile otros links -->
         <a
-          href="/servicios"
+          href="/our-services"
           class="hover:text-luzgas-blue block font-medium text-gray-700 transition-colors duration-200"
-          >Servicios</a
         >
+          Servicios
+        </a>
         <a
-          href="/contacto"
+          href="/contact-us"
           class="hover:text-luzgas-blue block font-medium text-gray-700 transition-colors duration-200"
-          >Contactános</a
         >
+          Contactános
+        </a>
         <a
-          href="/factura"
+          href="/invoice"
           class="hover:text-luzgas-blue block font-medium text-gray-700 transition-colors duration-200"
-          >Factura</a
         >
+          Factura
+        </a>
         <a
-          href="/solicitar-estudio"
+          href="/study"
           class="from-luzgas-green to-luzgas-blue block w-full rounded-lg bg-gradient-to-r px-6 py-2 text-center font-medium text-white"
         >
           Solicitar Estudio
