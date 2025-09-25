@@ -1,46 +1,77 @@
 ---
-
+import ArrowDownToDot from "./icon/ArrowDownToDot.astro";
+import Button from "./ui/Button.astro";
 ---
 
 <section
   id="inicio"
-  class="relative min-h-screen flex items-center justify-center overflow-hidden pt-16"
+  class="relative flex items-center justify-center overflow-hidden"
+  style="min-height: 100vh; padding-top: 80px;"
 >
+  <!-- Background Image -->
   <div
-    class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center min-h-dvh flex flex-col items-center justify-center"
+    class="absolute inset-0 z-0"
+    style="background-image: url('/inicio-1.webp'); background-size: cover; background-position: center; background-repeat: no-repeat;"
+  >
+    <!-- Dark overlay for better text readability -->
+    <div class="absolute inset-0 bg-black/40"></div>
+  </div>
+
+  <!-- Content -->
+  <div
+    class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 text-center flex flex-col items-center justify-center h-full"
   >
     <div class="animate-slide-up">
-      <!-- Main Logo -->
-      <figure>
-        <img
-          src="/logo-1.png"
-          alt="Luzgas Logo"
-          class="w-72 h-72 mx-auto mb-4"
-        />
-      </figure>
+      <!-- Main Title -->
+      <h1
+        class="text-4xl sm:text-5xl lg:text-7xl font-bold text-white leading-tight drop-shadow-lg mb-8!"
+      >
+        Soluciones Energéticas
+        <span class="block text-luzgas-green -mt-2">Inteligentes</span>
+      </h1>
 
+      <!-- Description -->
       <p
-        class="text-lg text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed w-full"
+        class="text-xl sm:text-2xl text-white/90 mb-12! max-w-4xl mx-auto leading-relaxed drop-shadow-md font-medium mt-12"
       >
         Optimizamos tu consumo energético con soluciones inteligentes y
         sostenibles. Expertos en eficiencia energética para empresas y hogares.
       </p>
 
       <!-- CTA Buttons -->
-      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-        <a
-          href="#solicitar"
-          class="bg-gradient-to-r from-luzgas-green to-luzgas-blue text-white px-8 py-4 rounded-xl font-semibold text-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 min-w-[200px]"
+      <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+        <Button
+          variant="gradient"
+          color="primary"
+          dimension="xl"
+          class="min-w-[280px] backdrop-blur-sm !text-xl font-medium!"
         >
-          Solicitar Estudio Gratuito
-        </a>
-        <a
-          href="#servicios"
-          class="border-2 border-luzgas-blue text-luzgas-blue px-8 py-4 rounded-xl font-semibold text-lg hover:bg-luzgas-blue hover:text-white transition-all duration-300 min-w-[200px]"
+          <a href="/invoice" class="block w-full h-full">
+            Solicitar Estudio Gratuito
+          </a>
+        </Button>
+
+        <Button
+          variant="outline"
+          color="secondary"
+          dimension="xl"
+          class="min-w-[280px] backdrop-blur-sm !text-xl font-medium! border-white text-white bg-white/10 hover:bg-white hover:text-secondary-500"
         >
-          Ver Servicios
-        </a>
+          <a href="/our-services" class="block w-full h-full">
+            Ver Servicios
+          </a>
+        </Button>
       </div>
     </div>
   </div>
+
+  <!-- Scroll Indicator -->
+  <a
+    href="#featured-services"
+    class="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10 hover:scale-110 transition-transform duration-300"
+  >
+    <div class="animate-bounce">
+      <ArrowDownToDot class="w-8 h-8 text-white" />
+    </div>
+  </a>
 </section>

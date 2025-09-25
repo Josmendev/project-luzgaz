@@ -1,9 +1,10 @@
 ---
-import { ChevronDown } from "lucide-astro";
+import ChevronDown from "./icon/ChevronDown.astro";
+import Button from "./ui/Button.astro";
 ---
 
 <header
-  class="fixed top-0 right-0 left-0 z-50 mx-auto border-b border-gray-100 bg-white/80 backdrop-blur-sm backdrop-filter transition-colors duration-200 ease-in-out"
+  class="fixed top-0 right-0 left-0 z-50 mx-auto border-b border-gray-100 bg-white/90 backdrop-blur-sm"
   transition:persist
 >
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -19,12 +20,16 @@ import { ChevronDown } from "lucide-astro";
       <nav class="hidden items-center space-x-8 lg:flex">
         <!-- Inicio con dropdown -->
         <div class="group relative">
-          <button
-            class="hover:text-luzgas-blue flex items-center text-gray-700 transition-colors duration-200 cursor-pointer"
+          <a
+            href="/"
+            data-nav="inicio"
+            class="nav-link hover:text-luzgas-blue flex items-center text-gray-700 transition-colors duration-200 cursor-pointer group"
           >
             Inicio
-            <ChevronDown class="ml-1 h-4 w-4" />
-          </button>
+            <ChevronDown
+              class="ml-1 h-4 w-4 transition-transform duration-200 group-hover:rotate-180"
+            />
+          </a>
 
           <div
             class="invisible absolute left-0 top-full mt-2 w-64 translate-y-2 transform rounded-xl border border-gray-100 bg-white/95 opacity-0 shadow-xl backdrop-blur-md transition-all duration-300 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100"
@@ -32,6 +37,7 @@ import { ChevronDown } from "lucide-astro";
             <div class="p-2">
               <a
                 href="/#featured-services"
+                data-parent="inicio"
                 class="hover:text-luzgas-blue hover:bg-luzgas-blue/5 block rounded-lg px-4 py-3 text-gray-700 transition-all duration-200"
               >
                 <div class="font-medium">Servicios destacados</div>
@@ -41,6 +47,7 @@ import { ChevronDown } from "lucide-astro";
               </a>
               <a
                 href="/#why-choose-us"
+                data-parent="inicio"
                 class="hover:text-luzgas-blue hover:bg-luzgas-blue/5 block rounded-lg px-4 py-3 text-gray-700 transition-all duration-200"
               >
                 <div class="font-medium">¿Por qué elegirnos?</div>
@@ -48,6 +55,7 @@ import { ChevronDown } from "lucide-astro";
               </a>
               <a
                 href="/#testimonials"
+                data-parent="inicio"
                 class="hover:text-luzgas-blue hover:bg-luzgas-blue/5 block rounded-lg px-4 py-3 text-gray-700 transition-all duration-200"
               >
                 <div class="font-medium">Testimonios</div>
@@ -55,6 +63,7 @@ import { ChevronDown } from "lucide-astro";
               </a>
               <a
                 href="/#frequently-asked-questions"
+                data-parent="inicio"
                 class="hover:text-luzgas-blue hover:bg-luzgas-blue/5 block rounded-lg px-4 py-3 text-gray-700 transition-all duration-200"
               >
                 <div class="font-medium">Preguntas frecuentes</div>
@@ -67,10 +76,13 @@ import { ChevronDown } from "lucide-astro";
         <!-- Sobre nosotros con dropdown -->
         <div class="group relative">
           <button
-            class="hover:text-luzgas-green flex items-center text-gray-700 transition-colors duration-200"
+            data-nav="about"
+            class="nav-link hover:text-luzgas-green flex items-center text-gray-700 transition-colors duration-200 group"
           >
             Sobre nosotros
-            <ChevronDown class="ml-1 h-4 w-4" />
+            <ChevronDown
+              class="ml-1 h-4 w-4 transition-transform duration-200 group-hover:rotate-180"
+            />
           </button>
 
           <div
@@ -79,6 +91,7 @@ import { ChevronDown } from "lucide-astro";
             <div class="p-2">
               <a
                 href="/about-us#brief-review"
+                data-parent="about"
                 class="hover:text-luzgas-green hover:bg-luzgas-green/5 block rounded-lg px-4 py-3 text-gray-700 transition-all duration-200"
               >
                 <div class="font-medium">Breve reseña</div>
@@ -86,6 +99,7 @@ import { ChevronDown } from "lucide-astro";
               </a>
               <a
                 href="/about-us#how-we-work"
+                data-parent="about"
                 class="hover:text-luzgas-green hover:bg-luzgas-green/5 block rounded-lg px-4 py-3 text-gray-700 transition-all duration-200"
               >
                 <div class="font-medium">¿Cómo funcionamos?</div>
@@ -93,6 +107,7 @@ import { ChevronDown } from "lucide-astro";
               </a>
               <a
                 href="/about-us#members"
+                data-parent="about"
                 class="hover:text-luzgas-green hover:bg-luzgas-green/5 block rounded-lg px-4 py-3 text-gray-700 transition-all duration-200"
               >
                 <div class="font-medium">Integrantes</div>
@@ -100,6 +115,7 @@ import { ChevronDown } from "lucide-astro";
               </a>
               <a
                 href="/about-us#objectives"
+                data-parent="about"
                 class="hover:text-luzgas-green hover:bg-luzgas-green/5 block rounded-lg px-4 py-3 text-gray-700 transition-all duration-200"
               >
                 <div class="font-medium">Objetivos</div>
@@ -112,7 +128,8 @@ import { ChevronDown } from "lucide-astro";
         <!-- Servicios -->
         <a
           href="/our-services"
-          class="hover:text-luzgas-blue text-gray-700 transition-colors duration-200"
+          data-nav="services"
+          class="nav-link hover:text-luzgas-blue text-gray-700 transition-colors duration-200"
         >
           Servicios
         </a>
@@ -120,28 +137,25 @@ import { ChevronDown } from "lucide-astro";
         <!-- Contactános -->
         <a
           href="/contact-us"
-          class="hover:text-luzgas-blue text-gray-700 transition-colors duration-200"
+          data-nav="contact"
+          class="nav-link hover:text-luzgas-blue text-gray-700 transition-colors duration-200"
         >
-          Contactános
-        </a>
-
-        <!-- Factura -->
-        <a
-          href="/invoice"
-          class="hover:text-luzgas-blue text-gray-700 transition-colors duration-200"
-        >
-          Factura
+          Contáctanos
         </a>
       </nav>
 
-      <!-- CTA Button -->
+      <!-- Factura Button -->
       <div class="hidden lg:block">
-        <a
-          href="/study"
-          class="from-luzgas-green to-luzgas-blue block w-full rounded-lg bg-gradient-to-r px-6 py-2 text-center font-medium text-white"
+        <Button
+          variant="gradient"
+          color="primary"
+          dimension="sm"
+          class="backdrop-blur-sm text-sm! py-3!"
         >
-          Solicitar Estudio
-        </a>
+          <a href="/invoice" class="block w-full h-full">
+            Solicitar Estudio Gratuito
+          </a>
+        </Button>
       </div>
 
       <!-- Mobile menu button -->
@@ -193,24 +207,28 @@ import { ChevronDown } from "lucide-astro";
           <div id="mobile-inicio-submenu" class="mt-2 ml-4 hidden space-y-2">
             <a
               href="/#featured-services"
+              data-parent="inicio"
               class="hover:text-luzgas-blue block text-gray-600 transition-colors duration-200"
             >
               Servicios destacados
             </a>
             <a
               href="/#why-choose-us"
+              data-parent="inicio"
               class="hover:text-luzgas-blue block text-gray-600 transition-colors duration-200"
             >
               ¿Por qué elegirnos?
             </a>
             <a
               href="/#testimonials"
+              data-parent="inicio"
               class="hover:text-luzgas-blue block text-gray-600 transition-colors duration-200"
             >
               Testimonios
             </a>
             <a
               href="/#frequently-asked-questions"
+              data-parent="inicio"
               class="hover:text-luzgas-blue block text-gray-600 transition-colors duration-200"
             >
               Preguntas frecuentes
@@ -241,24 +259,28 @@ import { ChevronDown } from "lucide-astro";
           <div id="mobile-about-submenu" class="mt-2 ml-4 hidden space-y-2">
             <a
               href="/about-us#brief-review"
+              data-parent="about"
               class="hover:text-luzgas-green block text-gray-600 transition-colors duration-200"
             >
               Breve reseña
             </a>
             <a
               href="/about-us#how-we-work"
+              data-parent="about"
               class="hover:text-luzgas-green block text-gray-600 transition-colors duration-200"
             >
               ¿Cómo funcionamos?
             </a>
             <a
               href="/about-us#members"
+              data-parent="about"
               class="hover:text-luzgas-green block text-gray-600 transition-colors duration-200"
             >
               Integrantes
             </a>
             <a
               href="/about-us#objectives"
+              data-parent="about"
               class="hover:text-luzgas-green block text-gray-600 transition-colors duration-200"
             >
               Objetivos
@@ -269,15 +291,17 @@ import { ChevronDown } from "lucide-astro";
         <!-- Mobile otros links -->
         <a
           href="/our-services"
+          id="mobile-services-link"
           class="hover:text-luzgas-blue block font-medium text-gray-700 transition-colors duration-200"
         >
           Servicios
         </a>
         <a
           href="/contact-us"
+          id="mobile-contact-link"
           class="hover:text-luzgas-blue block font-medium text-gray-700 transition-colors duration-200"
         >
-          Contactános
+          Contáctanos
         </a>
         <a
           href="/invoice"
@@ -297,6 +321,37 @@ import { ChevronDown } from "lucide-astro";
 </header>
 
 <script>
+  // actualizar navegación activa
+  function updateActiveNav() {
+    const path = window.location.pathname;
+
+    // Limpiar activos
+    document.querySelectorAll(".nav-link").forEach((link) => {
+      link.classList.remove("active");
+    });
+
+    // Marcar el activo según URL
+    if (path === "/" || path.includes("/#")) {
+      document.querySelector('[data-nav="inicio"]')?.classList.add("active");
+    } else if (path.includes("/about-us")) {
+      document.querySelector('[data-nav="about"]')?.classList.add("active");
+    } else if (path.includes("/our-services")) {
+      document.querySelector('[data-nav="services"]')?.classList.add("active");
+    } else if (path.includes("/contact-us")) {
+      document.querySelector('[data-nav="contact"]')?.classList.add("active");
+    }
+  }
+
+  // Ejecutar cuando carga la página
+  document.addEventListener("DOMContentLoaded", updateActiveNav);
+
+  // Ejecutar en cada cambio de ruta (para View Transitions)
+  document.addEventListener("astro:page-load", updateActiveNav);
+
+  // Ejecutar cuando cambia la URL manualmente
+  window.addEventListener("popstate", updateActiveNav);
+
+  // Funcionalidad del menú móvil
   const mobileMenuButton = document.getElementById("mobile-menu-button");
   const mobileMenu = document.getElementById("mobile-menu");
   const mobileInicioToggle = document.getElementById("mobile-inicio-toggle");
@@ -320,7 +375,6 @@ import { ChevronDown } from "lucide-astro";
     icon?.classList.toggle("rotate-180");
   });
 
-  // Close mobile menu when clicking on links
   const mobileLinks = mobileMenu?.querySelectorAll("a");
   mobileLinks?.forEach((link) => {
     link.addEventListener("click", () => {

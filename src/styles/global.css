@@ -5,13 +5,13 @@
   /* Colores personalizados de Tailwind */
   --color-luzgas-green: #22c55e;
   --color-luzgas-blue: #0ea5e9;
-  --color-luzgas-yellow: #facc15;
+  --color-luzgas-yellow: #ebef17;
   --color-luzgas-dark-blue: #1e40af;
   --color-luzgas-light-green: #86efac;
   --color-black: #000;
   --color-white: #fff;
 
-    /* Primary colors basado en luzgas-green (#22c55e = 500) */
+  /* Primary colors basado en luzgas-green (#22c55e = 500) */
   --color-primary-50: #f0fdf4;
   --color-primary-100: #dcfce7;
   --color-primary-200: #bbf7d0;
@@ -37,18 +37,18 @@
   --color-secondary-900: #0c4a6e;
   --color-secondary-950: #082f49;
 
-    /* Tertiary colors basado en luzgas-yellow (#facc15 = 500) */
+  /* Tertiary colors basado en luzgas-yellow (#facc15 = 500) */
   --color-tertiary-50: #fefce8;
   --color-tertiary-100: #fef9c3;
   --color-tertiary-200: #fef08a;
   --color-tertiary-300: #fde047;
   --color-tertiary-400: #facc15;
-  --color-tertiary-500: #eab308;
-  --color-tertiary-600: #ca8a04;
-  --color-tertiary-700: #a16207;
-  --color-tertiary-800: #854d0e;
-  --color-tertiary-900: #713f12;
-  --color-tertiary-950: #422006;
+  --color-tertiary-500: #ebef17;
+  --color-tertiary-600: #bcc014;
+  --color-tertiary-700: #8d9010;
+  --color-tertiary-800: #5e600b;
+  --color-tertiary-900: #2f3006;
+  --color-tertiary-950: #171803;
 
   /* Fuentes */
   --font-family-sans: Poppins, system-ui, sans-serif;
@@ -173,4 +173,16 @@ body::-webkit-scrollbar-thumb {
   50% {
     transform: translateY(-20px);
   }
+}
+
+.animate-slide-up {
+  animation: slideUp 0.8s ease-out;
+}
+
+.nav-link.active {
+  color: var(--color-luzgas-blue);
+}
+
+.nav-link[data-nav="about"].active {
+  color: var(--color-luzgas-green);
 }
