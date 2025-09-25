@@ -1,0 +1,323 @@
+---
+import { ChevronDown } from "lucide-astro";
+import Button from "../components/ui/Button.astro";
+---
+
+<header
+  class="fixed top-0 right-0 left-0 z-50 mx-auto border-b border-gray-100 bg-white/80 backdrop-blur-md"
+  transition:persist
+>
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="flex h-20 items-center justify-between">
+      <!-- Logo -->
+      <div class="flex-shrink-0">
+        <a href="/" class="group flex items-center space-x-2">
+          <img src="/logo-1.png" alt="Luzgas Logo" class="h-18 w-18" />
+        </a>
+      </div>
+
+      <!-- Navigation -->
+      <nav class="hidden items-center justify-items-center space-x-8 lg:flex">
+        <!-- Inicio -->
+        <div class="group relative">
+          <Button variant="link" color="gray">
+            Inicio <ChevronDown slot="rightIcon" class="w-5 h-5 -ml-1" />
+          </Button>
+
+          <div
+            class="invisible absolute top-full left-0 mt-2 w-64 translate-y-2 transform rounded-xl border border-gray-100 bg-white/95 opacity-0 shadow-xl backdrop-blur-md transition-all duration-300 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100"
+          >
+            <div class="p-2">
+              <a
+                href="/#featured-services"
+                class="hover:text-luzgas-blue hover:bg-luzgas-blue/5 block rounded-lg px-4 py-3 text-gray-700 transition-all duration-200"
+              >
+                <div class="font-medium">Servicios destacados</div>
+                <div class="text-sm text-gray-500">
+                  Nuestros mejores servicios
+                </div>
+              </a>
+              <a
+                href="/#why-choose-us"
+                class="hover:text-luzgas-blue hover:bg-luzgas-blue/5 block rounded-lg px-4 py-3 text-gray-700 transition-all duration-200"
+              >
+                <div class="font-medium">¿Por qué elegirnos?</div>
+                <div class="text-sm text-gray-500">Ventajas competitivas</div>
+              </a>
+              <a
+                href="/#testimonials"
+                class="hover:text-luzgas-blue hover:bg-luzgas-blue/5 block rounded-lg px-4 py-3 text-gray-700 transition-all duration-200"
+              >
+                <div class="font-medium">Testimonios</div>
+                <div class="text-sm text-gray-500">Opiniones de clientes</div>
+              </a>
+              <a
+                href="/#frequently-asked-questions"
+                class="hover:text-luzgas-blue hover:bg-luzgas-blue/5 block rounded-lg px-4 py-3 text-gray-700 transition-all duration-200"
+              >
+                <div class="font-medium">Preguntas frecuentes</div>
+                <div class="text-sm text-gray-500">Dudas comunes</div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sobre nosotros with dropdown -->
+        <div class="group relative">
+          <button
+            class="hover:text-luzgas-blue flex items-center py-2 font-medium text-gray-700 transition-colors duration-200"
+          >
+            Sobre nosotros
+            <svg
+              class="ml-1 h-4 w-4 transform transition-transform duration-200 group-hover:rotate-180"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div
+            class="invisible absolute top-full left-0 mt-2 w-64 translate-y-2 transform rounded-xl border border-gray-100 bg-white/95 opacity-0 shadow-xl backdrop-blur-md transition-all duration-300 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100"
+          >
+            <div class="p-2">
+              <a
+                href="/sobre-nosotros#brief-review"
+                class="hover:text-luzgas-green hover:bg-luzgas-green/5 block rounded-lg px-4 py-3 text-gray-700 transition-all duration-200"
+              >
+                <div class="font-medium">Breve reseña</div>
+                <div class="text-sm text-gray-500">Nuestra historia</div>
+              </a>
+              <a
+                href="/sobre-nosotros#how-we-work"
+                class="hover:text-luzgas-green hover:bg-luzgas-green/5 block rounded-lg px-4 py-3 text-gray-700 transition-all duration-200"
+              >
+                <div class="font-medium">¿Cómo funcionamos?</div>
+                <div class="text-sm text-gray-500">Nuestro proceso</div>
+              </a>
+              <a
+                href="/sobre-nosotros#members"
+                class="hover:text-luzgas-green hover:bg-luzgas-green/5 block rounded-lg px-4 py-3 text-gray-700 transition-all duration-200"
+              >
+                <div class="font-medium">Integrantes</div>
+                <div class="text-sm text-gray-500">Nuestro equipo</div>
+              </a>
+              <a
+                href="/sobre-nosotros#objectives"
+                class="hover:text-luzgas-green hover:bg-luzgas-green/5 block rounded-lg px-4 py-3 text-gray-700 transition-all duration-200"
+              >
+                <div class="font-medium">Objetivos</div>
+                <div class="text-sm text-gray-500">Nuestras metas</div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Servicios -->
+        <a
+          href="/servicios"
+          class="hover:text-luzgas-blue text-gray-700 transition-colors duration-200"
+          >Servicios</a
+        >
+
+        <!-- Contactános -->
+        <a
+          href="/contacto"
+          class="hover:text-luzgas-blue text-gray-700 transition-colors duration-200"
+          >Contactános</a
+        >
+
+        <!-- Factura -->
+        <a
+          href="/factura"
+          class="hover:text-luzgas-blue text-gray-700 transition-colors duration-200"
+          >Factura</a
+        >
+      </nav>
+
+      <!-- CTA Button -->
+      <div class="hidden lg:block">
+        <a
+          href="/solicitar-estudio"
+          class="from-luzgas-green to-luzgas-blue transform rounded-lg bg-gradient-to-r px-6 py-2 font-medium text-white transition-all duration-200 hover:scale-105 hover:shadow-lg"
+        >
+          Solicitar Estudio
+        </a>
+      </div>
+
+      <!-- Mobile menu button -->
+      <button
+        id="mobile-menu-button"
+        class="hover:text-luzgas-blue p-2 text-gray-700 lg:hidden"
+      >
+        <svg
+          class="h-6 w-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile menu -->
+    <div
+      id="mobile-menu"
+      class="hidden border-t border-gray-100 py-4 lg:hidden"
+    >
+      <div class="space-y-4">
+        <!-- Mobile Inicio -->
+        <div>
+          <button
+            id="mobile-inicio-toggle"
+            class="hover:text-luzgas-blue flex w-full items-center justify-between font-medium text-gray-700 transition-colors duration-200"
+          >
+            Inicio
+            <svg
+              class="h-4 w-4 transform transition-transform duration-200"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div id="mobile-inicio-submenu" class="mt-2 ml-4 hidden space-y-2">
+            <a
+              href="/#featured-services"
+              class="hover:text-luzgas-blue block text-gray-600 transition-colors duration-200"
+              >Servicios destacados</a
+            >
+            <a
+              href="/#why-choose-us"
+              class="hover:text-luzgas-blue block text-gray-600 transition-colors duration-200"
+              >¿Por qué elegirnos?</a
+            >
+            <a
+              href="/#testimonials"
+              class="hover:text-luzgas-blue block text-gray-600 transition-colors duration-200"
+              >Testimonios</a
+            >
+            <a
+              href="/#frequently-asked-questions"
+              class="hover:text-luzgas-blue block text-gray-600 transition-colors duration-200"
+              >Preguntas frecuentes</a
+            >
+          </div>
+        </div>
+
+        <!-- Mobile Sobre nosotros -->
+        <div>
+          <button
+            id="mobile-about-toggle"
+            class="hover:text-luzgas-blue flex w-full items-center justify-between font-medium text-gray-700 transition-colors duration-200"
+          >
+            Sobre nosotros
+            <svg
+              class="h-4 w-4 transform transition-transform duration-200"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div id="mobile-about-submenu" class="mt-2 ml-4 hidden space-y-2">
+            <a
+              href="/sobre-nosotros#brief-review"
+              class="hover:text-luzgas-green block text-gray-600 transition-colors duration-200"
+              >Breve reseña</a
+            >
+            <a
+              href="/sobre-nosotros#how-we-work"
+              class="hover:text-luzgas-green block text-gray-600 transition-colors duration-200"
+              >¿Cómo funcionamos?</a
+            >
+            <a
+              href="/sobre-nosotros#members"
+              class="hover:text-luzgas-green block text-gray-600 transition-colors duration-200"
+              >Integrantes</a
+            >
+            <a
+              href="/sobre-nosotros#objectives"
+              class="hover:text-luzgas-green block text-gray-600 transition-colors duration-200"
+              >Objetivos</a
+            >
+          </div>
+        </div>
+
+        <a
+          href="/servicios"
+          class="hover:text-luzgas-blue block font-medium text-gray-700 transition-colors duration-200"
+          >Servicios</a
+        >
+        <a
+          href="/contacto"
+          class="hover:text-luzgas-blue block font-medium text-gray-700 transition-colors duration-200"
+          >Contactános</a
+        >
+        <a
+          href="/factura"
+          class="hover:text-luzgas-blue block font-medium text-gray-700 transition-colors duration-200"
+          >Factura</a
+        >
+        <a
+          href="/solicitar-estudio"
+          class="from-luzgas-green to-luzgas-blue block w-full rounded-lg bg-gradient-to-r px-6 py-2 text-center font-medium text-white"
+        >
+          Solicitar Estudio
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<script>
+  const mobileMenuButton = document.getElementById("mobile-menu-button");
+  const mobileMenu = document.getElementById("mobile-menu");
+  const mobileInicioToggle = document.getElementById("mobile-inicio-toggle");
+  const mobileInicioSubmenu = document.getElementById("mobile-inicio-submenu");
+  const mobileAboutToggle = document.getElementById("mobile-about-toggle");
+  const mobileAboutSubmenu = document.getElementById("mobile-about-submenu");
+
+  mobileMenuButton?.addEventListener("click", () => {
+    mobileMenu?.classList.toggle("hidden");
+  });
+
+  mobileInicioToggle?.addEventListener("click", () => {
+    mobileInicioSubmenu?.classList.toggle("hidden");
+    const icon = mobileInicioToggle.querySelector("svg");
+    icon?.classList.toggle("rotate-180");
+  });
+
+  mobileAboutToggle?.addEventListener("click", () => {
+    mobileAboutSubmenu?.classList.toggle("hidden");
+    const icon = mobileAboutToggle.querySelector("svg");
+    icon?.classList.toggle("rotate-180");
+  });
+
+  // Close mobile menu when clicking on links
+  const mobileLinks = mobileMenu?.querySelectorAll("a");
+  mobileLinks?.forEach((link) => {
+    link.addEventListener("click", () => {
+      mobileMenu?.classList.add("hidden");
+    });
+  });
+</script>

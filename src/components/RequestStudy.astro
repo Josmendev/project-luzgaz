@@ -1,0 +1,247 @@
+---
+---
+
+<section id="solicitar" class="py-20 bg-gradient-to-br from-luzgas-blue/10 via-white to-luzgas-green/10">
+	<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+		<div class="bg-white rounded-3xl shadow-2xl overflow-hidden">
+			<!-- Header -->
+			<div class="bg-gradient-to-r from-luzgas-green to-luzgas-blue p-8 text-center text-white">
+				<div class="w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center mx-auto mb-4">
+					<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+					</svg>
+				</div>
+				<h2 class="text-3xl md:text-4xl font-bold mb-2">Solicita tu Estudio Gratuito</h2>
+				<p class="text-xl opacity-90">Descubre cuánto puedes ahorrar en tu factura energética</p>
+			</div>
+
+			<!-- Form -->
+			<div class="p-8">
+				<form id="study-form" class="space-y-6">
+					<!-- Personal Info -->
+					<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+						<div>
+							<label for="study-nombre" class="block text-sm font-medium text-gray-700 mb-2">
+								Nombre completo *
+							</label>
+							<input 
+								type="text" 
+								id="study-nombre" 
+								name="nombre" 
+								required 
+								class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-luzgas-blue focus:border-transparent transition-colors duration-200"
+								placeholder="Tu nombre completo"
+							>
+						</div>
+						<div>
+							<label for="study-telefono" class="block text-sm font-medium text-gray-700 mb-2">
+								Teléfono *
+							</label>
+							<input 
+								type="tel" 
+								id="study-telefono" 
+								name="telefono" 
+								required 
+								class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-luzgas-blue focus:border-transparent transition-colors duration-200"
+								placeholder="Tu número de teléfono"
+							>
+						</div>
+					</div>
+
+					<div>
+						<label for="study-email" class="block text-sm font-medium text-gray-700 mb-2">
+							Email *
+						</label>
+						<input 
+							type="email" 
+							id="study-email" 
+							name="email" 
+							required 
+							class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-luzgas-blue focus:border-transparent transition-colors duration-200"
+							placeholder="tu@email.com"
+						>
+					</div>
+
+					<!-- Property Info -->
+					<div class="border-t border-gray-200 pt-6">
+						<h3 class="text-lg font-semibold text-gray-800 mb-4">Información de tu propiedad</h3>
+						
+						<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+							<div>
+								<label for="tipo-propiedad" class="block text-sm font-medium text-gray-700 mb-2">
+									Tipo de propiedad *
+								</label>
+								<select 
+									id="tipo-propiedad" 
+									name="tipo_propiedad" 
+									required 
+									class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-luzgas-blue focus:border-transparent transition-colors duration-200"
+								>
+									<option value="">Selecciona una opción</option>
+									<option value="vivienda">Vivienda unifamiliar</option>
+									<option value="apartamento">Apartamento</option>
+									<option value="oficina">Oficina</option>
+									<option value="local-comercial">Local comercial</option>
+									<option value="industria">Industria</option>
+									<option value="otro">Otro</option>
+								</select>
+							</div>
+							<div>
+								<label for="superficie" class="block text-sm font-medium text-gray-700 mb-2">
+									Superficie aproximada (m²)
+								</label>
+								<input 
+									type="number" 
+									id="superficie" 
+									name="superficie" 
+									class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-luzgas-blue focus:border-transparent transition-colors duration-200"
+									placeholder="120"
+								>
+							</div>
+						</div>
+					</div>
+
+					<!-- Energy Info -->
+					<div class="border-t border-gray-200 pt-6">
+						<h3 class="text-lg font-semibold text-gray-800 mb-4">Consumo energético actual</h3>
+						
+						<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+							<div>
+								<label for="factura-electricidad" class="block text-sm font-medium text-gray-700 mb-2">
+									Factura mensual electricidad (€)
+								</label>
+								<input 
+									type="number" 
+									id="factura-electricidad" 
+									name="factura_electricidad" 
+									class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-luzgas-blue focus:border-transparent transition-colors duration-200"
+									placeholder="150"
+								>
+							</div>
+							<div>
+								<label for="factura-gas" class="block text-sm font-medium text-gray-700 mb-2">
+									Factura mensual gas (€)
+								</label>
+								<input 
+									type="number" 
+									id="factura-gas" 
+									name="factura_gas" 
+									class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-luzgas-blue focus:border-transparent transition-colors duration-200"
+									placeholder="80"
+								>
+							</div>
+						</div>
+					</div>
+
+					<!-- Interest -->
+					<div class="border-t border-gray-200 pt-6">
+						<h3 class="text-lg font-semibold text-gray-800 mb-4">¿Qué te interesa más?</h3>
+						
+						<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+							<label class="flex items-center">
+								<input type="checkbox" name="intereses[]" value="auditoria" class="rounded border-gray-300 text-luzgas-blue focus:ring-luzgas-blue">
+								<span class="ml-2 text-gray-700">Auditoría energética</span>
+							</label>
+							<label class="flex items-center">
+								<input type="checkbox" name="intereses[]" value="solar" class="rounded border-gray-300 text-luzgas-blue focus:ring-luzgas-blue">
+								<span class="ml-2 text-gray-700">Instalación solar</span>
+							</label>
+							<label class="flex items-center">
+								<input type="checkbox" name="intereses[]" value="eficiencia" class="rounded border-gray-300 text-luzgas-blue focus:ring-luzgas-blue">
+								<span class="ml-2 text-gray-700">Mejora de eficiencia</span>
+							</label>
+							<label class="flex items-center">
+								<input type="checkbox" name="intereses[]" value="consultoria" class="rounded border-gray-300 text-luzgas-blue focus:ring-luzgas-blue">
+								<span class="ml-2 text-gray-700">Consultoría energética</span>
+							</label>
+						</div>
+					</div>
+
+					<div>
+						<label for="study-mensaje" class="block text-sm font-medium text-gray-700 mb-2">
+							Mensaje adicional
+						</label>
+						<textarea 
+							id="study-mensaje" 
+							name="mensaje" 
+							rows="4" 
+							class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-luzgas-blue focus:border-transparent transition-colors duration-200" 
+							placeholder="Cuéntanos más detalles sobre tu proyecto o necesidades específicas..."
+						></textarea>
+					</div>
+
+					<!-- Submit -->
+					<div class="border-t border-gray-200 pt-6">
+						<button 
+							type="submit" 
+							class="w-full bg-gradient-to-r from-luzgas-green to-luzgas-blue text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-xl transform hover:scale-[1.02] transition-all duration-300 flex items-center justify-center"
+						>
+							<svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
+							</svg>
+							Solicitar Estudio Gratuito
+						</button>
+					</div>
+				</form>
+			</div>
+		</div>
+
+		<!-- Benefits -->
+		<div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+			<div class="bg-white/80 backdrop-blur-sm rounded-xl p-6">
+				<div class="w-12 h-12 bg-gradient-to-br from-luzgas-green to-luzgas-light-green rounded-lg flex items-center justify-center mx-auto mb-4">
+					<svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"></path>
+					</svg>
+				</div>
+				<h4 class="font-semibold text-gray-800 mb-2">100% Gratuito</h4>
+				<p class="text-sm text-gray-600">Sin compromiso ni costos ocultos</p>
+			</div>
+			
+			<div class="bg-white/80 backdrop-blur-sm rounded-xl p-6">
+				<div class="w-12 h-12 bg-gradient-to-br from-luzgas-blue to-luzgas-dark-blue rounded-lg flex items-center justify-center mx-auto mb-4">
+					<svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+					</svg>
+				</div>
+				<h4 class="font-semibold text-gray-800 mb-2">Respuesta en 24h</h4>
+				<p class="text-sm text-gray-600">Te contactamos rápidamente</p>
+			</div>
+			
+			<div class="bg-white/80 backdrop-blur-sm rounded-xl p-6">
+				<div class="w-12 h-12 bg-gradient-to-br from-luzgas-yellow to-orange-400 rounded-lg flex items-center justify-center mx-auto mb-4">
+					<svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+					</svg>
+				</div>
+				<h4 class="font-semibold text-gray-800 mb-2">Expertos Certificados</h4>
+				<p class="text-sm text-gray-600">Profesionales especializados</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<script>
+	document.getElementById('study-form')?.addEventListener('submit', function(e) {
+		e.preventDefault();
+		
+		// Get form data
+		const formData = new FormData(this as HTMLFormElement);
+		const data = Object.fromEntries(formData.entries());
+		
+		// Collect checkboxes separately
+		const intereses = Array.from(document.querySelectorAll('input[name="intereses[]"]:checked'))
+			.map((checkbox) => (checkbox as HTMLInputElement).value);
+		
+		data.intereses = intereses.join(', ');
+		
+		// Here you would typically send the data to your server
+		console.log('Study request submitted:', data);
+		
+		// Show success message
+		alert('¡Solicitud enviada con éxito! Te contactaremos en las próximas 24 horas para coordinar tu estudio gratuito.');
+		
+		// Reset form
+		(this as HTMLFormElement).reset();
+	});
+</script>

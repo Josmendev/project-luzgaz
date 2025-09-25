@@ -1,0 +1,195 @@
+---
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import RequestStudy from '../components/RequestStudy.astro';
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Solicitar Estudio - LUZGAS Asesoría Energética" description="Solicita tu estudio energético gratuito con LUZGAS. Descubre cuánto puedes ahorrar en tu factura energética.">
+	<Header />
+	<main class="pt-16">
+		<!-- Hero Section -->
+		<section class="py-20 bg-gradient-to-br from-luzgas-green/5 via-white to-luzgas-blue/5">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+				<h1 class="text-5xl md:text-6xl font-bold text-gray-800 mb-6">
+					Solicita tu <span class="text-luzgas-green">Estudio Gratuito</span>
+				</h1>
+				<p class="text-xl text-gray-600 max-w-3xl mx-auto">
+					Descubre cuánto puedes ahorrar en tu factura energética con nuestro análisis personalizado
+				</p>
+			</div>
+		</section>
+
+		<!-- Main Request Study Component -->
+		<RequestStudy />
+
+		<!-- Benefits Section -->
+		<section class="py-20 bg-gradient-to-b from-white to-gray-50">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="text-center mb-16">
+					<h2 class="text-4xl font-bold text-gray-800 mb-4">
+						¿Qué incluye tu <span class="text-luzgas-blue">estudio gratuito</span>?
+					</h2>
+					<p class="text-xl text-gray-600">
+						Un análisis completo y personalizado de tu situación energética
+					</p>
+				</div>
+
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+					<div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+						<div class="w-16 h-16 bg-gradient-to-br from-luzgas-blue to-luzgas-dark-blue rounded-xl flex items-center justify-center mb-6">
+							<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+							</svg>
+						</div>
+						<h3 class="text-xl font-semibold text-gray-800 mb-4">Análisis de Consumo</h3>
+						<p class="text-gray-600 leading-relaxed">Evaluamos tu consumo actual de electricidad y gas para identificar patrones y oportunidades de mejora.</p>
+					</div>
+
+					<div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+						<div class="w-16 h-16 bg-gradient-to-br from-luzgas-green to-luzgas-light-green rounded-xl flex items-center justify-center mb-6">
+							<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"></path>
+							</svg>
+						</div>
+						<h3 class="text-xl font-semibold text-gray-800 mb-4">Cálculo de Ahorro</h3>
+						<p class="text-gray-600 leading-relaxed">Calculamos el ahorro potencial en euros que podrías obtener con diferentes soluciones energéticas.</p>
+					</div>
+
+					<div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+						<div class="w-16 h-16 bg-gradient-to-br from-luzgas-yellow to-orange-400 rounded-xl flex items-center justify-center mb-6">
+							<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+							</svg>
+						</div>
+						<h3 class="text-xl font-semibold text-gray-800 mb-4">Dimensionado Solar</h3>
+						<p class="text-gray-600 leading-relaxed">Diseñamos el sistema solar fotovoltaico ideal para tu propiedad y necesidades específicas.</p>
+					</div>
+
+					<div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+						<div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center mb-6">
+							<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+							</svg>
+						</div>
+						<h3 class="text-xl font-semibold text-gray-800 mb-4">Informe Detallado</h3>
+						<p class="text-gray-600 leading-relaxed">Recibes un informe completo con recomendaciones personalizadas y plan de implementación.</p>
+					</div>
+
+					<div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+						<div class="w-16 h-16 bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-xl flex items-center justify-center mb-6">
+							<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"></path>
+							</svg>
+						</div>
+						<h3 class="text-xl font-semibold text-gray-800 mb-4">Análisis Financiero</h3>
+						<p class="text-gray-600 leading-relaxed">Evaluamos la rentabilidad de la inversión y opciones de financiamiento disponibles.</p>
+					</div>
+
+					<div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+						<div class="w-16 h-16 bg-gradient-to-br from-pink-500 to-pink-600 rounded-xl flex items-center justify-center mb-6">
+							<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+							</svg>
+						</div>
+						<h3 class="text-xl font-semibold text-gray-800 mb-4">Consulta Personalizada</h3>
+						<p class="text-gray-600 leading-relaxed">Sesión de consulta con nuestros expertos para resolver todas tus dudas y preguntas.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Process Timeline -->
+		<section class="py-20 bg-gradient-to-b from-gray-50 to-white">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="text-center mb-16">
+					<h2 class="text-4xl font-bold text-gray-800 mb-4">
+						Proceso del <span class="text-luzgas-green">Estudio</span>
+					</h2>
+					<p class="text-xl text-gray-600">
+						Así es como trabajamos para ofrecerte el mejor análisis
+					</p>
+				</div>
+
+				<div class="relative">
+					<!-- Timeline line -->
+					<div class="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-luzgas-blue to-luzgas-green"></div>
+
+					<div class="space-y-16">
+						<!-- Step 1 -->
+						<div class="flex items-center">
+							<div class="flex-1 text-right pr-8">
+								<h3 class="text-2xl font-semibold text-gray-800 mb-2">Solicitud Online</h3>
+								<p class="text-gray-600">Completas el formulario con tus datos y necesidades específicas</p>
+								<span class="text-luzgas-blue font-medium">Día 1</span>
+							</div>
+							<div class="w-16 h-16 bg-gradient-to-br from-luzgas-blue to-luzgas-dark-blue rounded-full flex items-center justify-center z-10">
+								<span class="text-2xl font-bold text-white">1</span>
+							</div>
+							<div class="flex-1 pl-8"></div>
+						</div>
+
+						<!-- Step 2 -->
+						<div class="flex items-center">
+							<div class="flex-1 pr-8"></div>
+							<div class="w-16 h-16 bg-gradient-to-br from-luzgas-green to-luzgas-light-green rounded-full flex items-center justify-center z-10">
+								<span class="text-2xl font-bold text-white">2</span>
+							</div>
+							<div class="flex-1 text-left pl-8">
+								<h3 class="text-2xl font-semibold text-gray-800 mb-2">Contacto Inicial</h3>
+								<p class="text-gray-600">Te contactamos en 24h para agendar la visita técnica</p>
+								<span class="text-luzgas-green font-medium">Día 2</span>
+							</div>
+						</div>
+
+						<!-- Step 3 -->
+						<div class="flex items-center">
+							<div class="flex-1 text-right pr-8">
+								<h3 class="text-2xl font-semibold text-gray-800 mb-2">Visita Técnica</h3>
+								<p class="text-gray-600">Nuestro técnico evalúa tu propiedad y toma mediciones</p>
+								<span class="text-luzgas-yellow font-medium">Día 3-5</span>
+							</div>
+							<div class="w-16 h-16 bg-gradient-to-br from-luzgas-yellow to-orange-400 rounded-full flex items-center justify-center z-10">
+								<span class="text-2xl font-bold text-white">3</span>
+							</div>
+							<div class="flex-1 pl-8"></div>
+						</div>
+
+						<!-- Step 4 -->
+						<div class="flex items-center">
+							<div class="flex-1 pr-8"></div>
+							<div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center z-10">
+								<span class="text-2xl font-bold text-white">4</span>
+							</div>
+							<div class="flex-1 text-left pl-8">
+								<h3 class="text-2xl font-semibold text-gray-800 mb-2">Análisis y Cálculos</h3>
+								<p class="text-gray-600">Procesamos los datos y calculamos tu potencial de ahorro</p>
+								<span class="text-purple-600 font-medium">Día 6-8</span>
+							</div>
+						</div>
+
+						<!-- Step 5 -->
+						<div class="flex items-center">
+							<div class="flex-1 text-right pr-8">
+								<h3 class="text-2xl font-semibold text-gray-800 mb-2">Entrega de Resultados</h3>
+								<p class="text-gray-600">Recibes tu informe completo y presentación personalizada</p>
+								<span class="text-indigo-600 font-medium">Día 10</span>
+							</div>
+							<div class="w-16 h-16 bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-full flex items-center justify-center z-10">
+								<span class="text-2xl font-bold text-white">5</span>
+							</div>
+							<div class="flex-1 pl-8"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	<Footer />
+</Layout>
+
+<style>
+	main {
+		min-height: 100vh;
+	}
+</style>

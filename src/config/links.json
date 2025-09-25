@@ -1,0 +1,58 @@
+{
+  "links": [
+    {
+      "name": "Inicio",
+      "paths": [
+        {
+          "name": "Servicios destacados",
+          "url": "/#featured-services"
+        },
+        {
+          "name": "¿Porque elegirnos?",
+          "url": "/#why-choose-us"
+        },
+        {
+          "name": "Testimonios",
+          "url": "/#testimonials"
+        },
+        {
+          "name": "Preguntas frecuentes",
+          "url": "/#frequently-asked-questions"
+        }
+      ]
+    },
+    {
+      "name": "Sobre nosotros",
+      "paths": [
+        {
+          "name": "Breve reseña",
+          "url": "/#brief-review"
+        },
+        {
+          "name": "¿Cómo funcionamos?",
+          "url": "/#how-we-work"
+        },
+        {
+          "name": "Integrantes",
+          "url": "/#members"
+        },
+        {
+          "name": "Objetivos",
+          "url": "/#objectives"
+        }
+      ]
+    },
+    {
+      "name": "Servicios",
+      "url": "/#services"
+    },
+    {
+      "name": "Contactános",
+      "url": "/#contact-us"
+    },
+    {
+      "name": "Factura",
+      "url": "/#invoice"
+    }
+  ]
+}

@@ -1,0 +1,269 @@
+---
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Sobre Nosotros - LUZGAS Asesoría Energética" description="Conoce más sobre LUZGAS, nuestro equipo, historia y objetivos en asesoría energética.">
+	<Header />
+	<main class="pt-16">
+		<!-- Hero Section -->
+		<section class="py-20 bg-gradient-to-br from-luzgas-blue/5 via-white to-luzgas-green/5">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+				<h1 class="text-5xl md:text-6xl font-bold text-gray-800 mb-6">
+					Sobre <span class="text-luzgas-green">Nosotros</span>
+				</h1>
+				<p class="text-xl text-gray-600 max-w-3xl mx-auto">
+					Conoce la historia, el equipo y la visión que nos impulsa a ser líderes en asesoría energética
+				</p>
+			</div>
+		</section>
+
+		<!-- Brief Review Section -->
+		<section id="brief-review" class="py-20 bg-white">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+					<div>
+						<h2 class="text-4xl font-bold text-gray-800 mb-6">
+							Nuestra <span class="text-luzgas-blue">Historia</span>
+						</h2>
+						<p class="text-lg text-gray-600 mb-6 leading-relaxed">
+							LUZGAS nació en 2014 con la visión de transformar el sector energético español. 
+							Fundada por un equipo de ingenieros especializados en eficiencia energética, 
+							comenzamos como una pequeña consultora con grandes ambiciones.
+						</p>
+						<p class="text-lg text-gray-600 mb-6 leading-relaxed">
+							A lo largo de más de una década, hemos crecido hasta convertirnos en una 
+							referencia nacional en asesoría energética, ayudando a miles de familias 
+							y empresas a optimizar su consumo energético.
+						</p>
+						<p class="text-lg text-gray-600 leading-relaxed">
+							Hoy, con más de 500 proyectos completados y un equipo de 25 profesionales, 
+							seguimos comprometidos con la innovación y la sostenibilidad energética.
+						</p>
+					</div>
+					<div class="relative">
+						<div class="bg-gradient-to-br from-luzgas-blue/10 via-luzgas-green/10 to-luzgas-yellow/10 rounded-3xl p-8 h-96 flex items-center justify-center">
+							<div class="text-center">
+								<div class="w-32 h-32 bg-gradient-to-br from-luzgas-blue via-luzgas-dark-blue to-luzgas-blue rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-2xl">
+									<svg class="w-16 h-16 text-white" fill="currentColor" viewBox="0 0 24 24">
+										<path d="M13 10V3L4 14h7v7l9-11h-7z"/>
+									</svg>
+								</div>
+								<div class="text-4xl font-bold mb-2">
+									<span class="text-luzgas-yellow">LUZ</span><span class="text-luzgas-blue">GAS</span>
+								</div>
+								<p class="text-luzgas-green font-semibold">Desde 2014</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- How We Work Section -->
+		<section id="how-we-work" class="py-20 bg-gradient-to-b from-gray-50 to-white">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="text-center mb-16">
+					<h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+						¿Cómo <span class="text-luzgas-green">funcionamos</span>?
+					</h2>
+					<p class="text-xl text-gray-600 max-w-3xl mx-auto">
+						Nuestro proceso probado para transformar tu eficiencia energética
+					</p>
+				</div>
+
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+					<div class="text-center group">
+						<div class="w-20 h-20 bg-gradient-to-br from-luzgas-blue to-luzgas-dark-blue rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+							<span class="text-2xl font-bold text-white">1</span>
+						</div>
+						<h3 class="text-xl font-semibold text-gray-800 mb-3">Consulta Inicial</h3>
+						<p class="text-gray-600">Analizamos tus necesidades y objetivos energéticos específicos</p>
+					</div>
+
+					<div class="text-center group">
+						<div class="w-20 h-20 bg-gradient-to-br from-luzgas-green to-luzgas-light-green rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+							<span class="text-2xl font-bold text-white">2</span>
+						</div>
+						<h3 class="text-xl font-semibold text-gray-800 mb-3">Auditoría Técnica</h3>
+						<p class="text-gray-600">Realizamos un estudio detallado de tu consumo actual</p>
+					</div>
+
+					<div class="text-center group">
+						<div class="w-20 h-20 bg-gradient-to-br from-luzgas-yellow to-orange-400 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+							<span class="text-2xl font-bold text-white">3</span>
+						</div>
+						<h3 class="text-xl font-semibold text-gray-800 mb-3">Propuesta Personalizada</h3>
+						<p class="text-gray-600">Desarrollamos un plan adaptado a tu presupuesto</p>
+					</div>
+
+					<div class="text-center group">
+						<div class="w-20 h-20 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+							<span class="text-2xl font-bold text-white">4</span>
+						</div>
+						<h3 class="text-xl font-semibold text-gray-800 mb-3">Implementación</h3>
+						<p class="text-gray-600">Ejecutamos la solución con seguimiento continuo</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Team Members Section -->
+		<section id="members" class="py-20 bg-white">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="text-center mb-16">
+					<h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+						Nuestro <span class="text-luzgas-blue">Equipo</span>
+					</h2>
+					<p class="text-xl text-gray-600 max-w-3xl mx-auto">
+						Profesionales especializados comprometidos con la excelencia
+					</p>
+				</div>
+
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+					<div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 text-center">
+						<div class="w-24 h-24 bg-gradient-to-br from-luzgas-blue to-luzgas-dark-blue rounded-full flex items-center justify-center mx-auto mb-6">
+							<span class="text-2xl font-bold text-white">CF</span>
+						</div>
+						<h3 class="text-xl font-semibold text-gray-800 mb-2">Carlos Fernández</h3>
+						<p class="text-luzgas-blue font-medium mb-3">Director General</p>
+						<p class="text-gray-600 text-sm">Ingeniero Industrial con 15 años de experiencia en eficiencia energética</p>
+					</div>
+
+					<div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 text-center">
+						<div class="w-24 h-24 bg-gradient-to-br from-luzgas-green to-luzgas-light-green rounded-full flex items-center justify-center mx-auto mb-6">
+							<span class="text-2xl font-bold text-white">MR</span>
+						</div>
+						<h3 class="text-xl font-semibold text-gray-800 mb-2">María Rodríguez</h3>
+						<p class="text-luzgas-green font-medium mb-3">Directora Técnica</p>
+						<p class="text-gray-600 text-sm">Especialista en energías renovables y sistemas fotovoltaicos</p>
+					</div>
+
+					<div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 text-center">
+						<div class="w-24 h-24 bg-gradient-to-br from-luzgas-yellow to-orange-400 rounded-full flex items-center justify-center mx-auto mb-6">
+							<span class="text-2xl font-bold text-white">JL</span>
+						</div>
+						<h3 class="text-xl font-semibold text-gray-800 mb-2">Javier López</h3>
+						<p class="text-luzgas-yellow font-medium mb-3">Jefe de Proyectos</p>
+						<p class="text-gray-600 text-sm">Experto en gestión de proyectos energéticos y auditorías</p>
+					</div>
+
+					<div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 text-center">
+						<div class="w-24 h-24 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">
+							<span class="text-2xl font-bold text-white">AG</span>
+						</div>
+						<h3 class="text-xl font-semibold text-gray-800 mb-2">Ana García</h3>
+						<p class="text-purple-600 font-medium mb-3">Consultora Senior</p>
+						<p class="text-gray-600 text-sm">Especialista en optimización energética para empresas</p>
+					</div>
+
+					<div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 text-center">
+						<div class="w-24 h-24 bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-full flex items-center justify-center mx-auto mb-6">
+							<span class="text-2xl font-bold text-white">PM</span>
+						</div>
+						<h3 class="text-xl font-semibold text-gray-800 mb-2">Pedro Martín</h3>
+						<p class="text-indigo-600 font-medium mb-3">Ingeniero de Instalaciones</p>
+						<p class="text-gray-600 text-sm">Experto en instalación y mantenimiento de sistemas solares</p>
+					</div>
+
+					<div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 text-center">
+						<div class="w-24 h-24 bg-gradient-to-br from-pink-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+							<span class="text-2xl font-bold text-white">LS</span>
+						</div>
+						<h3 class="text-xl font-semibold text-gray-800 mb-2">Laura Sánchez</h3>
+						<p class="text-pink-600 font-medium mb-3">Responsable de Calidad</p>
+						<p class="text-gray-600 text-sm">Garantiza los más altos estándares en todos nuestros proyectos</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Objectives Section -->
+		<section id="objectives" class="py-20 bg-gradient-to-b from-gray-50 to-white">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="text-center mb-16">
+					<h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+						Nuestros <span class="text-luzgas-green">Objetivos</span>
+					</h2>
+					<p class="text-xl text-gray-600 max-w-3xl mx-auto">
+						Metas claras que guían nuestro trabajo hacia un futuro más sostenible
+					</p>
+				</div>
+
+				<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+					<div class="bg-white rounded-2xl p-8 shadow-lg">
+						<div class="w-16 h-16 bg-gradient-to-br from-luzgas-green to-luzgas-light-green rounded-xl flex items-center justify-center mb-6">
+							<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+							</svg>
+						</div>
+						<h3 class="text-2xl font-semibold text-gray-800 mb-4">Sostenibilidad Ambiental</h3>
+						<p class="text-gray-600 leading-relaxed">Reducir la huella de carbono de nuestros clientes mediante soluciones energéticas limpias y eficientes, contribuyendo activamente a la lucha contra el cambio climático.</p>
+					</div>
+
+					<div class="bg-white rounded-2xl p-8 shadow-lg">
+						<div class="w-16 h-16 bg-gradient-to-br from-luzgas-blue to-luzgas-dark-blue rounded-xl flex items-center justify-center mb-6">
+							<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"></path>
+							</svg>
+						</div>
+						<h3 class="text-2xl font-semibold text-gray-800 mb-4">Ahorro Económico</h3>
+						<p class="text-gray-600 leading-relaxed">Maximizar el ahorro económico de nuestros clientes a través de soluciones energéticas inteligentes que se paguen por sí mismas en el menor tiempo posible.</p>
+					</div>
+
+					<div class="bg-white rounded-2xl p-8 shadow-lg">
+						<div class="w-16 h-16 bg-gradient-to-br from-luzgas-yellow to-orange-400 rounded-xl flex items-center justify-center mb-6">
+							<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+							</svg>
+						</div>
+						<h3 class="text-2xl font-semibold text-gray-800 mb-4">Excelencia en Servicio</h3>
+						<p class="text-gray-600 leading-relaxed">Mantener los más altos estándares de calidad en todos nuestros servicios, superando las expectativas de nuestros clientes en cada proyecto.</p>
+					</div>
+
+					<div class="bg-white rounded-2xl p-8 shadow-lg">
+						<div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center mb-6">
+							<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+							</svg>
+						</div>
+						<h3 class="text-2xl font-semibold text-gray-800 mb-4">Innovación Tecnológica</h3>
+						<p class="text-gray-600 leading-relaxed">Estar a la vanguardia de las tecnologías energéticas, incorporando constantemente las últimas innovaciones para ofrecer las mejores soluciones.</p>
+					</div>
+				</div>
+
+				<!-- Vision 2030 -->
+				<div class="mt-16 bg-gradient-to-r from-luzgas-green to-luzgas-blue rounded-3xl p-8 md:p-12 text-white text-center">
+					<h3 class="text-3xl font-bold mb-6">Visión 2030</h3>
+					<p class="text-xl mb-8 max-w-4xl mx-auto leading-relaxed">
+						Ser la empresa líder en asesoría energética en España, habiendo ayudado a más de 10,000 
+						familias y empresas a alcanzar la independencia energética y contribuido significativamente 
+						a los objetivos de sostenibilidad del país.
+					</p>
+					<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+						<div>
+							<div class="text-4xl font-bold mb-2">10K+</div>
+							<p class="text-lg opacity-90">Clientes satisfechos</p>
+						</div>
+						<div>
+							<div class="text-4xl font-bold mb-2">50%</div>
+							<p class="text-lg opacity-90">Reducción CO₂</p>
+						</div>
+						<div>
+							<div class="text-4xl font-bold mb-2">100%</div>
+							<p class="text-lg opacity-90">Energías renovables</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	<Footer />
+</Layout>
+
+<style>
+	main {
+		min-height: 100vh;
+	}
+</style>

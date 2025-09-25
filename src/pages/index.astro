@@ -1,0 +1,242 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="LUZGAS - Asesoría Energética | Eficiencia y Sostenibilidad" description="Especialistas en asesoría energética. Optimizamos tu consumo energético con soluciones sostenibles e inteligentes. Solicita tu estudio gratuito.">
+	<Header />
+	<main>
+		<Hero />
+		
+		<!-- Featured Services Section -->
+		<section id="featured-services" class="py-20 bg-gradient-to-b from-white to-gray-50">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="text-center mb-16">
+					<h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+						Servicios <span class="text-luzgas-blue">Destacados</span>
+					</h2>
+					<p class="text-xl text-gray-600 max-w-3xl mx-auto">
+						Nuestras soluciones más populares para optimizar tu consumo energético
+					</p>
+				</div>
+
+				<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+					<div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group">
+						<div class="w-16 h-16 bg-gradient-to-br from-luzgas-green to-luzgas-light-green rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+							<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+							</svg>
+						</div>
+						<h3 class="text-2xl font-semibold text-gray-800 mb-4">Energía Solar</h3>
+						<p class="text-gray-600 mb-6">Instalación de paneles solares para reducir hasta un 90% tu factura eléctrica</p>
+						<a href="/our-services" class="text-luzgas-green font-semibold hover:text-luzgas-blue transition-colors duration-200">Ver más →</a>
+					</div>
+
+					<div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group">
+						<div class="w-16 h-16 bg-gradient-to-br from-luzgas-yellow to-orange-400 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+							<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+							</svg>
+						</div>
+						<h3 class="text-2xl font-semibold text-gray-800 mb-4">Eficiencia Energética</h3>
+						<p class="text-gray-600 mb-6">Optimización de instalaciones para maximizar el rendimiento energético</p>
+						<a href="/our-services" class="text-luzgas-yellow font-semibold hover:text-luzgas-blue transition-colors duration-200">Ver más →</a>
+					</div>
+
+					<div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group">
+						<div class="w-16 h-16 bg-gradient-to-br from-luzgas-blue to-luzgas-dark-blue rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+							<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+							</svg>
+						</div>
+						<h3 class="text-2xl font-semibold text-gray-800 mb-4">Auditoría Energética</h3>
+						<p class="text-gray-600 mb-6">Análisis completo de tu consumo para identificar oportunidades de ahorro</p>
+						<a href="/our-services" class="text-luzgas-blue font-semibold hover:text-luzgas-green transition-colors duration-200">Ver más →</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Why Choose Us Section -->
+		<section id="why-choose-us" class="py-20 bg-gradient-to-b from-gray-50 to-white">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="text-center mb-16">
+					<h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+						¿Por qué <span class="text-luzgas-green">elegirnos</span>?
+					</h2>
+					<p class="text-xl text-gray-600 max-w-3xl mx-auto">
+						Somos líderes en asesoría energética con resultados comprobados
+					</p>
+				</div>
+
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+					<div class="text-center">
+						<div class="w-20 h-20 bg-gradient-to-br from-luzgas-blue to-luzgas-dark-blue rounded-full flex items-center justify-center mx-auto mb-6">
+							<span class="text-3xl font-bold text-white">500+</span>
+						</div>
+						<h3 class="text-xl font-semibold text-gray-800 mb-2">Proyectos realizados</h3>
+						<p class="text-gray-600">Experiencia comprobada en el sector</p>
+					</div>
+
+					<div class="text-center">
+						<div class="w-20 h-20 bg-gradient-to-br from-luzgas-green to-luzgas-light-green rounded-full flex items-center justify-center mx-auto mb-6">
+							<span class="text-3xl font-bold text-white">95%</span>
+						</div>
+						<h3 class="text-xl font-semibold text-gray-800 mb-2">Clientes satisfechos</h3>
+						<p class="text-gray-600">Excelencia en servicio al cliente</p>
+					</div>
+
+					<div class="text-center">
+						<div class="w-20 h-20 bg-gradient-to-br from-luzgas-yellow to-orange-400 rounded-full flex items-center justify-center mx-auto mb-6">
+							<span class="text-3xl font-bold text-white">10+</span>
+						</div>
+						<h3 class="text-xl font-semibold text-gray-800 mb-2">Años de experiencia</h3>
+						<p class="text-gray-600">Conocimiento profundo del mercado</p>
+					</div>
+
+					<div class="text-center">
+						<div class="w-20 h-20 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">
+							<span class="text-3xl font-bold text-white">30%</span>
+						</div>
+						<h3 class="text-xl font-semibold text-gray-800 mb-2">Ahorro promedio</h3>
+						<p class="text-gray-600">Reducción significativa en costos</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Testimonials Section -->
+		<section id="testimonials" class="py-20 bg-gradient-to-b from-white to-gray-50">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="text-center mb-16">
+					<h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+						<span class="text-luzgas-blue">Testimonios</span>
+					</h2>
+					<p class="text-xl text-gray-600 max-w-3xl mx-auto">
+						Lo que dicen nuestros clientes sobre nuestros servicios
+					</p>
+				</div>
+
+				<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+					<div class="bg-white rounded-2xl p-8 shadow-lg">
+						<div class="flex items-center mb-6">
+							<div class="w-12 h-12 bg-gradient-to-br from-luzgas-green to-luzgas-light-green rounded-full flex items-center justify-center">
+								<span class="text-white font-bold">MR</span>
+							</div>
+							<div class="ml-4">
+								<h4 class="font-semibold text-gray-800">María Rodríguez</h4>
+								<p class="text-gray-600 text-sm">Propietaria de vivienda</p>
+							</div>
+						</div>
+						<p class="text-gray-600 italic">"Gracias a LUZGAS reduje mi factura eléctrica en un 40%. El servicio fue excelente y muy profesional."</p>
+					</div>
+
+					<div class="bg-white rounded-2xl p-8 shadow-lg">
+						<div class="flex items-center mb-6">
+							<div class="w-12 h-12 bg-gradient-to-br from-luzgas-blue to-luzgas-dark-blue rounded-full flex items-center justify-center">
+								<span class="text-white font-bold">JL</span>
+							</div>
+							<div class="ml-4">
+								<h4 class="font-semibold text-gray-800">Juan López</h4>
+								<p class="text-gray-600 text-sm">Director de empresa</p>
+							</div>
+						</div>
+						<p class="text-gray-600 italic">"La auditoría energética nos ayudó a identificar ahorros significativos. Muy recomendable."</p>
+					</div>
+
+					<div class="bg-white rounded-2xl p-8 shadow-lg">
+						<div class="flex items-center mb-6">
+							<div class="w-12 h-12 bg-gradient-to-br from-luzgas-yellow to-orange-400 rounded-full flex items-center justify-center">
+								<span class="text-white font-bold">AG</span>
+							</div>
+							<div class="ml-4">
+								<h4 class="font-semibold text-gray-800">Ana García</h4>
+								<p class="text-gray-600 text-sm">Administradora</p>
+							</div>
+						</div>
+						<p class="text-gray-600 italic">"Instalaron paneles solares en mi casa. El proceso fue rápido y ahora ahorro mucho dinero."</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- FAQ Section -->
+		<section id="frequently-asked-questions" class="py-20 bg-gradient-to-b from-gray-50 to-white">
+			<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="text-center mb-16">
+					<h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+						Preguntas <span class="text-luzgas-green">Frecuentes</span>
+					</h2>
+					<p class="text-xl text-gray-600">
+						Resolvemos las dudas más comunes sobre nuestros servicios
+					</p>
+				</div>
+
+				<div class="space-y-6">
+					<div class="bg-white rounded-xl shadow-lg overflow-hidden">
+						<button class="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors duration-200 faq-toggle">
+							<h3 class="text-lg font-semibold text-gray-800">¿Cuánto puedo ahorrar con energía solar?</h3>
+							<svg class="w-5 h-5 text-luzgas-blue transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+							</svg>
+						</button>
+						<div class="px-8 pb-6 hidden faq-content">
+							<p class="text-gray-600">El ahorro puede variar entre 50% y 90% dependiendo del tamaño de la instalación, consumo actual y condiciones de la vivienda. Realizamos un estudio personalizado para calcular tu ahorro específico.</p>
+						</div>
+					</div>
+
+					<div class="bg-white rounded-xl shadow-lg overflow-hidden">
+						<button class="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors duration-200 faq-toggle">
+							<h3 class="text-lg font-semibold text-gray-800">¿Cuánto tiempo toma una auditoría energética?</h3>
+							<svg class="w-5 h-5 text-luzgas-blue transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+							</svg>
+						</button>
+						<div class="px-8 pb-6 hidden faq-content">
+							<p class="text-gray-600">Una auditoría energética completa toma entre 2-4 horas dependiendo del tamaño de la propiedad. El informe detallado se entrega en 3-5 días hábiles.</p>
+						</div>
+					</div>
+
+					<div class="bg-white rounded-xl shadow-lg overflow-hidden">
+						<button class="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors duration-200 faq-toggle">
+							<h3 class="text-lg font-semibold text-gray-800">¿Ofrecen financiamiento para las instalaciones?</h3>
+							<svg class="w-5 h-5 text-luzgas-blue transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+							</svg>
+						</button>
+						<div class="px-8 pb-6 hidden faq-content">
+							<p class="text-gray-600">Sí, trabajamos con diferentes entidades financieras para ofrecer planes de financiamiento flexibles. También ayudamos con la gestión de subvenciones y ayudas públicas disponibles.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	<Footer />
+</Layout>
+
+<style>
+	main {
+		min-height: 100vh;
+	}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const faqToggles = document.querySelectorAll('.faq-toggle');
+    
+    faqToggles.forEach(toggle => {
+        toggle.addEventListener('click', function(event) {
+            const target = event.currentTarget as HTMLElement;
+            const content = target?.nextElementSibling as HTMLElement;
+            const icon = target?.querySelector('svg');
+            
+            content?.classList.toggle('hidden');
+            icon?.classList.toggle('rotate-180');
+        });
+    });
+});
+</script>
+</script>

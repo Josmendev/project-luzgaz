@@ -1,0 +1,176 @@
+@import "tailwindcss";
+
+/* Configuración de Tailwind v4 */
+@theme {
+  /* Colores personalizados de Tailwind */
+  --color-luzgas-green: #22c55e;
+  --color-luzgas-blue: #0ea5e9;
+  --color-luzgas-yellow: #facc15;
+  --color-luzgas-dark-blue: #1e40af;
+  --color-luzgas-light-green: #86efac;
+  --color-black: #000;
+  --color-white: #fff;
+
+    /* Primary colors basado en luzgas-green (#22c55e = 500) */
+  --color-primary-50: #f0fdf4;
+  --color-primary-100: #dcfce7;
+  --color-primary-200: #bbf7d0;
+  --color-primary-300: #86efac;
+  --color-primary-400: #4ade80;
+  --color-primary-500: #22c55e;
+  --color-primary-600: #16a34a;
+  --color-primary-700: #15803d;
+  --color-primary-800: #166534;
+  --color-primary-900: #14532d;
+  --color-primary-950: #052e16;
+
+  /* Secondary colors basado en luzgas-blue (#0ea5e9 = 500) */
+  --color-secondary-50: #f0f9ff;
+  --color-secondary-100: #e0f2fe;
+  --color-secondary-200: #bae6fd;
+  --color-secondary-300: #7dd3fc;
+  --color-secondary-400: #38bdf8;
+  --color-secondary-500: #0ea5e9;
+  --color-secondary-600: #0284c7;
+  --color-secondary-700: #0369a1;
+  --color-secondary-800: #075985;
+  --color-secondary-900: #0c4a6e;
+  --color-secondary-950: #082f49;
+
+    /* Tertiary colors basado en luzgas-yellow (#facc15 = 500) */
+  --color-tertiary-50: #fefce8;
+  --color-tertiary-100: #fef9c3;
+  --color-tertiary-200: #fef08a;
+  --color-tertiary-300: #fde047;
+  --color-tertiary-400: #facc15;
+  --color-tertiary-500: #eab308;
+  --color-tertiary-600: #ca8a04;
+  --color-tertiary-700: #a16207;
+  --color-tertiary-800: #854d0e;
+  --color-tertiary-900: #713f12;
+  --color-tertiary-950: #422006;
+
+  /* Fuentes */
+  --font-family-sans: Poppins, system-ui, sans-serif;
+
+  /* Animaciones */
+  --animate-fade-in: fadeIn 0.5s ease-in-out;
+  --animate-slide-up: slideUp 0.6s ease-out;
+  --animate-float: float 6s ease-in-out infinite;
+}
+
+/* Fuente global */
+html {
+  font-family: "Poppins", sans-serif;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.6;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Custom scrollbar */
+body::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--color-white);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--color-luzgas-blue);
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
