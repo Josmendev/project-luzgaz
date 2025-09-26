@@ -32,18 +32,3 @@ import Modal from "./Modal.astro";
   id="modalIcon"
   text="Envía la información que necesitas a nuestros correos corporativos y nos pondremos en comunicación con usted en breve."
 />
-
-<script>
-  // Asegurar que el modal funcione correctamente
-  document.addEventListener("astro:page-load", () => {
-    const modalTrigger = document.querySelector('[onclick*="modalIcon"]');
-    const modal = document.getElementById("modalIcon") as HTMLDialogElement;
-
-    if (modalTrigger && modal) {
-      modalTrigger.addEventListener("click", (e) => {
-        e.preventDefault();
-        modal.showModal();
-      });
-    }
-  });
-</script>
