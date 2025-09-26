@@ -14,17 +14,25 @@ import Layout from "../layouts/Layout.astro";
     <!-- History Section -->
     <section
       id="brief-review"
-      class="min-h-screen flex items-center justify-center bg-gradient-to-br from-luzgas-blue to-blue-600 relative overflow-hidden"
+      class="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-white to-green-50 relative overflow-hidden"
     >
-      <!-- Background with gradient overlay -->
+      <!-- Background Pattern -->
       <div class="absolute inset-0 opacity-10">
-        <div class="absolute top-20 left-10 w-32 h-32 bg-white rounded-full">
-        </div>
         <div
-          class="absolute bottom-20 right-20 w-24 h-24 bg-white rounded-full"
+          class="absolute top-10 left-10 w-20 h-20 bg-luzgas-blue rounded-full"
         >
         </div>
-        <div class="absolute top-40 right-32 w-16 h-16 bg-white rounded-full">
+        <div
+          class="absolute top-32 right-20 w-16 h-16 bg-luzgas-green rounded-full"
+        >
+        </div>
+        <div
+          class="absolute bottom-20 left-32 w-12 h-12 bg-luzgas-yellow rounded-full"
+        >
+        </div>
+        <div
+          class="absolute bottom-40 right-10 w-24 h-24 bg-luzgas-blue rounded-full"
+        >
         </div>
       </div>
 
@@ -36,16 +44,17 @@ import Layout from "../layouts/Layout.astro";
               src="/logo-1.png"
               alt="Luzgas Logo"
               class="h-auto w-48 md:w-[480px] mx-auto object-cover"
-              style="filter: drop-shadow(0 4px 8px rgba(0,0,0,0.7)) drop-shadow(0 2px 4px rgba(0,0,0,0.6));"
             />
           </div>
 
           <!-- Content -->
           <div>
-            <h2 class="text-3xl md:text-5xl font-bold text-white mb-2 md:mb-8!">
-              Nuestra <span class="text-yellow-300">historia</span>
+            <h2
+              class="text-3xl md:text-5xl font-bold text-luzgas-blue mb-2 md:mb-8!"
+            >
+              Nuestra <span class="text-yellow-400">historia</span>
             </h2>
-            <p class="text-xl text-blue-100 mb-6! leading-relaxed">
+            <p class="text-xl text-gray-600 mb-6! leading-relaxed">
               LUZGAS nació en 2014 con la visión de transformar el sector
               energético español. Fundada por un equipo de ingenieros
               especializados en eficiencia energética, comenzamos como una
@@ -53,12 +62,12 @@ import Layout from "../layouts/Layout.astro";
             </p>
             <div class="flex gap-4 mb-6!">
               <div class="text-center">
-                <div class="text-4xl font-bold text-yellow-300 mb-2">10+</div>
-                <p class="text-blue-200">Años de experiencia</p>
+                <div class="text-4xl font-bold text-yellow-400 mb-2">10+</div>
+                <p class="text-gray-500">Años de experiencia</p>
               </div>
               <div class="text-center">
-                <div class="text-4xl font-bold text-green-300 mb-2">500+</div>
-                <p class="text-blue-200">Proyectos completados</p>
+                <div class="text-4xl font-bold text-green-500 mb-2">500+</div>
+                <p class="text-gray-500">Proyectos completados</p>
               </div>
             </div>
             <div class="flex flex-col sm:flex-row gap-6">
@@ -82,25 +91,15 @@ import Layout from "../layouts/Layout.astro";
   <!-- How We Work Section -->
   <section
     id="how-we-work"
-    class="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-white to-green-50 relative overflow-hidden"
+    class="min-h-screen flex items-center justify-center bg-gradient-to-br from-luzgas-blue to-blue-600 relative overflow-hidden"
   >
-    <!-- Background Pattern -->
+    <!-- Background Elements -->
     <div class="absolute inset-0 opacity-10">
-      <div
-        class="absolute top-10 left-10 w-20 h-20 bg-luzgas-blue rounded-full"
-      >
+      <div class="absolute top-20 left-10 w-32 h-32 bg-white rounded-full">
       </div>
-      <div
-        class="absolute top-32 right-20 w-16 h-16 bg-luzgas-green rounded-full"
-      >
+      <div class="absolute bottom-20 right-20 w-24 h-24 bg-white rounded-full">
       </div>
-      <div
-        class="absolute bottom-20 left-32 w-12 h-12 bg-luzgas-yellow rounded-full"
-      >
-      </div>
-      <div
-        class="absolute bottom-40 right-10 w-24 h-24 bg-luzgas-blue rounded-full"
-      >
+      <div class="absolute top-40 right-32 w-16 h-16 bg-white rounded-full">
       </div>
     </div>
 
@@ -108,10 +107,10 @@ import Layout from "../layouts/Layout.astro";
       class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex flex-col items-center relative z-10"
     >
       <div class="text-center mb-12">
-        <h2 class="text-3xl md:text-5xl font-bold text-gray-800 mb-2 md:mb-3!">
-          Cómo <span class="text-luzgas-blue">funcionamos</span>
+        <h2 class="text-3xl md:text-5xl font-bold text-white mb-2 md:mb-3!">
+          Cómo <span class="text-yellow-400">funcionamos</span>
         </h2>
-        <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+        <p class="text-xl text-white max-w-3xl mx-auto leading-relaxed">
           Nuestro proceso probado para transformar tu eficiencia energética
         </p>
       </div>
@@ -223,15 +222,25 @@ import Layout from "../layouts/Layout.astro";
   <!-- Team Single Member Section -->
   <section
     id="members"
-    class="min-h-screen flex items-center justify-center bg-gradient-to-br from-luzgas-blue to-blue-600 relative overflow-hidden"
+    class="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-white to-green-50 relative"
   >
-    <!-- Background Elements -->
+    <!-- Background Pattern -->
     <div class="absolute inset-0 opacity-10">
-      <div class="absolute top-20 left-10 w-32 h-32 bg-white rounded-full">
+      <div
+        class="absolute top-10 left-10 w-20 h-20 bg-luzgas-blue rounded-full"
+      >
       </div>
-      <div class="absolute bottom-20 right-20 w-24 h-24 bg-white rounded-full">
+      <div
+        class="absolute top-32 right-20 w-16 h-16 bg-luzgas-green rounded-full"
+      >
       </div>
-      <div class="absolute top-40 right-32 w-16 h-16 bg-white rounded-full">
+      <div
+        class="absolute bottom-20 left-32 w-12 h-12 bg-luzgas-yellow rounded-full"
+      >
+      </div>
+      <div
+        class="absolute bottom-40 right-10 w-24 h-24 bg-luzgas-blue rounded-full"
+      >
       </div>
     </div>
 
@@ -239,10 +248,12 @@ import Layout from "../layouts/Layout.astro";
       class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex flex-col items-center relative z-10"
     >
       <div class="text-center mb-12">
-        <h2 class="text-3xl md:text-5xl font-bold text-white mb-2 md:mb-3!">
-          Nuestro <span class="text-luzgas-yellow">equipo</span>
+        <h2
+          class="text-3xl md:text-5xl font-bold text-luzgas-blue mb-2 md:mb-3!"
+        >
+          Nuestro <span class="text-yellow-400">equipo</span>
         </h2>
-        <p class="text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
           Profesional especializada comprometida con la excelencia energética
         </p>
       </div>
@@ -404,35 +415,25 @@ import Layout from "../layouts/Layout.astro";
   <!-- Objectives Section -->
   <section
     id="objectives"
-    class="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-white to-green-50 relative"
+    class="min-h-screen flex items-center justify-center bg-gradient-to-br from-luzgas-blue to-blue-600 relative overflow-hidden"
   >
-    <!-- Background Pattern -->
+    <!-- Background Elements -->
     <div class="absolute inset-0 opacity-10">
-      <div
-        class="absolute top-10 left-10 w-20 h-20 bg-luzgas-blue rounded-full"
-      >
+      <div class="absolute top-20 left-10 w-32 h-32 bg-white rounded-full">
       </div>
-      <div
-        class="absolute top-32 right-20 w-16 h-16 bg-luzgas-green rounded-full"
-      >
+      <div class="absolute bottom-20 right-20 w-24 h-24 bg-white rounded-full">
       </div>
-      <div
-        class="absolute bottom-20 left-32 w-12 h-12 bg-luzgas-yellow rounded-full"
-      >
-      </div>
-      <div
-        class="absolute bottom-40 right-10 w-24 h-24 bg-luzgas-blue rounded-full"
-      >
+      <div class="absolute top-40 right-32 w-16 h-16 bg-white rounded-full">
       </div>
     </div>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
       <div class="text-center mb-12 flex flex-col items-center">
-        <h2 class="text-3xl md:text-5xl font-bold text-gray-800 mb-2 md:mb-3!">
+        <h2 class="text-3xl md:text-5xl font-bold text-white mb-2 md:mb-3!">
           Nuestros
-          <span class="text-luzgas-blue">objetivos</span>
+          <span class="text-yellow-400">objetivos</span>
         </h2>
-        <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+        <p class="text-xl text-white max-w-3xl mx-auto leading-relaxed">
           Metas claras que guían nuestro trabajo hacia un futuro más sostenible
         </p>
       </div>
