@@ -75,15 +75,16 @@ import Button from "./ui/Button.astro";
 
         <!-- Sobre nosotros con dropdown -->
         <div class="group relative">
-          <button
-            data-nav="about"
-            class="nav-link hover:text-luzgas-green flex items-center text-gray-700 transition-colors duration-200 group"
+          <a
+            href="/about-us"
+            data-nav="about-us"
+            class="nav-link hover:text-luzgas-blue flex items-center text-gray-700 transition-colors duration-200 cursor-pointer group"
           >
             Sobre nosotros
             <ChevronDown
               class="ml-1 h-4 w-4 transition-transform duration-200 group-hover:rotate-180"
             />
-          </button>
+          </a>
 
           <div
             class="invisible absolute left-0 top-full mt-2 w-64 translate-y-2 transform rounded-xl border border-gray-100 bg-white/95 opacity-0 shadow-xl backdrop-blur-md transition-all duration-300 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100"
@@ -91,7 +92,7 @@ import Button from "./ui/Button.astro";
             <div class="p-2">
               <a
                 href="/about-us#brief-review"
-                data-parent="about"
+                data-parent="about-us"
                 class="hover:text-luzgas-green hover:bg-luzgas-green/5 block rounded-lg px-4 py-3 text-gray-700 transition-all duration-200"
               >
                 <div class="font-medium">Breve reseña</div>
@@ -99,7 +100,7 @@ import Button from "./ui/Button.astro";
               </a>
               <a
                 href="/about-us#how-we-work"
-                data-parent="about"
+                data-parent="about-us"
                 class="hover:text-luzgas-green hover:bg-luzgas-green/5 block rounded-lg px-4 py-3 text-gray-700 transition-all duration-200"
               >
                 <div class="font-medium">¿Cómo funcionamos?</div>
@@ -107,7 +108,7 @@ import Button from "./ui/Button.astro";
               </a>
               <a
                 href="/about-us#members"
-                data-parent="about"
+                data-parent="about-us"
                 class="hover:text-luzgas-green hover:bg-luzgas-green/5 block rounded-lg px-4 py-3 text-gray-700 transition-all duration-200"
               >
                 <div class="font-medium">Integrantes</div>
@@ -115,7 +116,7 @@ import Button from "./ui/Button.astro";
               </a>
               <a
                 href="/about-us#objectives"
-                data-parent="about"
+                data-parent="about-us"
                 class="hover:text-luzgas-green hover:bg-luzgas-green/5 block rounded-lg px-4 py-3 text-gray-700 transition-all duration-200"
               >
                 <div class="font-medium">Objetivos</div>
@@ -334,7 +335,7 @@ import Button from "./ui/Button.astro";
     if (path === "/" || path.includes("/#")) {
       document.querySelector('[data-nav="inicio"]')?.classList.add("active");
     } else if (path.includes("/about-us")) {
-      document.querySelector('[data-nav="about"]')?.classList.add("active");
+      document.querySelector('[data-nav="about-us"]')?.classList.add("active");
     } else if (path.includes("/our-services")) {
       document.querySelector('[data-nav="services"]')?.classList.add("active");
     } else if (path.includes("/contact-us")) {

@@ -183,6 +183,6 @@ body::-webkit-scrollbar-thumb {
   color: var(--color-luzgas-blue);
 }
 
-.nav-link[data-nav="about"].active {
+.nav-link[data-nav="about-us"].active {
   color: var(--color-luzgas-green);
 }

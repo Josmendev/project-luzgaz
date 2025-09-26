@@ -351,7 +351,7 @@ import Layout from "../layouts/Layout.astro";
       </div>
 
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
-        <div class="text-center mb-13 flex flex-col items-center">
+        <div class="text-center mb-12 flex flex-col items-center">
           <h2
             class="text-3xl md:text-5xl font-bold text-gray-800 mb-2 md:mb-3!"
           >
@@ -684,214 +684,214 @@ import Layout from "../layouts/Layout.astro";
   </main>
 
   <Footer />
+</Layout>
 
-  <style>
-    main {
-      min-height: 100vh;
-    }
+<style>
+  main {
+    min-height: 100vh;
+  }
 
-    /* Custom Swiper Styles for Services */
-    .services-swiper {
-      width: 100%;
-      height: auto;
-      border-radius: 1.5rem;
-      overflow: hidden;
-    }
+  /* Custom Swiper Styles for Services */
+  .services-swiper {
+    width: 100%;
+    height: auto;
+    border-radius: 1.5rem;
+    overflow: hidden;
+  }
 
-    .services-swiper .swiper-button-next,
-    .services-swiper .swiper-button-prev {
-      color: var(--luzgas-blue, #2563eb);
-      padding: 10px;
-      background: rgba(255, 255, 255, 0.8);
-      backdrop-filter: blur(10px);
-      border-radius: 50%;
-      width: 55px;
-      height: 55px;
-      margin-top: -25px;
-      box-shadow:
-        0 15px 35px rgba(0, 0, 0, 0.15),
-        0 5px 15px rgba(0, 0, 0, 0.1);
-      transition: all 0.3s ease;
-    }
+  .services-swiper .swiper-button-next,
+  .services-swiper .swiper-button-prev {
+    color: var(--luzgas-blue, #2563eb);
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    margin-top: -25px;
+    box-shadow:
+      0 15px 35px rgba(0, 0, 0, 0.15),
+      0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
 
-    .services-swiper .swiper-button-next {
-      margin-right: 24px;
-    }
+  .services-swiper .swiper-button-next {
+    margin-right: 24px;
+  }
 
-    .services-swiper .swiper-button-prev {
-      margin-left: 24px;
-    }
+  .services-swiper .swiper-button-prev {
+    margin-left: 24px;
+  }
 
-    .services-swiper .swiper-button-next:hover,
-    .services-swiper .swiper-button-prev:hover {
-      background: rgba(255, 255, 255, 1);
-      transform: scale(1.05);
-    }
+  .services-swiper .swiper-button-next:hover,
+  .services-swiper .swiper-button-prev:hover {
+    background: rgba(255, 255, 255, 1);
+    transform: scale(1.05);
+  }
 
-    .services-swiper .swiper-pagination-bullet {
-      width: 12px;
-      height: 12px;
-      background: rgba(37, 99, 235, 0.3);
-      opacity: 1;
-    }
+  .services-swiper .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background: rgba(37, 99, 235, 0.3);
+    opacity: 1;
+  }
 
-    .services-swiper .swiper-pagination-bullet-active {
-      background: var(--luzgas-blue, #2563eb);
-      transform: scale(1.2);
-    }
+  .services-swiper .swiper-pagination-bullet-active {
+    background: var(--luzgas-blue, #2563eb);
+    transform: scale(1.2);
+  }
 
-    /* Custom Swiper Styles for Testimonials */
-    .testimonials-swiper {
-      width: 100%;
-      height: 340px;
-      padding: 20px 0;
-      box-sizing: border-box;
-    }
+  /* Custom Swiper Styles for Testimonials */
+  .testimonials-swiper {
+    width: 100%;
+    height: 340px;
+    padding: 20px 0;
+    box-sizing: border-box;
+  }
 
-    .testimonials-swiper .swiper-wrapper {
-      align-items: center;
-    }
+  .testimonials-swiper .swiper-wrapper {
+    align-items: center;
+  }
 
-    .testimonials-swiper .swiper-slide {
-      width: 320px !important;
-    }
+  .testimonials-swiper .swiper-slide {
+    width: 320px !important;
+  }
 
-    .testimonials-swiper .swiper-pagination-bullet {
-      width: 10px;
-      height: 10px;
-      background: rgba(255, 255, 255, 0.3);
-      opacity: 1;
-    }
+  .testimonials-swiper .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.3);
+    opacity: 1;
+  }
 
-    .testimonials-swiper .swiper-pagination-bullet-active {
-      background: #fbbf24;
-      transform: scale(1.3);
-    }
+  .testimonials-swiper .swiper-pagination-bullet-active {
+    background: #fbbf24;
+    transform: scale(1.3);
+  }
 
-    .testimonials-swiper .swiper-wrapper {
-      transition-timing-function: linear !important;
-    }
-  </style>
+  .testimonials-swiper .swiper-wrapper {
+    transition-timing-function: linear !important;
+  }
+</style>
 
-  <script>
-    import Swiper from "swiper";
-    import { Autoplay, Navigation, Pagination } from "swiper/modules";
+<script>
+  import Swiper from "swiper";
+  import { Autoplay, Navigation, Pagination } from "swiper/modules";
 
-    function initializePage() {
-      // LIMPIAR FAQ event listeners previos
-      const faqToggles = document.querySelectorAll(".faq-toggle");
-      faqToggles.forEach((toggle) => {
-        // Clonar el elemento para remover TODOS los event listeners
-        const newToggle = toggle.cloneNode(true) as HTMLElement;
-        toggle.parentNode?.replaceChild(newToggle, toggle);
+  function initializePage() {
+    const faqToggles = document.querySelectorAll(".faq-toggle");
+    faqToggles.forEach((toggle) => {
+      // Clonar el elemento para remover TODOS los event listeners
+      const newToggle = toggle.cloneNode(true) as HTMLElement;
+      toggle.parentNode?.replaceChild(newToggle, toggle);
 
-        // Agregar el event listener al elemento limpio
-        newToggle.addEventListener("click", function (event) {
-          event.preventDefault();
+      // Agregar el event listener al elemento limpio
+      newToggle.addEventListener("click", function (event) {
+        event.preventDefault();
 
-          const target = event.currentTarget as HTMLElement;
-          const content = target?.nextElementSibling as HTMLElement;
-          const icon = target?.querySelector("svg");
+        const target = event.currentTarget as HTMLElement;
+        const content = target?.nextElementSibling as HTMLElement;
+        const icon = target?.querySelector("svg");
 
-          content?.classList.toggle("hidden");
-          icon?.classList.toggle("rotate-180");
-        });
+        content?.classList.toggle("hidden");
+        icon?.classList.toggle("rotate-180");
       });
+    });
 
-      // Destruir Swipers existentes para evitar duplicados
-      document.querySelectorAll(".swiper-initialized").forEach((el) => {
-        const swiperEl = el as any;
-        if (swiperEl.swiper) {
-          swiperEl.swiper.destroy(true, true);
-        }
-      });
-
-      // Slider servicios
-      const servicesElement = document.querySelector(".services-swiper");
-      if (servicesElement) {
-        const servicesSwiper = new Swiper(".services-swiper", {
-          modules: [Autoplay, Navigation, Pagination],
-          spaceBetween: 30,
-          centeredSlides: true,
-          autoplay: {
-            delay: 2500,
-            disableOnInteraction: false,
-          },
-          pagination: {
-            el: ".services-swiper .swiper-pagination",
-            clickable: true,
-          },
-          navigation: {
-            nextEl: ".services-swiper .swiper-button-next",
-            prevEl: ".services-swiper .swiper-button-prev",
-          },
-          loop: true,
-          effect: "slide",
-          speed: 800,
-        });
+    // Destruir Swipers existentes para evitar duplicados
+    document.querySelectorAll(".swiper-initialized").forEach((el) => {
+      const swiperEl = el as any;
+      if (swiperEl.swiper) {
+        swiperEl.swiper.destroy(true, true);
       }
+    });
 
-      // Slider para Testimonios (data dinamica)
-      const testimonialsData = [
-        {
-          name: "María Rodríguez",
-          role: "Propietaria de vivienda",
-          initials: "MR",
-          color: "from-green-500 to-green-400",
-          testimonial:
-            "Gracias a LUZGAS reduje mi factura eléctrica en un 40%. El servicio fue excelente, muy profesional y cumplieron todos los plazos prometidos.",
+    // Slider servicios
+    const servicesElement = document.querySelector(".services-swiper");
+    if (servicesElement) {
+      const servicesSwiper = new Swiper(".services-swiper", {
+        modules: [Autoplay, Navigation, Pagination],
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
         },
-        {
-          name: "Juan López",
-          role: "Director de empresa",
-          initials: "JL",
-          color: "from-blue-500 to-blue-600",
-          testimonial:
-            "La auditoría energética nos ayudó a identificar ahorros significativos en nuestra empresa. Proceso muy profesional y resultados excepcionales.",
+        pagination: {
+          el: ".services-swiper .swiper-pagination",
+          clickable: true,
         },
-        {
-          name: "Ana García",
-          role: "Administradora",
-          initials: "AG",
-          color: "from-yellow-500 to-orange-400",
-          testimonial:
-            "Instalaron paneles solares en mi casa. El proceso fue rápido, transparente y ahorro considerablemente en electricidad.",
+        navigation: {
+          nextEl: ".services-swiper .swiper-button-next",
+          prevEl: ".services-swiper .swiper-button-prev",
         },
-        {
-          name: "Pedro Martínez",
-          role: "Comerciante",
-          initials: "PM",
-          color: "from-red-500 to-pink-400",
-          testimonial:
-            "La optimización de gas nos dio un respiro en los costos fijos del local. Muy recomendable por su honestidad y eficiencia.",
-        },
-        {
-          name: "Sofía Herrera",
-          role: "Consultora",
-          initials: "SH",
-          color: "from-purple-500 to-indigo-400",
-          testimonial:
-            "El acompañamiento en la gestión de subvenciones fue clave. Un equipo muy conocedor de las normativas vigentes.",
-        },
-        {
-          name: "Ricardo Núñez",
-          role: "Gerente",
-          initials: "RN",
-          color: "from-gray-500 to-gray-400",
-          testimonial:
-            "Servicio de gas impecable, rápido y con la mejor tarifa del mercado. Profesionales 100%.",
-        },
-      ];
+        loop: true,
+        effect: "slide",
+        speed: 800,
+      });
+    }
 
-      // Primero llenar el contenido de testimonials
-      const testimonialsWrapper = document.querySelector(
-        ".testimonials-swiper .swiper-wrapper",
-      );
+    // Slider para Testimonios (data dinamica)
+    const testimonialsData = [
+      {
+        name: "María Rodríguez",
+        role: "Propietaria de vivienda",
+        initials: "MR",
+        color: "from-green-500 to-green-400",
+        testimonial:
+          "Gracias a LUZGAS reduje mi factura eléctrica en un 40%. El servicio fue excelente, muy profesional y cumplieron todos los plazos prometidos.",
+      },
+      {
+        name: "Juan López",
+        role: "Director de empresa",
+        initials: "JL",
+        color: "from-blue-500 to-blue-600",
+        testimonial:
+          "La auditoría energética nos ayudó a identificar ahorros significativos en nuestra empresa. Proceso muy profesional y resultados excepcionales.",
+      },
+      {
+        name: "Ana García",
+        role: "Administradora",
+        initials: "AG",
+        color: "from-yellow-500 to-orange-400",
+        testimonial:
+          "Instalaron paneles solares en mi casa. El proceso fue rápido, transparente y ahorro considerablemente en electricidad.",
+      },
+      {
+        name: "Pedro Martínez",
+        role: "Comerciante",
+        initials: "PM",
+        color: "from-red-500 to-pink-400",
+        testimonial:
+          "La optimización de gas nos dio un respiro en los costos fijos del local. Muy recomendable por su honestidad y eficiencia.",
+      },
+      {
+        name: "Sofía Herrera",
+        role: "Consultora",
+        initials: "SH",
+        color: "from-purple-500 to-indigo-400",
+        testimonial:
+          "El acompañamiento en la gestión de subvenciones fue clave. Un equipo muy conocedor de las normativas vigentes.",
+      },
+      {
+        name: "Ricardo Núñez",
+        role: "Gerente",
+        initials: "RN",
+        color: "from-gray-500 to-gray-400",
+        testimonial:
+          "Servicio de gas impecable, rápido y con la mejor tarifa del mercado. Profesionales 100%.",
+      },
+    ];
 
-      if (testimonialsWrapper) {
-        testimonialsWrapper.innerHTML = testimonialsData
-          .map(
-            (testimonial) => `
+    // Primero llenar el contenido de testimonials
+    const testimonialsWrapper = document.querySelector(
+      ".testimonials-swiper .swiper-wrapper",
+    );
+
+    if (testimonialsWrapper) {
+      testimonialsWrapper.innerHTML = testimonialsData
+        .map(
+          (testimonial) => `
         <div class="swiper-slide !w-80 flex-shrink-0">
           <div class="bg-white p-6 h-full shadow-xl rounded-2xl mx-2">
             <div class="text-center">
@@ -905,77 +905,76 @@ import Layout from "../layouts/Layout.astro";
           </div>
         </div>
       `,
-          )
-          .join("");
+        )
+        .join("");
 
-        // Luego inicializar el swiper
-        const testimonialsElement = document.querySelector(
-          ".testimonials-swiper",
-        );
-        if (testimonialsElement) {
-          const testimonialsSwiper = new Swiper(".testimonials-swiper", {
-            modules: [Autoplay],
-            slidesPerView: "auto",
-            spaceBetween: 24,
-            loop: true,
-            centeredSlides: false,
-            autoplay: {
-              delay: 100,
-              disableOnInteraction: false,
-            },
-            speed: 6000,
-            allowTouchMove: true,
-          });
-        }
+      // Luego inicializar el swiper
+      const testimonialsElement = document.querySelector(
+        ".testimonials-swiper",
+      );
+      if (testimonialsElement) {
+        const testimonialsSwiper = new Swiper(".testimonials-swiper", {
+          modules: [Autoplay],
+          slidesPerView: "auto",
+          spaceBetween: 24,
+          loop: true,
+          centeredSlides: false,
+          autoplay: {
+            delay: 100,
+            disableOnInteraction: false,
+          },
+          speed: 6000,
+          allowTouchMove: true,
+        });
       }
     }
+  }
 
-    // Contador de elegirnos
-    function initCounters() {
-      const counterObserver = new IntersectionObserver(
-        (entries, observer) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              const counters = entry.target.querySelectorAll(".counter");
-              counters.forEach((counter) => {
-                const htmlCounter = counter as HTMLElement;
-                const target = +(htmlCounter.getAttribute("data-target") || 0);
-                let count = 0;
-                const increment = target / 200;
+  // Contador de elegirnos
+  function initCounters() {
+    const counterObserver = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const counters = entry.target.querySelectorAll(".counter");
+            counters.forEach((counter) => {
+              const htmlCounter = counter as HTMLElement;
+              const target = +(htmlCounter.getAttribute("data-target") || 0);
+              let count = 0;
+              const increment = target / 200;
 
-                const updateCounter = () => {
-                  count += increment;
-                  if (count < target) {
-                    htmlCounter.innerText = Math.ceil(count).toString();
-                    requestAnimationFrame(updateCounter);
-                  } else {
-                    htmlCounter.innerText = target.toString();
-                  }
-                };
-                updateCounter();
-              });
-              observer.unobserve(entry.target);
-            }
-          });
-        },
-        {
-          threshold: 0.5,
-        },
-      );
+              const updateCounter = () => {
+                count += increment;
+                if (count < target) {
+                  htmlCounter.innerText = Math.ceil(count).toString();
+                  requestAnimationFrame(updateCounter);
+                } else {
+                  htmlCounter.innerText = target.toString();
+                }
+              };
+              updateCounter();
+            });
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.5,
+      },
+    );
 
-      const chooseUsSection = document.getElementById("why-choose-us");
-      if (chooseUsSection) counterObserver.observe(chooseUsSection);
-    }
+    const chooseUsSection = document.getElementById("why-choose-us");
+    if (chooseUsSection) counterObserver.observe(chooseUsSection);
+  }
 
-    // Ejecutar en carga inicial
-    document.addEventListener("DOMContentLoaded", () => {
-      initializePage();
-      initCounters();
-    });
+  // Ejecutar en carga inicial
+  document.addEventListener("DOMContentLoaded", () => {
+    initializePage();
+    initCounters();
+  });
 
-    document.addEventListener("astro:page-load", () => {
-      initializePage();
-      initCounters();
-    });
-  </script>
-</Layout>
+  document.addEventListener("astro:page-load", () => {
+    initializePage();
+    initCounters();
+  });
+</script>
