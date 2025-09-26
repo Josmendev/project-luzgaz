@@ -1,188 +1,200 @@
 ---
-import Footer from '../components/Footer.astro';
-import Header from '../components/Header.astro';
-import Services from '../components/Services.astro';
-import Layout from '../layouts/Layout.astro';
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="Servicios - LUZGAS Asesoría Energética" description="Descubre todos nuestros servicios de asesoría energética: auditorías, energía solar, eficiencia energética y consultoría especializada.">
-	<Header />
-	<main class="pt-16">
-		<!-- Hero Section -->
-		<section class="py-20 bg-gradient-to-br from-luzgas-blue/5 via-white to-luzgas-green/5">
-			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-				<h1 class="text-5xl md:text-6xl font-bold text-gray-800 mb-6">
-					Nuestros <span class="text-luzgas-blue">Servicios</span>
-				</h1>
-				<p class="text-xl text-gray-600 max-w-3xl mx-auto">
-					Soluciones integrales para optimizar tu consumo energético y reducir costos
-				</p>
-			</div>
-		</section>
+<Layout
+  title="Servicios - LUZGAS Asesoría Energética"
+  description="Descubre todos nuestros servicios de asesoría energética: auditorías, energía solar, eficiencia energética y consultoría especializada."
+>
+  <Header />
 
-		<!-- Main Services Component -->
-		<Services />
+  <main class="pt-36">
+    <section
+      id="our-services"
+      class="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-gray-50 via-white to-blue-50"
+    >
+      <!-- Background Pattern -->
+      <div class="absolute inset-0 opacity-10">
+        <div
+          class="absolute top-10 left-10 w-20 h-20 bg-luzgas-blue rounded-full"
+        >
+        </div>
+        <div
+          class="absolute top-32 right-20 w-16 h-16 bg-luzgas-green rounded-full"
+        >
+        </div>
+        <div
+          class="absolute bottom-20 left-32 w-12 h-12 bg-luzgas-yellow rounded-full"
+        >
+        </div>
+        <div
+          class="absolute bottom-40 right-10 w-24 h-24 bg-luzgas-blue rounded-full"
+        >
+        </div>
+      </div>
 
-		<!-- Additional Services Details -->
-		<section class="py-20 bg-gradient-to-b from-white to-gray-50">
-			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-				<div class="text-center mb-16">
-					<h2 class="text-4xl font-bold text-gray-800 mb-4">
-						Servicios <span class="text-luzgas-green">Especializados</span>
-					</h2>
-					<p class="text-xl text-gray-600">
-						Soluciones adicionales para necesidades específicas
-					</p>
-				</div>
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex flex-col items-center relative z-10"
+      >
+        <!-- Header Section -->
+        <div class="text-center mb-12">
+          <h2
+            class="text-3xl md:text-5xl font-bold text-gray-800 mb-2 md:mb-3!"
+          >
+            Nuestros <span class="text-luzgas-blue">Servicios</span>
+          </h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            Soluciones integrales de asesoría energética para optimizar tu
+            consumo y reducir costos
+          </p>
+        </div>
 
-				<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-					<div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
-						<div class="w-16 h-16 bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-xl flex items-center justify-center mb-6">
-							<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path>
-							</svg>
-						</div>
-						<h3 class="text-2xl font-semibold text-gray-800 mb-4">Sistemas de Almacenamiento</h3>
-						<p class="text-gray-600 mb-6">Baterías inteligentes para maximizar el aprovechamiento de tu energía solar y garantizar suministro continuo.</p>
-						<ul class="text-gray-600 space-y-2">
-							<li class="flex items-center">
-								<svg class="w-4 h-4 text-luzgas-green mr-2" fill="currentColor" viewBox="0 0 20 20">
-									<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-								</svg>
-								Baterías de litio de alta capacidad
-							</li>
-							<li class="flex items-center">
-								<svg class="w-4 h-4 text-luzgas-green mr-2" fill="currentColor" viewBox="0 0 20 20">
-									<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-								</svg>
-								Gestión inteligente de energía
-							</li>
-							<li class="flex items-center">
-								<svg class="w-4 h-4 text-luzgas-green mr-2" fill="currentColor" viewBox="0 0 20 20">
-									<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-								</svg>
-								Respaldo de emergencia
-							</li>
-						</ul>
-					</div>
+        <div class="space-y-24 pb-24">
+          <!-- Servicio 1: Imagen Izq, Contenido Der -->
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <!-- Imagen -->
+            <div class="flex justify-center">
+              <img
+                src="/undraw_gas.svg"
+                alt="Optimización de Gas"
+                class="w-[380px] h-[380px] object-cover rounded-2xl"
+              />
+            </div>
 
-					<div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
-						<div class="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center mb-6">
-							<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
-							</svg>
-						</div>
-						<h3 class="text-2xl font-semibold text-gray-800 mb-4">Monitorización Inteligente</h3>
-						<p class="text-gray-600 mb-6">Sistemas avanzados de monitoreo para controlar y optimizar tu consumo energético en tiempo real.</p>
-						<ul class="text-gray-600 space-y-2">
-							<li class="flex items-center">
-								<svg class="w-4 h-4 text-luzgas-green mr-2" fill="currentColor" viewBox="0 0 20 20">
-									<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-								</svg>
-								Monitoreo en tiempo real
-							</li>
-							<li class="flex items-center">
-								<svg class="w-4 h-4 text-luzgas-green mr-2" fill="currentColor" viewBox="0 0 20 20">
-									<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-								</svg>
-								Alertas automáticas
-							</li>
-							<li class="flex items-center">
-								<svg class="w-4 h-4 text-luzgas-green mr-2" fill="currentColor" viewBox="0 0 20 20">
-									<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-								</svg>
-								Reportes detallados
-							</li>
-						</ul>
-					</div>
+            <!-- Contenido -->
+            <div class="space-y-6">
+              <div class="text-center lg:text-left flex flex-col gap-3">
+                <img
+                  src="/img-gas.gif"
+                  alt="Servicio de gas"
+                  class="w-28 h-28 object-cover"
+                />
+                <h3 class="text-2xl font-bold text-luzgas-blue">
+                  Optimización de Gas
+                </h3>
+                <p class="text-gray-600 leading-relaxed mb-6">
+                  Instalación y mantenimiento de sistemas de gas natural y GLP.
+                  Optimizamos el consumo para reducir costos y mejorar la
+                  eficiencia energética de tu hogar o empresa.
+                </p>
+              </div>
+              <ul class="space-y-3 text-gray-600">
+                <li class="flex items-center space-x-3">
+                  <span class="w-2 h-2 bg-blue-500 rounded-full"></span>
+                  <span>Instalación de sistemas de gas eficientes</span>
+                </li>
+                <li class="flex items-center space-x-3">
+                  <span class="w-2 h-2 bg-blue-500 rounded-full"></span>
+                  <span>Mantenimiento preventivo y correctivo</span>
+                </li>
+                <li class="flex items-center space-x-3">
+                  <span class="w-2 h-2 bg-blue-500 rounded-full"></span>
+                  <span>Auditorías de consumo y optimización</span>
+                </li>
+              </ul>
+            </div>
+          </div>
 
-					<div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
-						<div class="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center mb-6">
-							<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
-							</svg>
-						</div>
-						<h3 class="text-2xl font-semibold text-gray-800 mb-4">Certificación Energética</h3>
-						<p class="text-gray-600 mb-6">Obtén la certificación energética oficial para tu propiedad y mejora su valor de mercado.</p>
-						<ul class="text-gray-600 space-y-2">
-							<li class="flex items-center">
-								<svg class="w-4 h-4 text-luzgas-green mr-2" fill="currentColor" viewBox="0 0 20 20">
-									<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-								</svg>
-								Certificado oficial
-							</li>
-							<li class="flex items-center">
-								<svg class="w-4 h-4 text-luzgas-green mr-2" fill="currentColor" viewBox="0 0 20 20">
-									<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-								</svg>
-								Mejora del valor inmobiliario
-							</li>
-							<li class="flex items-center">
-								<svg class="w-4 h-4 text-luzgas-green mr-2" fill="currentColor" viewBox="0 0 20 20">
-									<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-								</svg>
-								Cumplimiento normativo
-							</li>
-						</ul>
-					</div>
+          <!-- Servicio 2: Contenido Izq, Imagen Der -->
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <!-- Contenido -->
+            <div class="space-y-6 order-2 lg:order-1">
+              <div class="text-center lg:text-left flex flex-col gap-3">
+                <img
+                  src="/img-luz.gif"
+                  alt="Servicio de luz"
+                  class="w-28 h-28 object-cover"
+                />
+                <h3 class="text-2xl font-bold text-yellow-500 mb-4">
+                  Eficiencia Eléctrica
+                </h3>
+                <p class="text-gray-600 leading-relaxed mb-6">
+                  Instalación de paneles solares y sistemas de iluminación LED.
+                  Reduce hasta un 90% tu factura eléctrica con tecnología
+                  renovable de última generación.
+                </p>
+              </div>
+              <ul class="space-y-3 text-gray-600">
+                <li class="flex items-center space-x-3">
+                  <span class="w-2 h-2 bg-yellow-500 rounded-full"></span>
+                  <span>Paneles solares de alta eficiencia</span>
+                </li>
+                <li class="flex items-center space-x-3">
+                  <span class="w-2 h-2 bg-yellow-500 rounded-full"></span>
+                  <span>Sistemas de almacenamiento de energía</span>
+                </li>
+                <li class="flex items-center space-x-3">
+                  <span class="w-2 h-2 bg-yellow-500 rounded-full"></span>
+                  <span>Iluminación LED inteligente</span>
+                </li>
+              </ul>
+            </div>
 
-					<div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
-						<div class="w-16 h-16 bg-gradient-to-br from-red-500 to-red-600 rounded-xl flex items-center justify-center mb-6">
-							<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
-							</svg>
-						</div>
-						<h3 class="text-2xl font-semibold text-gray-800 mb-4">Mantenimiento Preventivo</h3>
-						<p class="text-gray-600 mb-6">Servicios de mantenimiento para garantizar el óptimo funcionamiento de tus instalaciones energéticas.</p>
-						<ul class="text-gray-600 space-y-2">
-							<li class="flex items-center">
-								<svg class="w-4 h-4 text-luzgas-green mr-2" fill="currentColor" viewBox="0 0 20 20">
-									<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-								</svg>
-								Revisiones periódicas
-							</li>
-							<li class="flex items-center">
-								<svg class="w-4 h-4 text-luzgas-green mr-2" fill="currentColor" viewBox="0 0 20 20">
-									<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-								</svg>
-								Limpieza especializada
-							</li>
-							<li class="flex items-center">
-								<svg class="w-4 h-4 text-luzgas-green mr-2" fill="currentColor" viewBox="0 0 20 20">
-									<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-								</svg>
-								Garantía extendida
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</section>
+            <!-- Imagen -->
+            <div class="flex justify-center order-1 lg:order-2">
+              <img
+                src="/undraw_luz.svg"
+                alt="Eficiencia Eléctrica"
+                class="w-[380px] h-[380px] object-cover rounded-2xl"
+              />
+            </div>
+          </div>
 
-		<!-- CTA Section -->
-		<section class="py-20 bg-gradient-to-r from-luzgas-green to-luzgas-blue">
-			<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
-				<h2 class="text-4xl font-bold mb-6">¿Listo para optimizar tu energía?</h2>
-				<p class="text-xl mb-8 opacity-90">
-					Contacta con nuestros expertos y descubre cuánto puedes ahorrar
-				</p>
-				<div class="flex flex-col sm:flex-row gap-4 justify-center">
-					<a href="/solicitar-estudio" class="bg-white text-luzgas-blue px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
-						Solicitar Estudio Gratuito
-					</a>
-					<a href="/contacto" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-luzgas-blue transition-all duration-300">
-						Contactar Ahora
-					</a>
-				</div>
-			</div>
-		</section>
-	</main>
-	<Footer />
+          <!-- Servicio 3: Imagen Izq, Contenido Der -->
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <!-- Imagen -->
+            <div class="flex justify-center">
+              <img
+                src="/undraw_auditoria.svg"
+                alt="Auditoria energética"
+                class="w-[380px] h-[380px] object-cover rounded-2xl"
+              />
+            </div>
+
+            <!-- Contenido -->
+            <div class="space-y-6">
+              <div class="text-center lg:text-left flex flex-col gap-3">
+                <img
+                  src="/img-auditoria.gif"
+                  alt="Servicio de auditoria"
+                  class="w-40 h-40 object-cover mb-4"
+                />
+                <h3 class="text-2xl font-bold text-luzgas-green mb-4">
+                  Asesoría Energética
+                </h3>
+                <p class="text-gray-600 leading-relaxed mb-6">
+                  Consultoría especializada para identificar oportunidades de
+                  ahorro energético. Te ayudamos a tomar las mejores decisiones
+                  para tu proyecto energético.
+                </p>
+              </div>
+              <ul class="space-y-3 text-gray-600">
+                <li class="flex items-center space-x-3">
+                  <span class="w-2 h-2 bg-primary-500 rounded-full"></span>
+                  <span>Instalación de sistemas de gas eficientes</span>
+                </li>
+                <li class="flex items-center space-x-3">
+                  <span class="w-2 h-2 bg-primary-500 rounded-full"></span>
+                  <span>Mantenimiento preventivo y correctivo</span>
+                </li>
+                <li class="flex items-center space-x-3">
+                  <span class="w-2 h-2 bg-primary-500 rounded-full"></span>
+                  <span>Auditorías de consumo y optimización</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
 </Layout>
 
 <style>
-	main {
-		min-height: 100vh;
-	}
+  main {
+    min-height: 100vh;
+  }
 </style>
