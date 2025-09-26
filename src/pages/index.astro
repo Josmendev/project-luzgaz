@@ -1,8 +1,8 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
 import Hero from "../components/Hero.astro";
-import Footer from "../components/Footer.astro";
+import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout
@@ -16,104 +16,146 @@ import Footer from "../components/Footer.astro";
     <!-- Featured Services Section -->
     <section
       id="featured-services"
-      class="min-h-screen flex items-center justify-center bg-gradient-to-b from-white to-gray-50"
+      class="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-white to-green-50 relative overflow-hidden"
     >
+      <!-- Background Pattern -->
+      <div class="absolute inset-0 opacity-10">
+        <div
+          class="absolute top-10 left-10 w-20 h-20 bg-luzgas-blue rounded-full"
+        >
+        </div>
+        <div
+          class="absolute top-32 right-20 w-16 h-16 bg-luzgas-green rounded-full"
+        >
+        </div>
+        <div
+          class="absolute bottom-20 left-32 w-12 h-12 bg-luzgas-yellow rounded-full"
+        >
+        </div>
+        <div
+          class="absolute bottom-40 right-10 w-24 h-24 bg-luzgas-blue rounded-full"
+        >
+        </div>
+      </div>
+
       <div
-        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex flex-col items-center"
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex flex-col items-center relative z-10"
       >
-        <div class="text-center mb-16">
-          <h2 class="text-3xl md:text-5xl font-bold text-gray-800 mb-6!">
+        <div class="text-center mb-12">
+          <h2
+            class="text-3xl md:text-5xl font-bold text-gray-800 mb-2 md:mb-3!"
+          >
             Servicios <span class="text-luzgas-blue">Destacados</span>
           </h2>
-          <p class="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Nuestras soluciones más populares para optimizar tu consumo
-            energético y reducir costos significativamente
+            energético y reducir costos
           </p>
         </div>
 
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 max-w-6xl mx-auto">
-          <div
-            class="bg-white rounded-3xl p-10 shadow-2xl hover:shadow-3xl transition-all duration-500 transform hover:-translate-y-4 group text-center"
-          >
-            <div
-              class="w-24 h-24 bg-gradient-to-br from-luzgas-green to-green-400 rounded-2xl flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-transform duration-500"
-            >
-              <svg
-                class="w-12 h-12 text-white"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
-                ></path>
-              </svg>
-            </div>
-            <h3 class="text-3xl font-bold text-gray-800 mb-6">Energía Solar</h3>
-            <p class="text-lg text-gray-600 leading-relaxed">
-              Instalación de paneles solares fotovoltaicos para reducir hasta un
-              90% tu factura eléctrica con tecnología de última generación
-            </p>
-          </div>
+        <!-- Swiper Container for Services -->
+        <div class="relative w-full max-w-5xl mx-auto">
+          <div class="swiper services-swiper">
+            <div class="swiper-wrapper">
+              <!-- Gas Service -->
+              <div class="swiper-slide">
+                <div
+                  class="bg-white rounded-3xl p-12 px-20 shadow-xl m-1 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center"
+                >
+                  <div class="flex justify-center">
+                    <img
+                      src="/undraw_gas.svg"
+                      alt="Servicio de gas"
+                      class="w-80 h-80 object-cover"
+                    />
+                  </div>
 
-          <div
-            class="bg-white rounded-3xl p-10 shadow-2xl hover:shadow-3xl transition-all duration-500 transform hover:-translate-y-4 group text-center"
-          >
-            <div
-              class="w-24 h-24 bg-gradient-to-br from-luzgas-yellow to-orange-400 rounded-2xl flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-transform duration-500"
-            >
-              <svg
-                class="w-12 h-12 text-white"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-              </svg>
-            </div>
-            <h3 class="text-3xl font-bold text-gray-800 mb-6">
-              Eficiencia Energética
-            </h3>
-            <p class="text-lg text-gray-600 leading-relaxed">
-              Optimización integral de instalaciones eléctricas para maximizar
-              el rendimiento energético y minimizar las pérdidas
-            </p>
-          </div>
+                  <div class="text-center lg:text-left flex flex-col gap-3">
+                    <img
+                      src="/img-gas.gif"
+                      alt="Servicio de gas"
+                      class="w-40 h-40 object-cover mb-8"
+                    />
+                    <h3 class="text-2xl font-bold text-luzgas-blue">
+                      Optimización de Gas
+                    </h3>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                      Instalación y mantenimiento de sistemas de gas natural y
+                      GLP. Optimizamos el consumo para reducir costos y mejorar
+                      la eficiencia energética de tu hogar o empresa.
+                    </p>
+                  </div>
+                </div>
+              </div>
 
-          <div
-            class="bg-white rounded-3xl p-10 shadow-2xl hover:shadow-3xl transition-all duration-500 transform hover:-translate-y-4 group text-center"
-          >
-            <div
-              class="w-24 h-24 bg-gradient-to-br from-luzgas-blue to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-transform duration-500"
-            >
-              <svg
-                class="w-12 h-12 text-white"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
-                ></path>
-              </svg>
+              <!-- Luz Service -->
+              <div class="swiper-slide">
+                <div
+                  class="bg-white rounded-3xl p-12 px-20 shadow-xl m-1 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center"
+                >
+                  <div class="text-center lg:text-left flex flex-col gap-3">
+                    <img
+                      src="/img-luz.gif"
+                      alt="Servicio de luz"
+                      class="w-40 h-40 object-cover mb-8"
+                    />
+                    <h3 class="text-2xl font-bold text-luzgas-yellow mb-4">
+                      Eficiencia Eléctrica
+                    </h3>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                      Instalación de paneles solares y sistemas de iluminación
+                      LED. Reduce hasta un 90% tu factura eléctrica con
+                      tecnología renovable de última generación.
+                    </p>
+                  </div>
+                  <div class="flex justify-center">
+                    <img
+                      src="/undraw_luz.svg"
+                      alt="Servicio de luz"
+                      class="w-80 h-80 object-contain"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <!-- Asesoría Service -->
+              <div class="swiper-slide">
+                <div
+                  class="bg-white rounded-3xl p-12 px-20 shadow-xl m-1 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center"
+                >
+                  <div class="flex justify-center">
+                    <img
+                      src="/undraw_auditoria.svg"
+                      alt="Servicio de auditoria"
+                      class="w-80 h-80 object-cover mb-8"
+                    />
+                  </div>
+
+                  <div class="text-center lg:text-left flex flex-col gap-3">
+                    <img
+                      src="/img-auditoria.gif"
+                      alt="Servicio de auditoria"
+                      class="w-40 h-40 object-cover mb-4"
+                    />
+                    <h3 class="text-2xl font-bold text-luzgas-green mb-4">
+                      Asesoría Energética
+                    </h3>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                      Consultoría especializada para identificar oportunidades
+                      de ahorro energético. Te ayudamos a tomar las mejores
+                      decisiones para tu proyecto energético.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
-            <h3 class="text-3xl font-bold text-gray-800 mb-6">
-              Auditoría Energética
-            </h3>
-            <p class="text-lg text-gray-600 leading-relaxed">
-              Análisis exhaustivo de tu consumo energético para identificar
-              oportunidades de ahorro y mejoras específicas
-            </p>
+
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- Add Navigation -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
           </div>
         </div>
       </div>
@@ -122,30 +164,63 @@ import Footer from "../components/Footer.astro";
     <!-- Why Choose Us Section -->
     <section
       id="why-choose-us"
-      class="min-h-screen flex items-center justify-center bg-gradient-to-b from-gray-50 to-white"
+      class="min-h-screen flex items-center justify-center bg-gradient-to-br from-luzgas-blue to-blue-600 relative overflow-hidden"
     >
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-        <div class="text-center mb-20">
-          <h2 class="text-5xl md:text-6xl font-bold text-gray-800 mb-6">
-            ¿Por qué <span class="text-luzgas-green">elegirnos</span>?
+      <!-- Background Elements -->
+      <div class="absolute inset-0 opacity-10">
+        <div class="absolute top-20 left-10 w-32 h-32 bg-white rounded-full">
+        </div>
+        <div
+          class="absolute bottom-20 right-20 w-24 h-24 bg-white rounded-full"
+        >
+        </div>
+        <div class="absolute top-40 right-32 w-16 h-16 bg-white rounded-full">
+        </div>
+      </div>
+
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex flex-col items-center relative z-10"
+      >
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-5xl font-bold text-white mb-2 md:mb-3!">
+            ¿Por qué <span class="text-luzgas-yellow">elegirnos</span>?
           </h2>
-          <p class="text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+          <p class="text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
             Somos líderes en asesoría energética con resultados comprobados y un
             compromiso total con la excelencia
           </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div class="text-center group">
             <div
-              class="w-32 h-32 bg-gradient-to-br from-luzgas-blue to-blue-600 rounded-full flex items-center justify-center mx-auto mb-8 shadow-2xl group-hover:scale-110 transition-transform duration-500"
+              class="w-24 h-24 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-6 shadow-2xl group-hover:scale-110 transition-transform duration-500 border border-white/30"
             >
-              <span class="text-4xl font-bold text-white">500+</span>
+              <svg
+                class="w-8 h-8 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
+                ></path>
+              </svg>
             </div>
-            <h3 class="text-2xl font-bold text-gray-800 mb-4">
+            <div class="mb-4">
+              <span
+                class="counter text-3xl font-bold text-white"
+                data-target="500">0</span
+              >
+              <span class="text-3xl font-bold text-yellow-300">+</span>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-3">
               Proyectos Realizados
             </h3>
-            <p class="text-lg text-gray-600 leading-relaxed">
+            <p class="text-blue-100 leading-relaxed">
               Experiencia comprobada en instalaciones residenciales y
               comerciales
             </p>
@@ -153,42 +228,96 @@ import Footer from "../components/Footer.astro";
 
           <div class="text-center group">
             <div
-              class="w-32 h-32 bg-gradient-to-br from-luzgas-green to-green-400 rounded-full flex items-center justify-center mx-auto mb-8 shadow-2xl group-hover:scale-110 transition-transform duration-500"
+              class="w-24 h-24 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-6 shadow-2xl group-hover:scale-110 transition-transform duration-500 border border-white/30"
             >
-              <span class="text-4xl font-bold text-white">95%</span>
+              <svg
+                class="w-8 h-8 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                ></path>
+              </svg>
             </div>
-            <h3 class="text-2xl font-bold text-gray-800 mb-4">
+            <div class="mb-4">
+              <span
+                class="counter text-3xl font-bold text-white"
+                data-target="95">0</span
+              >
+              <span class="text-3xl font-bold text-yellow-300">%</span>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-3">
               Clientes Satisfechos
             </h3>
-            <p class="text-lg text-gray-600 leading-relaxed">
+            <p class="text-blue-100 leading-relaxed">
               Excelencia en servicio al cliente y atención personalizada
             </p>
           </div>
 
           <div class="text-center group">
             <div
-              class="w-32 h-32 bg-gradient-to-br from-luzgas-yellow to-orange-400 rounded-full flex items-center justify-center mx-auto mb-8 shadow-2xl group-hover:scale-110 transition-transform duration-500"
+              class="w-24 h-24 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-6 shadow-2xl group-hover:scale-110 transition-transform duration-500 border border-white/30"
             >
-              <span class="text-4xl font-bold text-white">10+</span>
+              <svg
+                class="w-8 h-8 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
             </div>
-            <h3 class="text-2xl font-bold text-gray-800 mb-4">
+            <div class="mb-4">
+              <span
+                class="counter text-3xl font-bold text-white"
+                data-target="10">0</span
+              >
+              <span class="text-3xl font-bold text-yellow-300">+</span>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-3">
               Años de Experiencia
             </h3>
-            <p class="text-lg text-gray-600 leading-relaxed">
+            <p class="text-blue-100 leading-relaxed">
               Conocimiento profundo del mercado energético nacional
             </p>
           </div>
 
           <div class="text-center group">
             <div
-              class="w-32 h-32 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-8 shadow-2xl group-hover:scale-110 transition-transform duration-500"
+              class="w-24 h-24 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-6 shadow-2xl group-hover:scale-110 transition-transform duration-500 border border-white/30"
             >
-              <span class="text-4xl font-bold text-white">30%</span>
+              <svg
+                class="w-8 h-8 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"
+                ></path>
+              </svg>
             </div>
-            <h3 class="text-2xl font-bold text-gray-800 mb-4">
-              Ahorro Promedio
-            </h3>
-            <p class="text-lg text-gray-600 leading-relaxed">
+            <div class="mb-4">
+              <span
+                class="counter text-3xl font-bold text-white"
+                data-target="30">0</span
+              >
+              <span class="text-3xl font-bold text-yellow-300">%</span>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-3">Ahorro Promedio</h3>
+            <p class="text-blue-100 leading-relaxed">
               Reducción significativa y medible en costos energéticos
             </p>
           </div>
@@ -199,80 +328,48 @@ import Footer from "../components/Footer.astro";
     <!-- Testimonials Section -->
     <section
       id="testimonials"
-      class="min-h-screen flex items-center justify-center bg-gradient-to-b from-white to-gray-50"
+      class="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-white to-green-50 relative"
     >
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-        <div class="text-center mb-20">
-          <h2 class="text-5xl md:text-6xl font-bold text-gray-800 mb-6">
+      <!-- Background Pattern -->
+      <div class="absolute inset-0 opacity-10">
+        <div
+          class="absolute top-10 left-10 w-20 h-20 bg-luzgas-blue rounded-full"
+        >
+        </div>
+        <div
+          class="absolute top-32 right-20 w-16 h-16 bg-luzgas-green rounded-full"
+        >
+        </div>
+        <div
+          class="absolute bottom-20 left-32 w-12 h-12 bg-luzgas-yellow rounded-full"
+        >
+        </div>
+        <div
+          class="absolute bottom-40 right-10 w-24 h-24 bg-luzgas-blue rounded-full"
+        >
+        </div>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
+        <div class="text-center mb-13 flex flex-col items-center">
+          <h2
+            class="text-3xl md:text-5xl font-bold text-gray-800 mb-2 md:mb-3!"
+          >
             <span class="text-luzgas-blue">Testimonios</span>
           </h2>
-          <p class="text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             La satisfacción de nuestros clientes es nuestra mejor carta de
             presentación
           </p>
         </div>
 
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 max-w-6xl mx-auto">
-          <div
-            class="bg-white rounded-3xl p-10 shadow-2xl hover:shadow-3xl transition-all duration-500 text-center"
-          >
-            <div class="flex justify-center mb-8">
-              <div
-                class="w-20 h-20 bg-gradient-to-br from-luzgas-green to-green-400 rounded-full flex items-center justify-center"
-              >
-                <span class="text-white font-bold text-2xl">MR</span>
-              </div>
-            </div>
-            <h4 class="text-2xl font-bold text-gray-800 mb-2">
-              María Rodríguez
-            </h4>
-            <p class="text-luzgas-blue font-semibold mb-6">
-              Propietaria de vivienda
-            </p>
-            <blockquote class="text-lg text-gray-600 italic leading-relaxed">
-              "Gracias a LUZGAS reduje mi factura eléctrica en un 40%. El
-              servicio fue excelente, muy profesional y cumplieron todos los
-              plazos prometidos."
-            </blockquote>
-          </div>
-
-          <div
-            class="bg-white rounded-3xl p-10 shadow-2xl hover:shadow-3xl transition-all duration-500 text-center"
-          >
-            <div class="flex justify-center mb-8">
-              <div
-                class="w-20 h-20 bg-gradient-to-br from-luzgas-blue to-blue-600 rounded-full flex items-center justify-center"
-              >
-                <span class="text-white font-bold text-2xl">JL</span>
-              </div>
-            </div>
-            <h4 class="text-2xl font-bold text-gray-800 mb-2">Juan López</h4>
-            <p class="text-luzgas-blue font-semibold mb-6">
-              Director de empresa
-            </p>
-            <blockquote class="text-lg text-gray-600 italic leading-relaxed">
-              "La auditoría energética nos ayudó a identificar ahorros
-              significativos en nuestra empresa. Proceso muy profesional y
-              resultados excepcionales."
-            </blockquote>
-          </div>
-
-          <div
-            class="bg-white rounded-3xl p-10 shadow-2xl hover:shadow-3xl transition-all duration-500 text-center"
-          >
-            <div class="flex justify-center mb-8">
-              <div
-                class="w-20 h-20 bg-gradient-to-br from-luzgas-yellow to-orange-400 rounded-full flex items-center justify-center"
-              >
-                <span class="text-white font-bold text-2xl">AG</span>
-              </div>
-            </div>
-            <h4 class="text-2xl font-bold text-gray-800 mb-2">Ana García</h4>
-            <p class="text-luzgas-blue font-semibold mb-6">Administradora</p>
-            <blockquote class="text-lg text-gray-600 italic leading-relaxed">
-              "Instalaron paneles solares en mi casa. El proceso fue rápido,
-              transparente y ahora ahorro considerablemente en electricidad."
-            </blockquote>
+        <!-- Testimonials Swiper with Virtual Slides -->
+        <div class="relative">
+          <div class="swiper testimonials-swiper">
+            <!-- Virtual slides will be rendered here -->
+            <div class="swiper-wrapper"></div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
           </div>
         </div>
       </div>
@@ -281,134 +378,604 @@ import Footer from "../components/Footer.astro";
     <!-- FAQ Section -->
     <section
       id="frequently-asked-questions"
-      class="min-h-screen flex items-center justify-center bg-gradient-to-b from-gray-50 to-white"
+      class="min-h-screen flex items-center justify-center bg-gradient-to-br from-luzgas-blue to-blue-600 relative overflow-hidden"
     >
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-        <div class="text-center mb-20">
-          <h2 class="text-5xl md:text-6xl font-bold text-gray-800 mb-6">
-            Preguntas <span class="text-luzgas-green">Frecuentes</span>
+      <!-- Background Elements -->
+      <div class="absolute inset-0 opacity-10">
+        <div class="absolute top-20 left-10 w-32 h-32 bg-white rounded-full">
+        </div>
+        <div
+          class="absolute bottom-20 right-20 w-24 h-24 bg-white rounded-full"
+        >
+        </div>
+        <div class="absolute top-40 right-32 w-16 h-16 bg-white rounded-full">
+        </div>
+      </div>
+
+      <div
+        class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex flex-col items-center relative z-10"
+      >
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-5xl font-bold text-white mb-2 md:mb-3!">
+            Preguntas <span class="text-yellow-300">Frecuentes</span>
           </h2>
-          <p class="text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+          <p class="text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
             Resolvemos las dudas más comunes sobre nuestros servicios y procesos
           </p>
         </div>
 
-        <div class="max-w-4xl mx-auto space-y-8">
-          <div class="bg-white rounded-2xl shadow-2xl overflow-hidden">
-            <button
-              class="w-full px-10 py-8 text-left flex items-center justify-between hover:bg-gray-50 transition-colors duration-300 faq-toggle"
-            >
-              <h3 class="text-2xl font-bold text-gray-800">
-                ¿Cuánto puedo ahorrar con energía solar?
-              </h3>
-              <svg
-                class="w-8 h-8 text-luzgas-blue transform transition-transform duration-300"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
+        <div class="max-w-7xl mx-auto">
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="space-y-6">
+              <!-- FAQ 1 -->
+              <div
+                class="bg-white/20 backdrop-blur-sm rounded-2xl shadow-xl overflow-hidden border border-white/30"
               >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M19 9l-7 7-7-7"></path>
-              </svg>
-            </button>
-            <div class="px-10 pb-8 hidden faq-content">
-              <p class="text-xl text-gray-600 leading-relaxed">
-                El ahorro puede variar entre 50% y 90% dependiendo del tamaño de
-                la instalación, consumo actual y condiciones de la vivienda.
-                Realizamos un estudio personalizado completamente gratuito para
-                calcular tu ahorro específico y retorno de inversión.
-              </p>
-            </div>
-          </div>
+                <button
+                  class="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-white/10 transition-colors duration-300 faq-toggle"
+                >
+                  <h3 class="text-lg font-bold text-white">
+                    ¿Cuánto puedo ahorrar con Luzgas?
+                  </h3>
+                  <svg
+                    class="w-6 h-6 text-yellow-300 transform transition-transform duration-300"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 9l-7 7-7-7"></path>
+                  </svg>
+                </button>
+                <div class="px-8 pb-6 hidden faq-content">
+                  <p class="text-blue-100 leading-relaxed mt-4">
+                    El ahorro puede variar entre 50% y 90% dependiendo del
+                    tamaño de la instalación, consumo actual y condiciones de la
+                    vivienda. Realizamos un estudio personalizado completamente
+                    gratuito para calcular tu ahorro específico y retorno de
+                    inversión.
+                  </p>
+                </div>
+              </div>
 
-          <div class="bg-white rounded-2xl shadow-2xl overflow-hidden">
-            <button
-              class="w-full px-10 py-8 text-left flex items-center justify-between hover:bg-gray-50 transition-colors duration-300 faq-toggle"
-            >
-              <h3 class="text-2xl font-bold text-gray-800">
-                ¿Cuánto tiempo toma una auditoría energética?
-              </h3>
-              <svg
-                class="w-8 h-8 text-luzgas-blue transform transition-transform duration-300"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
+              <!-- FAQ 2 -->
+              <div
+                class="bg-white/20 backdrop-blur-sm rounded-2xl shadow-xl overflow-hidden border border-white/30"
               >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M19 9l-7 7-7-7"></path>
-              </svg>
-            </button>
-            <div class="px-10 pb-8 hidden faq-content">
-              <p class="text-xl text-gray-600 leading-relaxed">
-                Una auditoría energética completa toma entre 2-4 horas
-                dependiendo del tamaño de la propiedad. Utilizamos equipos
-                especializados para medir consumos y pérdidas. El informe
-                detallado se entrega en 3-5 días hábiles.
-              </p>
-            </div>
-          </div>
+                <button
+                  class="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-white/10 transition-colors duration-300 faq-toggle"
+                >
+                  <h3 class="text-lg font-bold text-white">
+                    ¿Cuánto tiempo toma una auditoría?
+                  </h3>
+                  <svg
+                    class="w-6 h-6 text-yellow-300 transform transition-transform duration-300"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 9l-7 7-7-7"></path>
+                  </svg>
+                </button>
+                <div class="px-8 pb-6 hidden faq-content">
+                  <p class="text-blue-100 leading-relaxed mt-4">
+                    Una auditoría energética completa toma entre 2-4 horas
+                    dependiendo del tamaño de la propiedad. Utilizamos equipos
+                    especializados para medir consumos y pérdidas. El informe
+                    detallado se entrega en 3-5 días hábiles.
+                  </p>
+                </div>
+              </div>
 
-          <div class="bg-white rounded-2xl shadow-2xl overflow-hidden">
-            <button
-              class="w-full px-10 py-8 text-left flex items-center justify-between hover:bg-gray-50 transition-colors duration-300 faq-toggle"
-            >
-              <h3 class="text-2xl font-bold text-gray-800">
-                ¿Ofrecen financiamiento para las instalaciones?
-              </h3>
-              <svg
-                class="w-8 h-8 text-luzgas-blue transform transition-transform duration-300"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
+              <!-- FAQ 3 -->
+              <div
+                class="bg-white/20 backdrop-blur-sm rounded-2xl shadow-xl overflow-hidden border border-white/30"
               >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M19 9l-7 7-7-7"></path>
-              </svg>
-            </button>
-            <div class="px-10 pb-8 hidden faq-content">
-              <p class="text-xl text-gray-600 leading-relaxed">
-                Sí, trabajamos con diferentes entidades financieras para ofrecer
-                planes de financiamiento flexibles adaptados a tu presupuesto.
-                También ayudamos con la gestión de subvenciones y ayudas
-                públicas disponibles para proyectos de eficiencia energética.
-              </p>
+                <button
+                  class="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-white/10 transition-colors duration-300 faq-toggle"
+                >
+                  <h3 class="text-lg font-bold text-white">
+                    ¿Ofrecen financiamiento directo?
+                  </h3>
+                  <svg
+                    class="w-6 h-6 text-yellow-300 transform transition-transform duration-300"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 9l-7 7-7-7"></path>
+                  </svg>
+                </button>
+                <div class="px-8 pb-6 hidden faq-content">
+                  <p class="text-blue-100 leading-relaxed mt-4">
+                    Sí, trabajamos con diferentes entidades financieras para
+                    ofrecer planes de financiamiento flexibles adaptados a tu
+                    presupuesto. También ayudamos con la gestión de subvenciones
+                    y ayudas públicas disponibles para proyectos de eficiencia
+                    energética.
+                  </p>
+                </div>
+              </div>
+
+              <!-- FAQ 4 -->
+              <div
+                class="bg-white/20 backdrop-blur-sm rounded-2xl shadow-xl overflow-hidden border border-white/30"
+              >
+                <button
+                  class="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-white/10 transition-colors duration-300 faq-toggle"
+                >
+                  <h3 class="text-lg font-bold text-white">
+                    ¿Qué tipo de mantenimiento se requiere?
+                  </h3>
+                  <svg
+                    class="w-6 h-6 text-yellow-300 transform transition-transform duration-300"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 9l-7 7-7-7"></path>
+                  </svg>
+                </button>
+                <div class="px-8 pb-6 hidden faq-content">
+                  <p class="text-blue-100 leading-relaxed mt-4">
+                    Los paneles solares requieren mantenimiento mínimo. Se
+                    recomienda limpieza cada 6 meses y revisión técnica anual.
+                    Ofrecemos planes de mantenimiento preventivo para garantizar
+                    el óptimo rendimiento de tu instalación.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- COLUMNA 2 -->
+            <div class="space-y-6">
+              <!-- FAQ 5 -->
+              <div
+                class="bg-white/20 backdrop-blur-sm rounded-2xl shadow-xl overflow-hidden border border-white/30"
+              >
+                <button
+                  class="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-white/10 transition-colors duration-300 faq-toggle"
+                >
+                  <h3 class="text-lg font-bold text-white">
+                    ¿Cuánto tiempo dura la instalación?
+                  </h3>
+                  <svg
+                    class="w-6 h-6 text-yellow-300 transform transition-transform duration-300"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 9l-7 7-7-7"></path>
+                  </svg>
+                </button>
+                <div class="px-8 pb-6 hidden faq-content">
+                  <p class="text-blue-100 leading-relaxed mt-4">
+                    La instalación típica de paneles solares toma entre 1-3 días
+                    dependiendo del tamaño del sistema. Incluimos tramitación de
+                    permisos, instalación completa, conexión a la red eléctrica
+                    y puesta en marcha. Todo con garantía integral.
+                  </p>
+                </div>
+              </div>
+
+              <!-- FAQ 6 -->
+              <div
+                class="bg-white/20 backdrop-blur-sm rounded-2xl shadow-xl overflow-hidden border border-white/30"
+              >
+                <button
+                  class="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-white/10 transition-colors duration-300 faq-toggle"
+                >
+                  <h3 class="text-lg font-bold text-white">
+                    ¿Puedo vender energía de la red?
+                  </h3>
+                  <svg
+                    class="w-6 h-6 text-yellow-300 transform transition-transform duration-300"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 9l-7 7-7-7"></path>
+                  </svg>
+                </button>
+                <div class="px-8 pb-6 hidden faq-content">
+                  <p class="text-blue-100 leading-relaxed mt-4">
+                    Sí, a través del sistema de autoconsumo con compensación de
+                    excedentes. La energía que no consumas se inyecta a la red y
+                    te compensan en tu factura. Nos encargamos de todos los
+                    trámites y la configuración necesaria.
+                  </p>
+                </div>
+              </div>
+
+              <!-- FAQ 7 -->
+              <div
+                class="bg-white/20 backdrop-blur-sm rounded-2xl shadow-xl overflow-hidden border border-white/30"
+              >
+                <button
+                  class="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-white/10 transition-colors duration-300 faq-toggle"
+                >
+                  <h3 class="text-lg font-bold text-white">
+                    ¿Qué pasa si el servicio de energía falla?
+                  </h3>
+                  <svg
+                    class="w-6 h-6 text-yellow-300 transform transition-transform duration-300"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 9l-7 7-7-7"></path>
+                  </svg>
+                </button>
+                <div class="px-8 pb-6 hidden faq-content">
+                  <p class="text-blue-100 leading-relaxed mt-4">
+                    Ofrecemos alternativas como instalaciones en suelo,
+                    marquesinas para coches, o estructuras flotantes. También
+                    evaluamos opciones de mejora del tejado si es necesario.
+                    Siempre encontramos la mejor solución para tu caso
+                    específico.
+                  </p>
+                </div>
+              </div>
+
+              <!-- FAQ 8 -->
+              <div
+                class="bg-white/20 backdrop-blur-sm rounded-2xl shadow-xl overflow-hidden border border-white/30"
+              >
+                <button
+                  class="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-white/10 transition-colors duration-300 faq-toggle"
+                >
+                  <h3 class="text-lg font-bold text-white">
+                    ¿Qué garantías ofrecen en sus servicios?
+                  </h3>
+                  <svg
+                    class="w-6 h-6 text-yellow-300 transform transition-transform duration-300"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 9l-7 7-7-7"></path>
+                  </svg>
+                </button>
+                <div class="px-8 pb-6 hidden faq-content">
+                  <p class="text-blue-100 leading-relaxed mt-4">
+                    Ofrecemos 25 años de garantía en paneles solares, 10 años en
+                    inversores y 5 años en instalación. Además, incluimos seguro
+                    de daños y servicio técnico 24/7. Somos una empresa
+                    certificada con más de 1000 instalaciones exitosas.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
   </main>
+
   <Footer />
-</Layout>
 
-<style>
-  main {
-    min-height: 100vh;
-  }
-</style>
+  <style>
+    main {
+      min-height: 100vh;
+    }
 
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const faqToggles = document.querySelectorAll(".faq-toggle");
+    /* Custom Swiper Styles for Services */
+    .services-swiper {
+      width: 100%;
+      height: auto;
+      border-radius: 1.5rem;
+      overflow: hidden;
+    }
 
-    faqToggles.forEach((toggle) => {
-      toggle.addEventListener("click", function (event) {
-        const target = event.currentTarget as HTMLElement;
-        const content = target?.nextElementSibling as HTMLElement;
-        const icon = target?.querySelector("svg");
+    .services-swiper .swiper-button-next,
+    .services-swiper .swiper-button-prev {
+      color: var(--luzgas-blue, #2563eb);
+      padding: 10px;
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(10px);
+      border-radius: 50%;
+      width: 55px;
+      height: 55px;
+      margin-top: -25px;
+      box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.15),
+        0 5px 15px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+    }
 
-        content?.classList.toggle("hidden");
-        icon?.classList.toggle("rotate-180");
+    .services-swiper .swiper-button-next {
+      margin-right: 24px;
+    }
+
+    .services-swiper .swiper-button-prev {
+      margin-left: 24px;
+    }
+
+    .services-swiper .swiper-button-next:hover,
+    .services-swiper .swiper-button-prev:hover {
+      background: rgba(255, 255, 255, 1);
+      transform: scale(1.05);
+    }
+
+    .services-swiper .swiper-pagination-bullet {
+      width: 12px;
+      height: 12px;
+      background: rgba(37, 99, 235, 0.3);
+      opacity: 1;
+    }
+
+    .services-swiper .swiper-pagination-bullet-active {
+      background: var(--luzgas-blue, #2563eb);
+      transform: scale(1.2);
+    }
+
+    /* Custom Swiper Styles for Testimonials */
+    .testimonials-swiper {
+      width: 100%;
+      height: 340px;
+      padding: 20px 0;
+      box-sizing: border-box;
+    }
+
+    .testimonials-swiper .swiper-wrapper {
+      align-items: center;
+    }
+
+    .testimonials-swiper .swiper-slide {
+      width: 320px !important;
+    }
+
+    .testimonials-swiper .swiper-pagination-bullet {
+      width: 10px;
+      height: 10px;
+      background: rgba(255, 255, 255, 0.3);
+      opacity: 1;
+    }
+
+    .testimonials-swiper .swiper-pagination-bullet-active {
+      background: #fbbf24;
+      transform: scale(1.3);
+    }
+
+    .testimonials-swiper .swiper-wrapper {
+      transition-timing-function: linear !important;
+    }
+  </style>
+
+  <script>
+    import Swiper from "swiper";
+    import { Autoplay, Navigation, Pagination } from "swiper/modules";
+
+    function initializePage() {
+      // LIMPIAR FAQ event listeners previos
+      const faqToggles = document.querySelectorAll(".faq-toggle");
+      faqToggles.forEach((toggle) => {
+        // Clonar el elemento para remover TODOS los event listeners
+        const newToggle = toggle.cloneNode(true) as HTMLElement;
+        toggle.parentNode?.replaceChild(newToggle, toggle);
+
+        // Agregar el event listener al elemento limpio
+        newToggle.addEventListener("click", function (event) {
+          event.preventDefault();
+
+          const target = event.currentTarget as HTMLElement;
+          const content = target?.nextElementSibling as HTMLElement;
+          const icon = target?.querySelector("svg");
+
+          content?.classList.toggle("hidden");
+          icon?.classList.toggle("rotate-180");
+        });
       });
+
+      // Destruir Swipers existentes para evitar duplicados
+      document.querySelectorAll(".swiper-initialized").forEach((el) => {
+        const swiperEl = el as any;
+        if (swiperEl.swiper) {
+          swiperEl.swiper.destroy(true, true);
+        }
+      });
+
+      // Slider servicios
+      const servicesElement = document.querySelector(".services-swiper");
+      if (servicesElement) {
+        const servicesSwiper = new Swiper(".services-swiper", {
+          modules: [Autoplay, Navigation, Pagination],
+          spaceBetween: 30,
+          centeredSlides: true,
+          autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+          },
+          pagination: {
+            el: ".services-swiper .swiper-pagination",
+            clickable: true,
+          },
+          navigation: {
+            nextEl: ".services-swiper .swiper-button-next",
+            prevEl: ".services-swiper .swiper-button-prev",
+          },
+          loop: true,
+          effect: "slide",
+          speed: 800,
+        });
+      }
+
+      // Slider para Testimonios (data dinamica)
+      const testimonialsData = [
+        {
+          name: "María Rodríguez",
+          role: "Propietaria de vivienda",
+          initials: "MR",
+          color: "from-green-500 to-green-400",
+          testimonial:
+            "Gracias a LUZGAS reduje mi factura eléctrica en un 40%. El servicio fue excelente, muy profesional y cumplieron todos los plazos prometidos.",
+        },
+        {
+          name: "Juan López",
+          role: "Director de empresa",
+          initials: "JL",
+          color: "from-blue-500 to-blue-600",
+          testimonial:
+            "La auditoría energética nos ayudó a identificar ahorros significativos en nuestra empresa. Proceso muy profesional y resultados excepcionales.",
+        },
+        {
+          name: "Ana García",
+          role: "Administradora",
+          initials: "AG",
+          color: "from-yellow-500 to-orange-400",
+          testimonial:
+            "Instalaron paneles solares en mi casa. El proceso fue rápido, transparente y ahorro considerablemente en electricidad.",
+        },
+        {
+          name: "Pedro Martínez",
+          role: "Comerciante",
+          initials: "PM",
+          color: "from-red-500 to-pink-400",
+          testimonial:
+            "La optimización de gas nos dio un respiro en los costos fijos del local. Muy recomendable por su honestidad y eficiencia.",
+        },
+        {
+          name: "Sofía Herrera",
+          role: "Consultora",
+          initials: "SH",
+          color: "from-purple-500 to-indigo-400",
+          testimonial:
+            "El acompañamiento en la gestión de subvenciones fue clave. Un equipo muy conocedor de las normativas vigentes.",
+        },
+        {
+          name: "Ricardo Núñez",
+          role: "Gerente",
+          initials: "RN",
+          color: "from-gray-500 to-gray-400",
+          testimonial:
+            "Servicio de gas impecable, rápido y con la mejor tarifa del mercado. Profesionales 100%.",
+        },
+      ];
+
+      // Primero llenar el contenido de testimonials
+      const testimonialsWrapper = document.querySelector(
+        ".testimonials-swiper .swiper-wrapper",
+      );
+
+      if (testimonialsWrapper) {
+        testimonialsWrapper.innerHTML = testimonialsData
+          .map(
+            (testimonial) => `
+        <div class="swiper-slide !w-80 flex-shrink-0">
+          <div class="bg-white p-6 h-full shadow-xl rounded-2xl mx-2">
+            <div class="text-center">
+              <div class="w-16 h-16 bg-gradient-to-br ${testimonial.color} rounded-full flex items-center justify-center mx-auto mb-4">
+                <span class="text-lg font-bold text-white">${testimonial.initials}</span>
+              </div>
+              <h3 class="text-lg font-semibold text-gray-800 mb-1">${testimonial.name}</h3>
+              <p class="text-sm text-gray-600 mb-4">${testimonial.role}</p>
+              <p class="text-gray-700 text-sm leading-relaxed">"${testimonial.testimonial}"</p>
+            </div>
+          </div>
+        </div>
+      `,
+          )
+          .join("");
+
+        // Luego inicializar el swiper
+        const testimonialsElement = document.querySelector(
+          ".testimonials-swiper",
+        );
+        if (testimonialsElement) {
+          const testimonialsSwiper = new Swiper(".testimonials-swiper", {
+            modules: [Autoplay],
+            slidesPerView: "auto",
+            spaceBetween: 24,
+            loop: true,
+            centeredSlides: false,
+            autoplay: {
+              delay: 100,
+              disableOnInteraction: false,
+            },
+            speed: 6000,
+            allowTouchMove: true,
+          });
+        }
+      }
+    }
+
+    // Contador de elegirnos
+    function initCounters() {
+      const counterObserver = new IntersectionObserver(
+        (entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              const counters = entry.target.querySelectorAll(".counter");
+              counters.forEach((counter) => {
+                const htmlCounter = counter as HTMLElement;
+                const target = +(htmlCounter.getAttribute("data-target") || 0);
+                let count = 0;
+                const increment = target / 200;
+
+                const updateCounter = () => {
+                  count += increment;
+                  if (count < target) {
+                    htmlCounter.innerText = Math.ceil(count).toString();
+                    requestAnimationFrame(updateCounter);
+                  } else {
+                    htmlCounter.innerText = target.toString();
+                  }
+                };
+                updateCounter();
+              });
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        {
+          threshold: 0.5,
+        },
+      );
+
+      const chooseUsSection = document.getElementById("why-choose-us");
+      if (chooseUsSection) counterObserver.observe(chooseUsSection);
+    }
+
+    // Ejecutar en carga inicial
+    document.addEventListener("DOMContentLoaded", () => {
+      initializePage();
+      initCounters();
     });
-  });
-</script>
+
+    document.addEventListener("astro:page-load", () => {
+      initializePage();
+      initCounters();
+    });
+  </script>
+</Layout>
