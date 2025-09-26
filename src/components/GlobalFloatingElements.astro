@@ -1,0 +1,49 @@
+---
+import Dial from "./Dial.astro";
+import Modal from "./Modal.astro";
+---
+
+<!-- Elementos flotantes globales -->
+<div class="fixed inset-0 pointer-events-none z-50">
+  <!-- WhatsApp Button -->
+  <Dial
+    href={`https://wa.me/34667275919?text=Hola, Quisiera obtener mayor información acerca de la asesoria energética.`}
+    target="_blank"
+    src="/whatsApp.svg"
+    alt="Botón interactivo de WhatsApp"
+    className="animate-bounce animate-infinite animate-duration-[1500ms] animate-ease-in-out bottom-6 left-3 md:left-6 lg:left-10 pointer-events-auto"
+    classImg="w-16 h-16 lg:w-[74px] lg:h-[74px] drop-shadow-[1px_1px_2px_#1da752e6]"
+  />
+
+  <!-- Email Button -->
+  <Dial
+    href="mailto:info@luzgas.net?subject=Solicitud%20de%20informaci%C3%B3n%20sobre%20asesor%C3%ADa%20energ%C3%A9tica&body=Hola%2C%20Quisiera%20obtener%20mayor%20informaci%C3%B3n%20acerca%20de%20la%20asesor%C3%ADa%20energ%C3%A9tica."
+    target="_blank"
+    src="/email.svg"
+    alt="Botón interactivo con el correo corporativo organizacional"
+    className="animate-bounce animate-infinite animate-duration-[1500ms] animate-ease-in-out bottom-6 right-3 md:right-6 lg:right-10 rounded-full bg-luzgas-blue p-4 pointer-events-auto"
+    classImg="w-10 h-10 lg:w-[50px] lg:h-[50px] drop-shadow-[1px_1px_2px_#2a6fa8e6]"
+    onclick="modalIcon.showModal()"
+  />
+</div>
+
+<!-- Modal (fuera del contenedor fixed) -->
+<Modal
+  id="modalIcon"
+  text="Envía la información que necesitas a nuestros correos corporativos y nos pondremos en comunicación con usted en breve."
+/>
+
+<script>
+  // Asegurar que el modal funcione correctamente
+  document.addEventListener("astro:page-load", () => {
+    const modalTrigger = document.querySelector('[onclick*="modalIcon"]');
+    const modal = document.getElementById("modalIcon") as HTMLDialogElement;
+
+    if (modalTrigger && modal) {
+      modalTrigger.addEventListener("click", (e) => {
+        e.preventDefault();
+        modal.showModal();
+      });
+    }
+  });
+</script>

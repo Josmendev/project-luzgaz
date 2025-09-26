@@ -1,5 +1,6 @@
 ---
 import { ViewTransitions } from "astro:transitions";
+import GlobalFloatingElements from "../components/GlobalFloatingElements.astro";
 import "../styles/global.css";
 
 export interface Props {
@@ -36,6 +37,7 @@ const { title, description = "LUZGAS - Asesoría Energética" } = Astro.props;
     class="font-poppins antialiased bg-gradient-to-br from-gray-50 to-white"
   >
     <slot />
+    <GlobalFloatingElements />
   </body>
 </html>
 
@@ -43,4 +45,8 @@ const { title, description = "LUZGAS - Asesoría Energética" } = Astro.props;
   @import "swiper/css";
   @import "swiper/css/bundle";
   @import "swiper/css/free-mode";
+
+  body {
+    overflow-x: hidden;
+  }
 </style>

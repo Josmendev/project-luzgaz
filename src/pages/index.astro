@@ -16,7 +16,8 @@ import Layout from "../layouts/Layout.astro";
     <!-- Featured Services Section -->
     <section
       id="featured-services"
-      class="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-white to-green-50 relative overflow-hidden"
+      class="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-white to-green-50 relative overflow-hidden scroll-animate"
+      data-animate="fade-up"
     >
       <!-- Background Pattern -->
       <div class="absolute inset-0 opacity-10">
@@ -66,7 +67,7 @@ import Layout from "../layouts/Layout.astro";
                     <img
                       src="/undraw_gas.svg"
                       alt="Servicio de gas"
-                      class="w-80 h-80 object-cover"
+                      class="w-96 h-[400px] object-cover"
                     />
                   </div>
 
@@ -112,7 +113,7 @@ import Layout from "../layouts/Layout.astro";
                     <img
                       src="/undraw_luz.svg"
                       alt="Servicio de luz"
-                      class="w-80 h-80 object-contain"
+                      class="w-96 h-[400px] object-cover"
                     />
                   </div>
                 </div>
@@ -127,7 +128,7 @@ import Layout from "../layouts/Layout.astro";
                     <img
                       src="/undraw_auditoria.svg"
                       alt="Servicio de auditoria"
-                      class="w-80 h-80 object-cover mb-8"
+                      class="w-96 h-[400px] object-cover"
                     />
                   </div>
 
@@ -164,7 +165,8 @@ import Layout from "../layouts/Layout.astro";
     <!-- Why Choose Us Section -->
     <section
       id="why-choose-us"
-      class="min-h-screen flex items-center justify-center bg-gradient-to-br from-luzgas-blue to-blue-600 relative overflow-hidden"
+      class="min-h-screen flex items-center justify-center bg-gradient-to-br from-luzgas-blue to-blue-600 relative overflow-hidden scroll-animate"
+      data-animate="fade-left"
     >
       <!-- Background Elements -->
       <div class="absolute inset-0 opacity-10">
@@ -328,7 +330,8 @@ import Layout from "../layouts/Layout.astro";
     <!-- Testimonials Section -->
     <section
       id="testimonials"
-      class="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-white to-green-50 relative"
+      class="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-white to-green-50 relative scroll-animate"
+      data-animate="fade-up"
     >
       <!-- Background Pattern -->
       <div class="absolute inset-0 opacity-10">
@@ -378,7 +381,8 @@ import Layout from "../layouts/Layout.astro";
     <!-- FAQ Section -->
     <section
       id="frequently-asked-questions"
-      class="min-h-screen flex items-center justify-center bg-gradient-to-br from-luzgas-blue to-blue-600 relative overflow-hidden"
+      class="min-h-screen flex items-center justify-center bg-gradient-to-br from-luzgas-blue to-blue-600 relative overflow-hidden scroll-animate"
+      data-animate="fade-right"
     >
       <!-- Background Elements -->
       <div class="absolute inset-0 opacity-10">
@@ -774,6 +778,31 @@ import Layout from "../layouts/Layout.astro";
   }
 </style>
 
+<!-- Estilo para animaciones -->
+<style>
+  .scroll-animate {
+    opacity: 0;
+    transition: all 0.9s ease-in-out;
+  }
+
+  .scroll-animate[data-animate="fade-up"] {
+    transform: translateY(500px);
+  }
+
+  .scroll-animate[data-animate="fade-left"] {
+    transform: translateX(-500px);
+  }
+
+  .scroll-animate[data-animate="fade-right"] {
+    transform: translateX(500px);
+  }
+
+  .scroll-animate.animate-in {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+</style>
+
 <script>
   import Swiper from "swiper";
   import { Autoplay, Navigation, Pagination } from "swiper/modules";
@@ -977,4 +1006,27 @@ import Layout from "../layouts/Layout.astro";
     initializePage();
     initCounters();
   });
+</script>
+
+<script>
+  function initScrollAnimations() {
+    const elements = document.querySelectorAll(".scroll-animate");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("animate-in");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1 },
+    );
+
+    elements.forEach((el) => observer.observe(el));
+  }
+
+  document.addEventListener("DOMContentLoaded", initScrollAnimations);
+  document.addEventListener("astro:page-load", initScrollAnimations);
 </script>
