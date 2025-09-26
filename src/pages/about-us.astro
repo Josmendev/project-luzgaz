@@ -33,10 +33,10 @@ import Layout from "../layouts/Layout.astro";
           <!-- Logo/Brand visual -->
           <div class="relative">
             <img
-              src="/logo-2.png"
+              src="/logo-1.png"
               alt="Luzgas Logo"
-              class="h-auto w-56 md:w-[500px] mx-auto object-cover"
-              style="filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3)) drop-shadow(0 2px 4px rgba(0,0,0,0.2));"
+              class="h-auto w-48 md:w-[480px] mx-auto object-cover"
+              style="filter: drop-shadow(0 4px 8px rgba(0,0,0,0.7)) drop-shadow(0 2px 4px rgba(0,0,0,0.6));"
             />
           </div>
 
@@ -268,7 +268,7 @@ import Layout from "../layouts/Layout.astro";
 
         <!-- Columna derecha - Contenido -->
         <div
-          class="bg-white rounded-3xl p-12 shadow-2xl hover:shadow-3xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100"
+          class="bg-white rounded-3xl p-8 shadow-2xl hover:shadow-3xl transition-all duration-500 transform hover:-translate-y-2"
         >
           <!-- Name and Position -->
           <h3 class="text-3xl font-bold text-gray-800 mb-2! text-center">
@@ -654,42 +654,85 @@ import Layout from "../layouts/Layout.astro";
   import Swiper from "swiper";
   import { Autoplay, Navigation, Pagination } from "swiper/modules";
 
-  function initializeHowWeWorkSlider() {
-    // Destruir Swiper existente si existe
-    const existingSwiper = document.querySelector(
-      ".how-we-work-swiper.swiper-initialized",
-    );
-    if (existingSwiper && (existingSwiper as any).swiper) {
-      (existingSwiper as any).swiper.destroy(true, true);
+  let howWeWorkSwiperInstance: any = null;
+
+  function cleanupSwiper() {
+    if (howWeWorkSwiperInstance) {
+      howWeWorkSwiperInstance.destroy(true, true);
+      howWeWorkSwiperInstance = null;
     }
 
-    // Inicializar nuevo Swiper
-    const howWeWorkElement = document.querySelector(".how-we-work-swiper");
-    if (howWeWorkElement) {
-      const howWeWorkSwiper = new Swiper(".how-we-work-swiper", {
-        modules: [Autoplay, Navigation, Pagination],
-        spaceBetween: 30,
-        centeredSlides: true,
-        autoplay: {
-          delay: 2500,
-          disableOnInteraction: false,
-        },
-        pagination: {
-          el: ".how-we-work-swiper .swiper-pagination",
-          clickable: true,
-        },
-        navigation: {
-          nextEl: ".how-we-work-swiper .swiper-button-next",
-          prevEl: ".how-we-work-swiper .swiper-button-prev",
-        },
-        loop: true,
-        effect: "slide",
-        speed: 800,
-      });
-    }
+    // Backup: limpiar cualquier swiper inicializado en el DOM
+    document.querySelectorAll(".swiper-initialized").forEach((el) => {
+      const swiperEl = el as any;
+      if (swiperEl.swiper) {
+        swiperEl.swiper.destroy(true, true);
+      }
+    });
   }
 
-  // Ejecutar cuando se carga la página
-  document.addEventListener("DOMContentLoaded", initializeHowWeWorkSlider);
-  document.addEventListener("astro:page-load", initializeHowWeWorkSlider);
+  function initializePage() {
+    // Primero limpiar cualquier instancia existente
+    cleanupSwiper();
+
+    // Pequeño delay para asegurar que el DOM esté listo
+    setTimeout(() => {
+      // Slider How We Work
+      const howWeWorkElement = document.querySelector(".how-we-work-swiper");
+
+      if (
+        howWeWorkElement &&
+        !howWeWorkElement.classList.contains("swiper-initialized")
+      ) {
+        try {
+          howWeWorkSwiperInstance = new Swiper(".how-we-work-swiper", {
+            modules: [Autoplay, Navigation, Pagination],
+            spaceBetween: 30,
+            centeredSlides: true,
+            autoplay: {
+              delay: 2500,
+              disableOnInteraction: false,
+            },
+            pagination: {
+              el: ".how-we-work-swiper .swiper-pagination",
+              clickable: true,
+            },
+            navigation: {
+              nextEl: ".how-we-work-swiper .swiper-button-next",
+              prevEl: ".how-we-work-swiper .swiper-button-prev",
+            },
+            loop: true,
+            effect: "slide",
+            speed: 800,
+            // Estas opciones ayudan con la navegación SPA
+            observer: true,
+            observeParents: true,
+            watchSlidesProgress: true,
+          });
+        } catch (error) {
+          console.error("Error inicializando How We Work Swiper:", error);
+        }
+      }
+    }, 100);
+  }
+
+  // Ejecutar en carga inicial
+  document.addEventListener("DOMContentLoaded", () => {
+    initializePage();
+  });
+
+  // Ejecutar cuando Astro cambie de página
+  document.addEventListener("astro:page-load", () => {
+    initializePage();
+  });
+
+  // Limpiar antes de cambiar de página (importante para Astro)
+  document.addEventListener("astro:before-preparation", () => {
+    cleanupSwiper();
+  });
+
+  // Backup de limpieza
+  window.addEventListener("beforeunload", () => {
+    cleanupSwiper();
+  });
 </script>
