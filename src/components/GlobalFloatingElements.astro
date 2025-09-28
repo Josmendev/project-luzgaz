@@ -32,3 +32,58 @@ import Modal from "./Modal.astro";
   id="modalIcon"
   text="Envía la información que necesitas a nuestros correos corporativos y nos pondremos en comunicación con usted en breve."
 />
+
+<!-- Cursor personalizado global -->
+<div id="global-cursor" class="fixed w-4 h-4 bg-luzgas-blue/20 rounded-full pointer-events-none z-50 transition-all duration-300 ease-out" style="left: -100px; top: -100px;"></div>
+
+<script>
+  // Enhanced Cursor Effect Global
+  function initGlobalCursor() {
+    const cursor = document.getElementById('global-cursor');
+    if (!cursor) return;
+
+    let mouseX = 0, mouseY = 0;
+    let cursorX = 0, cursorY = 0;
+
+    document.addEventListener('mousemove', (e) => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+    });
+
+    function updateCursor() {
+      cursorX += (mouseX - cursorX) * 0.1;
+      cursorY += (mouseY - cursorY) * 0.1;
+      cursor.style.left = cursorX + 'px';
+      cursor.style.top = cursorY + 'px';
+      requestAnimationFrame(updateCursor);
+    }
+    updateCursor();
+
+    // Scale effect on hover for interactive elements
+    const interactiveElements = 'a, button, .service-card, .feature-item, input, textarea, select, [role="button"]';
+
+    document.addEventListener('mouseover', (e) => {
+      if (e.target?.closest(interactiveElements)) {
+        cursor.style.transform = 'scale(2)';
+        cursor.style.backgroundColor = 'rgba(59, 130, 246, 0.3)';
+      }
+    });
+
+    document.addEventListener('mouseout', (e) => {
+      if (e.target?.closest(interactiveElements)) {
+        cursor.style.transform = 'scale(1)';
+        cursor.style.backgroundColor = 'rgba(59, 130, 246, 0.2)';
+      }
+    });
+  }
+
+  // Initialize when DOM is ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initGlobalCursor);
+  } else {
+    initGlobalCursor();
+  }
+
+  // Re-initialize on page transitions (for Astro View Transitions)
+  document.addEventListener('astro:page-load', initGlobalCursor);
+</script>

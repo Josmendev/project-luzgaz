@@ -15,24 +15,32 @@ import Layout from "../layouts/Layout.astro";
       id="our-services"
       class="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-gray-50 via-white to-blue-50"
     >
-      <!-- Background Pattern -->
+      <!-- Enhanced Background Pattern with Animation -->
       <div class="absolute inset-0 opacity-10">
         <div
-          class="absolute top-10 left-10 w-20 h-20 bg-luzgas-blue rounded-full"
+          class="absolute top-10 left-10 w-20 h-20 bg-luzgas-blue rounded-full floating-1"
         >
         </div>
         <div
-          class="absolute top-32 right-20 w-16 h-16 bg-luzgas-green rounded-full"
+          class="absolute top-32 right-20 w-16 h-16 bg-luzgas-green rounded-full floating-2"
         >
         </div>
         <div
-          class="absolute bottom-20 left-32 w-12 h-12 bg-luzgas-yellow rounded-full"
+          class="absolute bottom-20 left-32 w-12 h-12 bg-luzgas-yellow rounded-full floating-3"
         >
         </div>
         <div
-          class="absolute bottom-40 right-10 w-24 h-24 bg-luzgas-blue rounded-full"
+          class="absolute bottom-40 right-10 w-24 h-24 bg-luzgas-blue rounded-full floating-1"
         >
         </div>
+        <!-- Additional animated elements -->
+        <div class="absolute top-1/2 left-1/4 w-8 h-8 bg-luzgas-green/30 rounded-full floating-2"></div>
+        <div class="absolute top-1/3 right-1/3 w-6 h-6 bg-luzgas-yellow/40 rounded-full floating-3"></div>
+      </div>
+
+      <!-- Parallax Grid Background -->
+      <div class="absolute inset-0 opacity-5">
+        <div class="grid-background"></div>
       </div>
 
       <div
@@ -40,9 +48,7 @@ import Layout from "../layouts/Layout.astro";
       >
         <!-- Header Section -->
         <div class="text-center mb-12">
-          <h2
-            class="text-3xl md:text-5xl font-bold text-gray-800 mb-2 md:mb-3!"
-          >
+          <h2 class="text-3xl md:text-5xl font-bold text-gray-800 mb-2 md:mb-3!">
             Nuestros <span class="text-luzgas-blue">Servicios</span>
           </h2>
           <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
@@ -51,139 +57,277 @@ import Layout from "../layouts/Layout.astro";
           </p>
         </div>
 
-        <div class="space-y-24 pb-24">
-          <!-- Servicio 1: Imagen Izq, Contenido Der -->
-          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <!-- Imagen -->
-            <div class="flex justify-center">
-              <img
-                src="/undraw_gas.svg"
-                alt="Optimización de Gas"
-                class="w-[380px] h-[380px] object-cover rounded-2xl"
-              />
-            </div>
+        <div class="space-y-32 pb-24">
+          <!-- Servicio 1: Gas - Modern Card Design -->
+          <div class="service-card scroll-reveal" data-delay="0">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center bg-white/70 backdrop-blur-sm rounded-3xl p-8 lg:p-12 shadow-xl hover:shadow-2xl transition-all duration-500 border border-white/20 relative overflow-hidden">
 
-            <!-- Contenido -->
-            <div class="space-y-6">
-              <div class="text-center lg:text-left flex flex-col gap-3">
-                <img
-                  src="/img-gas.gif"
-                  alt="Servicio de gas"
-                  class="w-28 h-28 object-cover"
-                />
-                <h3 class="text-2xl font-bold text-luzgas-blue">
-                  Optimización de Gas
-                </h3>
-                <p class="text-gray-600 leading-relaxed mb-6">
-                  Instalación y mantenimiento de sistemas de gas natural y GLP.
-                  Optimizamos el consumo para reducir costos y mejorar la
-                  eficiencia energética de tu hogar o empresa.
-                </p>
+              <!-- Floating Background Elements -->
+              <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-luzgas-blue/10 to-transparent rounded-full -translate-y-16 translate-x-16"></div>
+              <div class="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-luzgas-blue/5 to-transparent rounded-full translate-y-12 -translate-x-12"></div>
+
+              <!-- Imagen with Enhanced Effects -->
+              <div class="flex justify-center relative group">
+                <div class="relative overflow-hidden rounded-2xl shadow-2xl group-hover:scale-105 transition-transform duration-500">
+                  <img
+                    src="/undraw_gas.svg"
+                    alt="Optimización de Gas"
+                    class="w-[380px] h-[380px] object-cover"
+                  />
+                  <!-- Overlay gradient on hover -->
+                  <div class="absolute inset-0 bg-gradient-to-t from-luzgas-blue/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
+                <!-- Floating icon -->
+                <div class="absolute -top-4 -right-4 w-16 h-16 bg-gradient-to-br from-luzgas-blue to-blue-600 rounded-xl shadow-lg flex items-center justify-center transform rotate-12 group-hover:rotate-0 transition-transform duration-300">
+                  <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                  </svg>
+                </div>
               </div>
-              <ul class="space-y-3 text-gray-600">
-                <li class="flex items-center space-x-3">
-                  <span class="w-2 h-2 bg-blue-500 rounded-full"></span>
-                  <span>Instalación de sistemas de gas eficientes</span>
-                </li>
-                <li class="flex items-center space-x-3">
-                  <span class="w-2 h-2 bg-blue-500 rounded-full"></span>
-                  <span>Mantenimiento preventivo y correctivo</span>
-                </li>
-                <li class="flex items-center space-x-3">
-                  <span class="w-2 h-2 bg-blue-500 rounded-full"></span>
-                  <span>Auditorías de consumo y optimización</span>
-                </li>
-              </ul>
+
+              <!-- Contenido Enhanced -->
+              <div class="space-y-6 relative">
+                <div class="text-center lg:text-left flex flex-col gap-4">
+                  <div class="flex items-center gap-4 justify-center lg:justify-start">
+                    <div class="relative">
+                      <img
+                        src="/img-gas.gif"
+                        alt="Servicio de gas"
+                        class="w-32 h-32 object-cover rounded-xl shadow-lg hover:scale-110 transition-transform duration-300"
+                      />
+                      <div class="absolute -bottom-2 -right-2 w-8 h-8 bg-luzgas-blue rounded-full flex items-center justify-center">
+                        <span class="text-white text-sm font-bold">1</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <h3 class="text-3xl font-bold bg-gradient-to-r from-luzgas-blue to-blue-600 bg-clip-text text-transparent">
+                    Análisis de Facturas de Gas
+                  </h3>
+                  <p class="text-gray-600 leading-relaxed text-lg">
+                    Revisamos tus facturas de gas para identificar si pagas de más. Analizamos tu consumo y comparamos todas las comercializadoras del mercado.
+                  </p>
+                </div>
+
+                <div class="space-y-4">
+                  <div class="flex items-center space-x-4 p-3 bg-luzgas-blue/5 rounded-xl hover:bg-luzgas-blue/10 transition-colors duration-300 feature-item">
+                    <div class="w-10 h-10 bg-gradient-to-br from-luzgas-blue to-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                      </svg>
+                    </div>
+                    <span class="text-gray-700 font-medium">Análisis detallado de tu factura de gas</span>
+                  </div>
+                  <div class="flex items-center space-x-4 p-3 bg-luzgas-blue/5 rounded-xl hover:bg-luzgas-blue/10 transition-colors duration-300 feature-item">
+                    <div class="w-10 h-10 bg-gradient-to-br from-luzgas-blue to-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                      </svg>
+                    </div>
+                    <span class="text-gray-700 font-medium">Comparativa de todas las comercializadoras</span>
+                  </div>
+                  <div class="flex items-center space-x-4 p-3 bg-luzgas-blue/5 rounded-xl hover:bg-luzgas-blue/10 transition-colors duration-300 feature-item">
+                    <div class="w-10 h-10 bg-gradient-to-br from-luzgas-blue to-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                      </svg>
+                    </div>
+                    <span class="text-gray-700 font-medium">Recomendación personalizada para ahorrar</span>
+                  </div>
+                </div>
+
+                <!-- CTA Button -->
+                <div class="pt-4">
+                  <a href="/invoice" class="bg-gradient-to-r from-luzgas-blue to-blue-600 text-white px-8 py-4 rounded-xl font-semibold hover:shadow-xl hover:scale-105 transition-all duration-300 flex items-center space-x-2 inline-flex">
+                    <span>Solicitar Análisis</span>
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                    </svg>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
 
-          <!-- Servicio 2: Contenido Izq, Imagen Der -->
-          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <!-- Contenido -->
-            <div class="space-y-6 order-2 lg:order-1">
-              <div class="text-center lg:text-left flex flex-col gap-3">
-                <img
-                  src="/img-luz.gif"
-                  alt="Servicio de luz"
-                  class="w-28 h-28 object-cover"
-                />
-                <h3 class="text-2xl font-bold text-yellow-500 mb-4">
-                  Eficiencia Eléctrica
-                </h3>
-                <p class="text-gray-600 leading-relaxed mb-6">
-                  Instalación de paneles solares y sistemas de iluminación LED.
-                  Reduce hasta un 90% tu factura eléctrica con tecnología
-                  renovable de última generación.
-                </p>
-              </div>
-              <ul class="space-y-3 text-gray-600">
-                <li class="flex items-center space-x-3">
-                  <span class="w-2 h-2 bg-yellow-500 rounded-full"></span>
-                  <span>Paneles solares de alta eficiencia</span>
-                </li>
-                <li class="flex items-center space-x-3">
-                  <span class="w-2 h-2 bg-yellow-500 rounded-full"></span>
-                  <span>Sistemas de almacenamiento de energía</span>
-                </li>
-                <li class="flex items-center space-x-3">
-                  <span class="w-2 h-2 bg-yellow-500 rounded-full"></span>
-                  <span>Iluminación LED inteligente</span>
-                </li>
-              </ul>
-            </div>
+          <!-- Servicio 2: Luz - Modern Card Design (Reverse Layout) -->
+          <div class="service-card scroll-reveal" data-delay="200">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center bg-white/70 backdrop-blur-sm rounded-3xl p-8 lg:p-12 shadow-xl hover:shadow-2xl transition-all duration-500 border border-white/20 relative overflow-hidden">
 
-            <!-- Imagen -->
-            <div class="flex justify-center order-1 lg:order-2">
-              <img
-                src="/undraw_luz.svg"
-                alt="Eficiencia Eléctrica"
-                class="w-[380px] h-[380px] object-cover rounded-2xl"
-              />
+              <!-- Floating Background Elements -->
+              <div class="absolute top-0 left-0 w-32 h-32 bg-gradient-to-br from-luzgas-yellow/10 to-transparent rounded-full -translate-y-16 -translate-x-16"></div>
+              <div class="absolute bottom-0 right-0 w-24 h-24 bg-gradient-to-tr from-luzgas-yellow/5 to-transparent rounded-full translate-y-12 translate-x-12"></div>
+
+              <!-- Contenido Enhanced -->
+              <div class="space-y-6 relative order-2 lg:order-1">
+                <div class="text-center lg:text-left flex flex-col gap-4">
+                  <div class="flex items-center gap-4 justify-center lg:justify-start">
+                    <div class="relative">
+                      <img
+                        src="/img-luz.gif"
+                        alt="Servicio de luz"
+                        class="w-32 h-32 object-cover rounded-xl shadow-lg hover:scale-110 transition-transform duration-300"
+                      />
+                      <div class="absolute -bottom-2 -right-2 w-8 h-8 bg-luzgas-yellow rounded-full flex items-center justify-center">
+                        <span class="text-white text-sm font-bold">2</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <h3 class="text-3xl font-bold bg-gradient-to-r from-luzgas-yellow to-orange-500 bg-clip-text text-transparent">
+                    Análisis de Facturas de Luz
+                  </h3>
+                  <p class="text-gray-600 leading-relaxed text-lg">
+                    Estudiamos tu factura eléctrica para encontrar la tarifa más competitiva. Te ayudamos a entender cada concepto y reducir tu gasto mensual.
+                  </p>
+                </div>
+
+                <div class="space-y-4">
+                  <div class="flex items-center space-x-4 p-3 bg-luzgas-yellow/5 rounded-xl hover:bg-luzgas-yellow/10 transition-colors duration-300 feature-item">
+                    <div class="w-10 h-10 bg-gradient-to-br from-luzgas-yellow to-orange-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                      </svg>
+                    </div>
+                    <span class="text-gray-700 font-medium">Estudio de tu potencia contratada</span>
+                  </div>
+                  <div class="flex items-center space-x-4 p-3 bg-luzgas-yellow/5 rounded-xl hover:bg-luzgas-yellow/10 transition-colors duration-300 feature-item">
+                    <div class="w-10 h-10 bg-gradient-to-br from-luzgas-yellow to-orange-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                      </svg>
+                    </div>
+                    <span class="text-gray-700 font-medium">Análisis de tarifas según tu consumo</span>
+                  </div>
+                  <div class="flex items-center space-x-4 p-3 bg-luzgas-yellow/5 rounded-xl hover:bg-luzgas-yellow/10 transition-colors duration-300 feature-item">
+                    <div class="w-10 h-10 bg-gradient-to-br from-luzgas-yellow to-orange-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"></path>
+                      </svg>
+                    </div>
+                    <span class="text-gray-700 font-medium">Asesoramiento para cambio de compañía</span>
+                  </div>
+                </div>
+
+                <!-- CTA Button -->
+                <div class="pt-4">
+                  <a href="/invoice" class="bg-gradient-to-r from-luzgas-yellow to-orange-500 text-white px-8 py-4 rounded-xl font-semibold hover:shadow-xl hover:scale-105 transition-all duration-300 flex items-center space-x-2 inline-flex">
+                    <span>Solicitar Análisis</span>
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Imagen with Enhanced Effects -->
+              <div class="flex justify-center relative group order-1 lg:order-2">
+                <div class="relative overflow-hidden rounded-2xl shadow-2xl group-hover:scale-105 transition-transform duration-500">
+                  <img
+                    src="/undraw_luz.svg"
+                    alt="Eficiencia Eléctrica"
+                    class="w-[380px] h-[380px] object-cover"
+                  />
+                  <!-- Overlay gradient on hover -->
+                  <div class="absolute inset-0 bg-gradient-to-t from-luzgas-yellow/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
+                <!-- Floating icon -->
+                <div class="absolute -top-4 -left-4 w-16 h-16 bg-gradient-to-br from-luzgas-yellow to-orange-500 rounded-xl shadow-lg flex items-center justify-center transform -rotate-12 group-hover:rotate-0 transition-transform duration-300">
+                  <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                  </svg>
+                </div>
+              </div>
             </div>
           </div>
 
-          <!-- Servicio 3: Imagen Izq, Contenido Der -->
-          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <!-- Imagen -->
-            <div class="flex justify-center">
-              <img
-                src="/undraw_auditoria.svg"
-                alt="Auditoria energética"
-                class="w-[380px] h-[380px] object-cover rounded-2xl"
-              />
-            </div>
+          <!-- Servicio 3: Asesoría - Modern Card Design -->
+          <div class="service-card scroll-reveal" data-delay="400">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center bg-white/70 backdrop-blur-sm rounded-3xl p-8 lg:p-12 shadow-xl hover:shadow-2xl transition-all duration-500 border border-white/20 relative overflow-hidden">
 
-            <!-- Contenido -->
-            <div class="space-y-6">
-              <div class="text-center lg:text-left flex flex-col gap-3">
-                <img
-                  src="/img-auditoria.gif"
-                  alt="Servicio de auditoria"
-                  class="w-40 h-40 object-cover mb-4"
-                />
-                <h3 class="text-2xl font-bold text-luzgas-green mb-4">
-                  Asesoría Energética
-                </h3>
-                <p class="text-gray-600 leading-relaxed mb-6">
-                  Consultoría especializada para identificar oportunidades de
-                  ahorro energético. Te ayudamos a tomar las mejores decisiones
-                  para tu proyecto energético.
-                </p>
+              <!-- Floating Background Elements -->
+              <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-luzgas-green/10 to-transparent rounded-full -translate-y-16 translate-x-16"></div>
+              <div class="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-luzgas-green/5 to-transparent rounded-full translate-y-12 -translate-x-12"></div>
+
+              <!-- Imagen with Enhanced Effects -->
+              <div class="flex justify-center relative group">
+                <div class="relative overflow-hidden rounded-2xl shadow-2xl group-hover:scale-105 transition-transform duration-500">
+                  <img
+                    src="/undraw_auditoria.svg"
+                    alt="Auditoria energética"
+                    class="w-[380px] h-[380px] object-cover"
+                  />
+                  <!-- Overlay gradient on hover -->
+                  <div class="absolute inset-0 bg-gradient-to-t from-luzgas-green/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
+                <!-- Floating icon -->
+                <div class="absolute -top-4 -right-4 w-16 h-16 bg-gradient-to-br from-luzgas-green to-green-600 rounded-xl shadow-lg flex items-center justify-center transform rotate-12 group-hover:rotate-0 transition-transform duration-300">
+                  <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                  </svg>
+                </div>
               </div>
-              <ul class="space-y-3 text-gray-600">
-                <li class="flex items-center space-x-3">
-                  <span class="w-2 h-2 bg-primary-500 rounded-full"></span>
-                  <span>Instalación de sistemas de gas eficientes</span>
-                </li>
-                <li class="flex items-center space-x-3">
-                  <span class="w-2 h-2 bg-primary-500 rounded-full"></span>
-                  <span>Mantenimiento preventivo y correctivo</span>
-                </li>
-                <li class="flex items-center space-x-3">
-                  <span class="w-2 h-2 bg-primary-500 rounded-full"></span>
-                  <span>Auditorías de consumo y optimización</span>
-                </li>
-              </ul>
+
+              <!-- Contenido Enhanced -->
+              <div class="space-y-6 relative">
+                <div class="text-center lg:text-left flex flex-col gap-4">
+                  <div class="flex items-center gap-4 justify-center lg:justify-start">
+                    <div class="relative">
+                      <img
+                        src="/img-auditoria.gif"
+                        alt="Servicio de auditoria"
+                        class="w-32 h-32 object-cover rounded-xl shadow-lg hover:scale-110 transition-transform duration-300"
+                      />
+                      <div class="absolute -bottom-2 -right-2 w-8 h-8 bg-luzgas-green rounded-full flex items-center justify-center">
+                        <span class="text-white text-sm font-bold">3</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <h3 class="text-3xl font-bold bg-gradient-to-r from-luzgas-green to-green-600 bg-clip-text text-transparent">
+                    Asesoría Energética
+                  </h3>
+                  <p class="text-gray-600 leading-relaxed text-lg">
+                    Te acompañamos en todo el proceso. Desde el análisis inicial hasta la verificación del ahorro en tu primera factura.
+                  </p>
+                </div>
+
+                <div class="space-y-4">
+                  <div class="flex items-center space-x-4 p-3 bg-luzgas-green/5 rounded-xl hover:bg-luzgas-green/10 transition-colors duration-300 feature-item">
+                    <div class="w-10 h-10 bg-gradient-to-br from-luzgas-green to-green-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                      </svg>
+                    </div>
+                    <span class="text-gray-700 font-medium">Diagnóstico gratuito sin compromiso</span>
+                  </div>
+                  <div class="flex items-center space-x-4 p-3 bg-luzgas-green/5 rounded-xl hover:bg-luzgas-green/10 transition-colors duration-300 feature-item">
+                    <div class="w-10 h-10 bg-gradient-to-br from-luzgas-green to-green-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                      </svg>
+                    </div>
+                    <span class="text-gray-700 font-medium">Explicación clara de tu factura actual</span>
+                  </div>
+                  <div class="flex items-center space-x-4 p-3 bg-luzgas-green/5 rounded-xl hover:bg-luzgas-green/10 transition-colors duration-300 feature-item">
+                    <div class="w-10 h-10 bg-gradient-to-br from-luzgas-green to-green-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                      </svg>
+                    </div>
+                    <span class="text-gray-700 font-medium">Seguimiento post-cambio garantizado</span>
+                  </div>
+                </div>
+
+                <!-- CTA Button -->
+                <div class="pt-4">
+                  <a href="/invoice" class="bg-gradient-to-r from-luzgas-green to-green-600 text-white px-8 py-4 rounded-xl font-semibold hover:shadow-xl hover:scale-105 transition-all duration-300 flex items-center space-x-2 inline-flex">
+                    <span>Solicitar Asesoría</span>
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                    </svg>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -197,4 +341,214 @@ import Layout from "../layouts/Layout.astro";
   main {
     min-height: 100vh;
   }
+
+  /* Floating Animations */
+  @keyframes floating-1 {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(5deg); }
+  }
+
+  @keyframes floating-2 {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-15px) rotate(-3deg); }
+  }
+
+  @keyframes floating-3 {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-25px) rotate(2deg); }
+  }
+
+  .floating-1 {
+    animation: floating-1 6s ease-in-out infinite;
+  }
+
+  .floating-2 {
+    animation: floating-2 4s ease-in-out infinite;
+    animation-delay: -2s;
+  }
+
+  .floating-3 {
+    animation: floating-3 5s ease-in-out infinite;
+    animation-delay: -1s;
+  }
+
+  /* Grid Background */
+  .grid-background {
+    background-image:
+      linear-gradient(90deg, rgba(59, 130, 246, 0.1) 1px, transparent 1px),
+      linear-gradient(rgba(59, 130, 246, 0.1) 1px, transparent 1px);
+    background-size: 50px 50px;
+    width: 100%;
+    height: 100%;
+    animation: grid-move 20s linear infinite;
+  }
+
+  @keyframes grid-move {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(50px, 50px); }
+  }
+
+
+  /* Fade In Animations */
+  .animate-fade-in-up {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s ease-out forwards;
+  }
+
+  .animate-fade-in-delayed {
+    animation-delay: 0.3s;
+  }
+
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Scroll Reveal Animation */
+  .scroll-reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .scroll-reveal.revealed {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Feature Items Animation */
+  .feature-item {
+    transform: translateX(-20px);
+    opacity: 0;
+    transition: all 0.6s ease-out;
+  }
+
+  .service-card.revealed .feature-item {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  .service-card.revealed .feature-item:nth-child(1) { transition-delay: 0.1s; }
+  .service-card.revealed .feature-item:nth-child(2) { transition-delay: 0.2s; }
+  .service-card.revealed .feature-item:nth-child(3) { transition-delay: 0.3s; }
+
+
+  /* Service Card Hover Effects */
+  .service-card:hover {
+    transform: translateY(-5px);
+  }
+
+  /* Advanced Gradient Border */
+  .service-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    padding: 2px;
+    background: linear-gradient(45deg, transparent, rgba(59, 130, 246, 0.1), transparent);
+    border-radius: inherit;
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: subtract;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .service-card:hover::before {
+    opacity: 1;
+  }
 </style>
+
+<script>
+  // Intersection Observer for Scroll Animations
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const delay = parseInt(entry.target.getAttribute('data-delay') || '0');
+        setTimeout(() => {
+          entry.target.classList.add('revealed');
+        }, delay);
+      }
+    });
+  }, observerOptions);
+
+
+  // Parallax Effect for Background Elements
+  function handleParallax() {
+    const scrolled = window.pageYOffset;
+    const parallaxElements = document.querySelectorAll('.floating-1, .floating-2, .floating-3');
+
+    parallaxElements.forEach((element) => {
+      const speed = 0.5;
+      const yPos = -(scrolled * speed);
+      (element as HTMLElement).style.transform = `translateY(${yPos}px)`;
+    });
+  }
+
+
+  // Smooth Scroll for Buttons
+  function addSmoothScrolling() {
+    const buttons = document.querySelectorAll('button');
+    buttons.forEach((button) => {
+      button.addEventListener('click', () => {
+        // Add ripple effect
+        const ripple = document.createElement('span');
+        ripple.className = 'absolute inset-0 rounded-xl bg-white/20 scale-0 animate-ping';
+        button.style.position = 'relative';
+        button.appendChild(ripple);
+
+        setTimeout(() => {
+          ripple.remove();
+        }, 600);
+      });
+    });
+  }
+
+  // Initialize function
+  function initializeServicesPage() {
+    // Clear previous observers
+    const scrollElements = document.querySelectorAll('.scroll-reveal');
+    scrollElements.forEach((el) => {
+      el.classList.remove('revealed');
+      observer.observe(el);
+    });
+
+    // Add parallax scrolling
+    window.addEventListener('scroll', handleParallax, { passive: true });
+
+    // Add smooth scrolling
+    addSmoothScrolling();
+
+    // Add progressive loading effect
+    setTimeout(() => {
+      document.body.style.opacity = '1';
+    }, 100);
+  }
+
+  // Initialize on different events
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initializeServicesPage);
+  } else {
+    initializeServicesPage();
+  }
+
+  // Re-initialize on Astro page transitions
+  document.addEventListener('astro:page-load', initializeServicesPage);
+
+  // Page Visibility API for performance
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) {
+      // Pause animations when tab is not visible
+      document.body.style.animationPlayState = 'paused';
+    } else {
+      // Resume animations when tab becomes visible
+      document.body.style.animationPlayState = 'running';
+    }
+  });
+</script>

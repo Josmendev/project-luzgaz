@@ -4,7 +4,8 @@ import Button from "./ui/Button.astro";
 ---
 
 <header
-  class="fixed top-0 right-0 left-0 z-50 mx-auto border-b border-gray-100 bg-white/90 backdrop-blur-sm"
+  id="main-header"
+  class="fixed top-0 right-0 left-0 z-50 mx-auto border-b border-gray-100 bg-white/90 backdrop-blur-sm transition-all duration-500"
   transition:persist
 >
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -12,7 +13,12 @@ import Button from "./ui/Button.astro";
       <!-- Logo -->
       <div class="flex-shrink-0">
         <a href="/" class="group flex items-center space-x-2">
-          <img src="/logo-3.png" alt="Luzgas Logo" class="h-auto w-48" />
+          <img
+            id="header-logo"
+            src="/logo-5.png"
+            alt="Luzgas Logo"
+            class="h-auto w-48 transition-all duration-300"
+          />
         </a>
       </div>
 
@@ -162,7 +168,7 @@ import Button from "./ui/Button.astro";
       <!-- Mobile menu button -->
       <button
         id="mobile-menu-button"
-        class="hover:text-luzgas-blue p-2 text-gray-700 lg:hidden"
+        class="hover:text-luzgas-blue p-2 text-gray-700 lg:hidden transition-colors duration-300"
       >
         <svg
           class="h-6 w-6"
@@ -321,7 +327,96 @@ import Button from "./ui/Button.astro";
   </div>
 </header>
 
+<style>
+  /* Estilos para header transparente - SOLO botones principales de navegación */
+  #main-header.header-transparent nav > div > a.nav-link:not(.active),
+  #main-header.header-transparent nav > a.nav-link:not(.active),
+  #main-header.header-transparent #mobile-menu-button {
+    color: white !important; /* Blanco solo para botones NO activos */
+  }
+
+  /* Mantener celeste para links activos - PRIORIDAD MÁXIMA */
+  #main-header.header-transparent nav > div > a.nav-link.active,
+  #main-header.header-transparent nav > a.nav-link.active,
+  #main-header.header-transparent .nav-link.active {
+    color: #0ea5e9 !important; /* Celeste luzgas para seleccionados */
+  }
+
+  /* Hover para botones principales */
+  #main-header.header-transparent nav > div > a.hover\\:text-luzgas-blue:hover,
+  #main-header.header-transparent nav > a.hover\\:text-luzgas-blue:hover {
+    color: #0ea5e9 !important; /* celeste en hover */
+  }
+
+  #main-header.header-transparent nav > div > a.hover\\:text-luzgas-green:hover {
+    color: #22c55e !important; /* verde en hover */
+  }
+
+  /* Dropdowns mantienen colores originales COMPLETAMENTE */
+  #main-header.header-transparent .bg-white\\/95 {
+    background-color: rgba(255, 255, 255, 0.95) !important;
+    border-color: rgb(243 244 246) !important;
+  }
+
+  /* IMPORTANTE: Los subitems NO deben cambiar de color NUNCA */
+  #main-header.header-transparent .bg-white\\/95 * {
+    color: revert !important; /* Mantener colores originales de todos los elementos del dropdown */
+  }
+
+  /* Transiciones suaves para todos los cambios de color */
+  #main-header .nav-link,
+  #main-header button,
+  #main-header a {
+    transition: color 0.3s ease-in-out !important;
+  }
+
+  /* Transición para el header completo */
+  #main-header {
+    transition: all 0.3s ease-in-out !important;
+  }
+</style>
+
 <script>
+  // Función para manejar la transparencia del header
+  function handleHeaderTransparency() {
+    const header = document.getElementById("main-header");
+    const heroSection = document.getElementById("inicio");
+    const currentPath = window.location.pathname;
+
+    if (!header) return;
+
+    // Solo aplicar transparencia en la página inicial (/)
+    if (currentPath !== "/" || !heroSection) {
+      // En otras páginas: siempre estado normal
+      header.style.backgroundColor = "rgb(255 255 255 / 0.9)";
+      header.style.borderColor = "rgb(243 244 246)";
+      header.style.backdropFilter = "blur(4px)";
+      header.classList.remove("header-transparent");
+      return;
+    }
+
+    // Solo en página inicial: verificar scroll para transparencia
+    const heroHeight = heroSection.offsetHeight;
+    const scrollY = window.scrollY;
+
+    // Punto donde comienza la transición (80% del hero)
+    const transitionPoint = heroHeight * 0.8;
+
+    if (scrollY < transitionPoint) {
+      // Dentro del hero: ligera transparencia
+      header.style.backgroundColor = "rgba(0, 0, 0, 0.1)";
+      header.style.borderColor = "rgba(255, 255, 255, 0.1)";
+      header.style.backdropFilter = "blur(8px)";
+      header.classList.add("header-transparent");
+    } else {
+      // Fuera del hero: estado normal
+      header.style.backgroundColor = "rgb(255 255 255 / 0.9)";
+      header.style.borderColor = "rgb(243 244 246)";
+      header.style.backdropFilter = "blur(4px)";
+      header.classList.remove("header-transparent");
+    }
+  }
+
   // actualizar navegación activa
   function updateActiveNav() {
     const path = window.location.pathname;
@@ -344,13 +439,25 @@ import Button from "./ui/Button.astro";
   }
 
   // Ejecutar cuando carga la página
-  document.addEventListener("DOMContentLoaded", updateActiveNav);
+  document.addEventListener("DOMContentLoaded", () => {
+    updateActiveNav();
+    handleHeaderTransparency();
+  });
 
   // Ejecutar en cada cambio de ruta (para View Transitions)
-  document.addEventListener("astro:page-load", updateActiveNav);
+  document.addEventListener("astro:page-load", () => {
+    updateActiveNav();
+    handleHeaderTransparency();
+  });
 
   // Ejecutar cuando cambia la URL manualmente
-  window.addEventListener("popstate", updateActiveNav);
+  window.addEventListener("popstate", () => {
+    updateActiveNav();
+    handleHeaderTransparency();
+  });
+
+  // Ejecutar al hacer scroll
+  window.addEventListener("scroll", handleHeaderTransparency);
 
   // Funcionalidad del menú móvil
   const mobileMenuButton = document.getElementById("mobile-menu-button");

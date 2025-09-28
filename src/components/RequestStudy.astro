@@ -24,11 +24,11 @@
 							<label for="study-nombre" class="block text-sm font-medium text-gray-700 mb-2">
 								Nombre completo *
 							</label>
-							<input 
-								type="text" 
-								id="study-nombre" 
-								name="nombre" 
-								required 
+							<input
+								type="text"
+								id="study-nombre"
+								name="nombre"
+								required
 								class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-luzgas-blue focus:border-transparent transition-colors duration-200"
 								placeholder="Tu nombre completo"
 							>
@@ -37,11 +37,11 @@
 							<label for="study-telefono" class="block text-sm font-medium text-gray-700 mb-2">
 								Teléfono *
 							</label>
-							<input 
-								type="tel" 
-								id="study-telefono" 
-								name="telefono" 
-								required 
+							<input
+								type="tel"
+								id="study-telefono"
+								name="telefono"
+								required
 								class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-luzgas-blue focus:border-transparent transition-colors duration-200"
 								placeholder="Tu número de teléfono"
 							>
@@ -52,11 +52,11 @@
 						<label for="study-email" class="block text-sm font-medium text-gray-700 mb-2">
 							Email *
 						</label>
-						<input 
-							type="email" 
-							id="study-email" 
-							name="email" 
-							required 
+						<input
+							type="email"
+							id="study-email"
+							name="email"
+							required
 							class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-luzgas-blue focus:border-transparent transition-colors duration-200"
 							placeholder="tu@email.com"
 						>
@@ -65,16 +65,16 @@
 					<!-- Property Info -->
 					<div class="border-t border-gray-200 pt-6">
 						<h3 class="text-lg font-semibold text-gray-800 mb-4">Información de tu propiedad</h3>
-						
+
 						<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 							<div>
 								<label for="tipo-propiedad" class="block text-sm font-medium text-gray-700 mb-2">
 									Tipo de propiedad *
 								</label>
-								<select 
-									id="tipo-propiedad" 
-									name="tipo_propiedad" 
-									required 
+								<select
+									id="tipo-propiedad"
+									name="tipo_propiedad"
+									required
 									class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-luzgas-blue focus:border-transparent transition-colors duration-200"
 								>
 									<option value="">Selecciona una opción</option>
@@ -90,10 +90,10 @@
 								<label for="superficie" class="block text-sm font-medium text-gray-700 mb-2">
 									Superficie aproximada (m²)
 								</label>
-								<input 
-									type="number" 
-									id="superficie" 
-									name="superficie" 
+								<input
+									type="number"
+									id="superficie"
+									name="superficie"
 									class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-luzgas-blue focus:border-transparent transition-colors duration-200"
 									placeholder="120"
 								>
@@ -104,16 +104,16 @@
 					<!-- Energy Info -->
 					<div class="border-t border-gray-200 pt-6">
 						<h3 class="text-lg font-semibold text-gray-800 mb-4">Consumo energético actual</h3>
-						
+
 						<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 							<div>
 								<label for="factura-electricidad" class="block text-sm font-medium text-gray-700 mb-2">
 									Factura mensual electricidad (€)
 								</label>
-								<input 
-									type="number" 
-									id="factura-electricidad" 
-									name="factura_electricidad" 
+								<input
+									type="number"
+									id="factura-electricidad"
+									name="factura_electricidad"
 									class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-luzgas-blue focus:border-transparent transition-colors duration-200"
 									placeholder="150"
 								>
@@ -122,10 +122,10 @@
 								<label for="factura-gas" class="block text-sm font-medium text-gray-700 mb-2">
 									Factura mensual gas (€)
 								</label>
-								<input 
-									type="number" 
-									id="factura-gas" 
-									name="factura_gas" 
+								<input
+									type="number"
+									id="factura-gas"
+									name="factura_gas"
 									class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-luzgas-blue focus:border-transparent transition-colors duration-200"
 									placeholder="80"
 								>
@@ -136,7 +136,7 @@
 					<!-- Interest -->
 					<div class="border-t border-gray-200 pt-6">
 						<h3 class="text-lg font-semibold text-gray-800 mb-4">¿Qué te interesa más?</h3>
-						
+
 						<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
 							<label class="flex items-center">
 								<input type="checkbox" name="intereses[]" value="auditoria" class="rounded border-gray-300 text-luzgas-blue focus:ring-luzgas-blue">
@@ -161,19 +161,19 @@
 						<label for="study-mensaje" class="block text-sm font-medium text-gray-700 mb-2">
 							Mensaje adicional
 						</label>
-						<textarea 
-							id="study-mensaje" 
-							name="mensaje" 
-							rows="4" 
-							class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-luzgas-blue focus:border-transparent transition-colors duration-200" 
+						<textarea
+							id="study-mensaje"
+							name="mensaje"
+							rows="4"
+							class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-luzgas-blue focus:border-transparent transition-colors duration-200"
 							placeholder="Cuéntanos más detalles sobre tu proyecto o necesidades específicas..."
 						></textarea>
 					</div>
 
 					<!-- Submit -->
 					<div class="border-t border-gray-200 pt-6">
-						<button 
-							type="submit" 
+						<button
+							type="submit"
 							class="w-full bg-gradient-to-r from-luzgas-green to-luzgas-blue text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-xl transform hover:scale-[1.02] transition-all duration-300 flex items-center justify-center"
 						>
 							<svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -197,7 +197,7 @@
 				<h4 class="font-semibold text-gray-800 mb-2">100% Gratuito</h4>
 				<p class="text-sm text-gray-600">Sin compromiso ni costos ocultos</p>
 			</div>
-			
+
 			<div class="bg-white/80 backdrop-blur-sm rounded-xl p-6">
 				<div class="w-12 h-12 bg-gradient-to-br from-luzgas-blue to-luzgas-dark-blue rounded-lg flex items-center justify-center mx-auto mb-4">
 					<svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -207,7 +207,7 @@
 				<h4 class="font-semibold text-gray-800 mb-2">Respuesta en 24h</h4>
 				<p class="text-sm text-gray-600">Te contactamos rápidamente</p>
 			</div>
-			
+
 			<div class="bg-white/80 backdrop-blur-sm rounded-xl p-6">
 				<div class="w-12 h-12 bg-gradient-to-br from-luzgas-yellow to-orange-400 rounded-lg flex items-center justify-center mx-auto mb-4">
 					<svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -224,23 +224,23 @@
 <script>
 	document.getElementById('study-form')?.addEventListener('submit', function(e) {
 		e.preventDefault();
-		
+
 		// Get form data
 		const formData = new FormData(this as HTMLFormElement);
 		const data = Object.fromEntries(formData.entries());
-		
+
 		// Collect checkboxes separately
 		const intereses = Array.from(document.querySelectorAll('input[name="intereses[]"]:checked'))
 			.map((checkbox) => (checkbox as HTMLInputElement).value);
-		
+
 		data.intereses = intereses.join(', ');
-		
+
 		// Here you would typically send the data to your server
 		console.log('Study request submitted:', data);
-		
+
 		// Show success message
 		alert('¡Solicitud enviada con éxito! Te contactaremos en las próximas 24 horas para coordinar tu estudio gratuito.');
-		
+
 		// Reset form
 		(this as HTMLFormElement).reset();
 	});

@@ -1,137 +1,156 @@
 ---
 ---
 
-<section id="contacto" class="py-20 bg-gradient-to-b from-white to-gray-50">
-	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-		<div class="text-center mb-16">
-			<h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
-				<span class="text-luzgas-blue">Contáctanos</span>
-			</h2>
-			<p class="text-xl text-gray-600 max-w-3xl mx-auto">
-				¿Listo para optimizar tu consumo energético? Conversemos sobre tu proyecto
-			</p>
-		</div>
+<!-- Sección Principal de Contacto -->
+<section
+  id="contacto"
+  class="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-white to-green-50 relative overflow-hidden scroll-animate"
+  data-animate="fade-up"
+>
+  <!-- Background Pattern -->
+  <div class="absolute inset-0 opacity-10">
+    <div class="absolute top-10 left-10 w-20 h-20 bg-luzgas-blue rounded-full"></div>
+    <div class="absolute top-32 right-20 w-16 h-16 bg-luzgas-green rounded-full"></div>
+    <div class="absolute bottom-20 left-32 w-12 h-12 bg-luzgas-yellow rounded-full"></div>
+    <div class="absolute bottom-40 right-10 w-24 h-24 bg-luzgas-blue rounded-full"></div>
+  </div>
 
-		<div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
-			<!-- Contact Info -->
-			<div>
-				<h3 class="text-3xl font-bold text-gray-800 mb-8">Información de Contacto</h3>
-				
-				<div class="space-y-6 mb-12">
-					<div class="flex items-start space-x-4">
-						<div class="w-12 h-12 bg-gradient-to-br from-luzgas-blue to-luzgas-dark-blue rounded-lg flex items-center justify-center flex-shrink-0">
-							<svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
-							</svg>
-						</div>
-						<div>
-							<h4 class="text-lg font-semibold text-gray-800">Teléfono</h4>
-							<p class="text-gray-600">+34 XXX XXX XXX</p>
-						</div>
-					</div>
+  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex flex-col items-center">
+    <!-- Header Section -->
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-5xl font-bold text-gray-800 mb-2 md:mb-3!">
+        <span class="text-luzgas-blue">Contáctanos</span>
+      </h2>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+        ¿Listo para optimizar tu consumo energético? Conversemos sobre tu proyecto
+      </p>
+    </div>
 
-					<div class="flex items-start space-x-4">
-						<div class="w-12 h-12 bg-gradient-to-br from-luzgas-green to-luzgas-light-green rounded-lg flex items-center justify-center flex-shrink-0">
-							<svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-							</svg>
-						</div>
-						<div>
-							<h4 class="text-lg font-semibold text-gray-800">Email</h4>
-							<p class="text-gray-600">info@luzgas.net</p>
-						</div>
-					</div>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+      <!-- Información de Contacto Mejorada -->
+      <div class="space-y-6">
+        <!-- Tarjetas de Contacto -->
+        <div class="grid grid-cols-1 gap-4">
+          <!-- Teléfono -->
+          <div class="bg-white/80 backdrop-blur-sm rounded-2xl p-4 shadow-lg hover:shadow-xl transition-all duration-300 border border-white/20">
+            <div class="flex items-center space-x-4">
+              <div class="w-14 h-14 bg-gradient-to-br from-luzgas-blue to-luzgas-dark-blue rounded-xl flex items-center justify-center">
+                <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                </svg>
+              </div>
+              <div>
+                <h4 class="text-xl font-bold text-gray-800">Teléfono</h4>
+                <p class="text-lg text-luzgas-blue font-semibold">+34 667 275 919</p>
+                <p class="text-sm text-gray-500">Llamadas de Lunes a Viernes</p>
+              </div>
+            </div>
+          </div>
 
-					<div class="flex items-start space-x-4">
-						<div class="w-12 h-12 bg-gradient-to-br from-luzgas-yellow to-orange-400 rounded-lg flex items-center justify-center flex-shrink-0">
-							<svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-							</svg>
-						</div>
-						<div>
-							<h4 class="text-lg font-semibold text-gray-800">Dirección</h4>
-							<p class="text-gray-600">Calle Ejemplo 123<br>28001 Madrid, España</p>
-						</div>
-					</div>
-				</div>
+          <!-- Email -->
+          <div class="bg-white/80 backdrop-blur-sm rounded-2xl p-4 shadow-lg hover:shadow-xl transition-all duration-300 border border-white/20">
+            <div class="flex items-center space-x-4">
+              <div class="w-14 h-14 bg-gradient-to-br from-luzgas-green to-luzgas-light-green rounded-xl flex items-center justify-center">
+                <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                </svg>
+              </div>
+              <div>
+                <h4 class="text-xl font-bold text-gray-800">Email</h4>
+                <p class="text-lg text-luzgas-green font-semibold">info@luzgas.net</p>
+                <p class="text-sm text-gray-500">Respuesta en 24 horas</p>
+              </div>
+            </div>
+          </div>
 
-				<div class="bg-gradient-to-br from-luzgas-blue/5 via-luzgas-green/5 to-luzgas-yellow/5 rounded-2xl p-6">
-					<h4 class="text-xl font-semibold text-gray-800 mb-4">Horarios de Atención</h4>
-					<div class="space-y-2 text-gray-600">
-						<p><span class="font-medium">Lunes - Viernes:</span> 9:00 - 18:00</p>
-						<p><span class="font-medium">Sábados:</span> 10:00 - 14:00</p>
-						<p><span class="font-medium">Domingos:</span> Cerrado</p>
-					</div>
-				</div>
-			</div>
+          <!-- Dirección -->
+          <div class="bg-white/80 backdrop-blur-sm rounded-2xl p-4 shadow-lg hover:shadow-xl transition-all duration-300 border border-white/20">
+            <div class="flex items-center space-x-4">
+              <div class="w-14 h-14 bg-gradient-to-br from-luzgas-yellow to-orange-400 rounded-xl flex items-center justify-center">
+                <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                </svg>
+              </div>
+              <div>
+                <h4 class="text-xl font-bold text-gray-800">Dirección</h4>
+                <p class="text-lg text-luzgas-yellow font-semibold">Calle Ejemplo 123</p>
+                <p class="text-sm text-gray-500">28001 Madrid, España</p>
+              </div>
+            </div>
+          </div>
+        </div>
 
-			<!-- Contact Form -->
-			<div class="bg-white rounded-3xl p-8 shadow-xl">
-				<h3 class="text-2xl font-bold text-gray-800 mb-6">Envíanos un mensaje</h3>
-				
-				<form id="contact-form" class="space-y-6">
-					<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-						<div>
-							<label for="nombre" class="block text-sm font-medium text-gray-700 mb-2">Nombre</label>
-							<input type="text" id="nombre" name="nombre" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-luzgas-blue focus:border-transparent transition-colors duration-200">
-						</div>
-						<div>
-							<label for="telefono" class="block text-sm font-medium text-gray-700 mb-2">Teléfono</label>
-							<input type="tel" id="telefono" name="telefono" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-luzgas-blue focus:border-transparent transition-colors duration-200">
-						</div>
-					</div>
-					
-					<div>
-						<label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email</label>
-						<input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-luzgas-blue focus:border-transparent transition-colors duration-200">
-					</div>
-					
-					<div>
-						<label for="empresa" class="block text-sm font-medium text-gray-700 mb-2">Empresa (opcional)</label>
-						<input type="text" id="empresa" name="empresa" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-luzgas-blue focus:border-transparent transition-colors duration-200">
-					</div>
-					
-					<div>
-						<label for="servicio" class="block text-sm font-medium text-gray-700 mb-2">Servicio de interés</label>
-						<select id="servicio" name="servicio" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-luzgas-blue focus:border-transparent transition-colors duration-200">
-							<option value="">Selecciona un servicio</option>
-							<option value="auditoria">Auditoría Energética</option>
-							<option value="solar">Energía Solar</option>
-							<option value="eficiencia">Eficiencia Energética</option>
-							<option value="consultoria">Consultoría</option>
-						</select>
-					</div>
-					
-					<div>
-						<label for="mensaje" class="block text-sm font-medium text-gray-700 mb-2">Mensaje</label>
-						<textarea id="mensaje" name="mensaje" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-luzgas-blue focus:border-transparent transition-colors duration-200" placeholder="Cuéntanos sobre tu proyecto..."></textarea>
-					</div>
-					
-					<button type="submit" class="w-full bg-gradient-to-r from-luzgas-green to-luzgas-blue text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-xl transform hover:scale-[1.02] transition-all duration-300">
-						Enviar Mensaje
-					</button>
-				</form>
-			</div>
-		</div>
-	</div>
+        <!-- Redes Sociales -->
+        <div class="bg-gradient-to-r from-luzgas-blue/10 via-luzgas-green/10 to-luzgas-yellow/10 rounded-2xl p-6 border border-white/30">
+          <h4 class="text-2xl font-bold text-gray-800 mb-6 text-center">Síguenos en Redes</h4>
+          <div class="grid grid-cols-3 gap-4">
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/luzgasasesoriaenergetica" target="_blank" class="bg-white/70 hover:bg-white hover:scale-105 rounded-xl p-4 shadow-lg transition-all duration-300 text-center group">
+              <div class="w-12 h-12 bg-gradient-to-br from-pink-500 to-orange-400 rounded-xl flex items-center justify-center mx-auto mb-3">
+                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                </svg>
+              </div>
+              <p class="text-xs font-semibold text-gray-800 group-hover:text-pink-600">Instagram</p>
+            </a>
+
+            <!-- Facebook -->
+            <a href="https://www.facebook.com/luzgasasesoriaenergetica" target="_blank" class="bg-white/70 hover:bg-white hover:scale-105 rounded-xl p-4 shadow-lg transition-all duration-300 text-center group">
+              <div class="w-12 h-12 bg-gradient-to-br from-blue-600 to-blue-500 rounded-xl flex items-center justify-center mx-auto mb-3">
+                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                </svg>
+              </div>
+              <p class="text-xs font-semibold text-gray-800 group-hover:text-blue-600">Facebook</p>
+            </a>
+
+            <!-- TikTok -->
+            <a href="https://www.tiktok.com/@luzgasasesoriaenergetica" target="_blank" class="bg-white/70 hover:bg-white hover:scale-105 rounded-xl p-4 shadow-lg transition-all duration-300 text-center group">
+              <div class="w-12 h-12 bg-gradient-to-br from-gray-800 to-gray-700 rounded-xl flex items-center justify-center mx-auto mb-3">
+                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-.88-.05A6.33 6.33 0 005 20.1a6.34 6.34 0 0010.86-4.43v-7a8.16 8.16 0 004.77 1.52v-3.4a4.85 4.85 0 01-1-.1z"/>
+                </svg>
+              </div>
+              <p class="text-xs font-semibold text-gray-800 group-hover:text-gray-800">TikTok</p>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Formulario Compacto -->
+      <div class="bg-white/90 backdrop-blur-sm rounded-3xl p-8 shadow-2xl border border-white/20">
+        <h3 class="text-2xl font-bold text-gray-800 mb-6 text-center">Envíanos un mensaje</h3>
+
+        <form id="contact-form" class="space-y-4 mt-6">
+          <!-- Nombre y Teléfono en una fila -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label for="nombre" class="block text-sm font-medium text-gray-700 mb-2">Nombre *</label>
+              <input type="text" id="nombre" name="nombre" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-luzgas-blue focus:border-transparent transition-colors duration-200">
+            </div>
+            <div>
+              <label for="telefono" class="block text-sm font-medium text-gray-700 mb-2">Teléfono</label>
+              <input type="tel" id="telefono" name="telefono" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-luzgas-blue focus:border-transparent transition-colors duration-200">
+            </div>
+          </div>
+
+          <div>
+            <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email *</label>
+            <input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-luzgas-blue focus:border-transparent transition-colors duration-200">
+          </div>
+
+          <div>
+            <label for="mensaje" class="block text-sm font-medium text-gray-700 mb-2">Mensaje *</label>
+            <textarea id="mensaje" name="mensaje" rows="4" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-luzgas-blue focus:border-transparent transition-colors duration-200" placeholder="Cuéntanos sobre tu proyecto..."></textarea>
+          </div>
+
+          <button type="submit" class="w-full bg-gradient-to-r from-luzgas-green to-luzgas-blue text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-xl transform hover:scale-[1.02] transition-all duration-300">
+            Enviar Mensaje
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
 </section>
 
-<script>
-	document.getElementById('contact-form')?.addEventListener('submit', function(e) {
-		e.preventDefault();
-		
-		// Get form data
-		const formData = new FormData(this as HTMLFormElement);
-		const data = Object.fromEntries(formData.entries());
-		
-		// send the data to your server
-		console.log('Form submitted:', data);
-		
-		// Show success message
-		alert('¡Gracias por tu mensaje! Te contactaremos pronto.');
-		
-		// Reset form
-		(this as HTMLFormElement).reset();
-	});
-</script>
